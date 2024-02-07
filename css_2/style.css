@@ -6952,6 +6952,10 @@ html body .settingPage .topArea .row .switch span {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+html body .settingPage .topArea .row .switch span > a {
+  width: 100%;
+  height: 100%;
+}
 html body .settingPage .bottomArea {
   width: 100%;
   height: auto;

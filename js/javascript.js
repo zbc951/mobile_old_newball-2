@@ -615,14 +615,11 @@ $(function(){
 $(function(){
     $(".settingPage .controller, .settingPage .switch").click(function(){
         $(this)
-        .toggleClass("close");
+        .toggleClass("on");
     })
     $(".settingPage .bottomArea .row").click(function(){
         $(".settingPage .changePW")
         .addClass("display");
-    })
-    $(".settingPage .topArea .row:eq(3) .switch").click(function(){
-        document.location.href="https://wawweb.github.io/newBall_mobile/html/setting.html";
     })
 })
 
