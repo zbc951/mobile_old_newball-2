@@ -6899,19 +6899,19 @@ html body .settingPage .topArea .row .switch {
   padding: 1vw;
   position: relative;
 }
-html body .settingPage .topArea .row .switch.close span {
+html body .settingPage .topArea .row .switch.on span {
   background: #3b73c2;
   left: unset;
   right: 1vw;
   -webkit-transform: translate(-2%, -50%);
           transform: translate(-2%, -50%);
 }
-html body .settingPage .topArea .row .switch.close p.open {
+html body .settingPage .topArea .row .switch.on p.open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-html body .settingPage .topArea .row .switch.close p.close {
+html body .settingPage .topArea .row .switch.on p.close {
   display: none;
 }
 html body .settingPage .topArea .row .switch p {
