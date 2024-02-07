@@ -693,6 +693,21 @@ html body .loginPage form .btnBox button:first-of-type {
   border-radius: 0.9259259259vw;
   color: #feb300;
 }
+html body .loginPage form .btnBox button:first-of-type a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #feb300;
+}
 html body .loginPage form .btnBox button:last-of-type {
   background: -webkit-gradient(linear, left bottom, left top, from(#feb300), to(#ffcc41));
   background: linear-gradient(to top, #feb300 0%, #ffcc41 100%);
@@ -3565,6 +3580,21 @@ html body .gameResultPage .searchFilters button {
   margin-right: 2vw;
   font-weight: bold;
 }
+html body .gameResultPage .searchFilters button a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #feb300;
+}
 html body .gameResultPage .searchFilters button:active, html body .gameResultPage .searchFilters button.active {
   background: #feb300;
   color: #212832;
@@ -4995,6 +5025,21 @@ html body .csPage .innerMode .content ul li .infoBlock .copyBtn {
   color: #feb300;
   font-size: 3.8vw;
 }
+html body .csPage .innerMode .content ul li .infoBlock .copyBtn a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #feb300;
+}
 html body .csPage .innerMode .content form {
   width: 100%;
   height: auto;
@@ -6408,6 +6453,25 @@ html body .memberPage .topArea .quickNav li {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 4vw;
+}
+html body .memberPage .topArea .quickNav li a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #feb300;
 }
 html body .memberPage .topArea .quickNav li i {
   width: 8vw;
