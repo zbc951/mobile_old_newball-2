@@ -375,8 +375,8 @@ footer ul.mainPageNav li i {
 }
 
 .logo {
-  background: url("../img/darkStyle_img/logo.png") no-repeat;
-  background-size: contain;
+  background: url("../img/darkStyle_img/logo.png") no-repeat center;
+  background-size: 100%;
 }
 
 /* http://meyerweb.com/eric/tools/css_2/reset/ 
@@ -665,7 +665,7 @@ html body .loginPage {
   padding: 20vw 13vw;
 }
 html body .loginPage > .logo {
-  width: 28vw;
+  width: 38vw;
   height: 12vw;
   margin: 21vw 0 16.5vw;
 }
@@ -786,6 +786,7 @@ html body .loginPage .slip {
 }
 html body .loginPage .slip p {
   color: #212832;
+  font-size: 4vw;
   font-weight: bold;
 }
 html body .loginPage .slip .bar {
