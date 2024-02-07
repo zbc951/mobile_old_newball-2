@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ZH-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css_2/style.css">
+    <link rel="shortcut icon" href="./img/newBall_64x64.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./js/javascript.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main class="loginPage">
+        <div class="logo"></div>
+        <form>
+            <div class="btnBox">
+                <button type="button" class="goPC">回到網頁版</button>
+                <button type="button" class="record">明確な記録</button>
+            </div>
+            <label>
+                <i class="acc_ic"></i>
+                <input type="text" placeholder="帳號">
+            </label>
+            <label>
+                <i class="pass_ic"></i>
+                <input type="text" placeholder="密碼">
+            </label>
+            <label class="checkBox">
+                <input class="check" type="checkbox">
+                <p>忘記密碼</p>
+            </label>
+        </form>
+        <div class="slip" onclick="window.location.href='./html/index.html'">
+            <p>滑動登入</p>
+            <div class="bar"></div>
+        </div>
+    </main>
+    <!-- 彈窗 -->
+    <div class="filter">
+        <!-- 公告 -->
+        <div class="jumpWindow announcement">
+            <p class="title">公告標題</p>
+            <div class="content">
+                <p>公告公告公告公告公告公告公告公告
+                    公告公告公告公告公告公告公告公告
+                    公告公告公告公告公告公告公告公告
+                    公告公告公告公告公告公告公告公告
+                    公告公告公告公告</p>
+            </div>
+            <div class="btnBlock">
+                <button type="button" class="closeWindow">關閉</button>
+                <button type="button" class="seeMore">查看全部</button>
+            </div>
+        </div>
+        <!-- 熱門賽事 -->
+        <div class="jumpWindow betHotGame">
+            <div class="reFresh">
+                <p>換一批</p>
+                <i class="reFresh_icon"></i>
+            </div>
+            <i class="close_icon closeWindow"></i>
+            <div class="titleArea">
+                <i class="decoPic"></i>
+                <i class="textPic"></i>
+            </div>
+            <div class="content">
+                <div class="gameBlock">
+                    <div class="teamBlock">
+                        <i class="teamPic liwagu"></i>
+                        <p class="teamName">利華古遜</p>
+                    </div>
+                    <div class="detailBlock">
+                        <p class="gameName">德國盃</p>
+                        <p class="time">2023/07/04 10:38</p>
+                        <p class="vs">VS</p>
+                    </div>
+                    <div class="teamBlock">
+                        <i class="teamPic stujia"></i>
+                        <p class="teamName">司徒加特</p>
+                    </div>
+                </div>
+                <div class="gameBlock">
+                    <div class="teamBlock">
+                        <i class="teamPic baijin"></i>
+                        <p class="teamName">拜仁慕尼黑</p>
+                    </div>
+                    <div class="detailBlock">
+                        <p class="gameName">德國盃</p>
+                        <p class="time">2023/07/04 15:45</p>
+                        <p class="vs">VS</p>
+                    </div>
+                    <div class="teamBlock">
+                        <i class="teamPic herfan"></i>
+                        <p class="teamName">賀芬咸</p>
+                    </div>
+                </div>
+                <div class="gameBlock">
+                    <div class="teamBlock">
+                        <i class="teamPic mays"></i>
+                        <p class="teamName">梅斯</p>
+                    </div>
+                    <div class="detailBlock">
+                        <p class="gameName">法國甲組聯賽</p>
+                        <p class="time">2023/07/04 02:00</p>
+                        <p class="vs">VS</p>
+                    </div>
+                    <div class="teamBlock">
+                        <i class="teamPic dian"></i>
+                        <p class="teamName">迪安</p>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="getBet closeWindow">
+                <p>來一注</p>
+                <i class=""></i>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+.gameRulePage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $BG_Color00;
+    position: relative;
+
+    .dataTable {
+        width: 100%;
+        height: auto;
+        padding: 0 2vw;
+        overflow-y: auto;
+        position: relative;
+        z-index: 3;
+
+        .tableOuter {
+            width: auto;
+            height: auto;
+            border-radius: 2vw;
+            border: 0.2vw solid $Border_06;
+            box-shadow: 0 1px 4px $shadow_01;
+            margin-bottom: 2vw;
+            overflow: hidden;
+
+            &.active {
+
+                table {
+
+                    tr {
+
+                        &.gameName {
+    
+                            th {
+                                background: $BG_Color06;
+
+                                p {
+                                    color: $Font_Color01 !important;
+                                }
+    
+                                i {
+                                    filter: brightness(0.2);
+                                    transform: rotate(-180deg);
+                                }
+                            }
+                        }
+    
+                        td {
+                            display: table-cell;
+                        }
+                    }
+                }
+            }
+
+            table {
+                width: 100%;
+                height: auto;
+                border-collapse: collapse;
+                overflow: hidden;
+
+                tr {
+                    border-bottom: 0.2vw solid $Border_06;
+                    
+                    &.gameName {
+
+                        th {
+                            width: 100%;
+                            height: 8vw;
+                            background: $BG_Color03;
+                            vertical-align: middle;
+                            padding: 0 3vw;
+                            position: relative;
+
+                            .outer {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                p {
+                                    color: $Font_Color07;
+                                    font-size: 4vw;
+                                    font-weight: bold;
+                                    letter-spacing: 2px;
+                                    text-align: start;
+                                }
+    
+                                i {
+                                    transition: transform 0.3s;
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(even) {
+                        background: $BG_Color04-2;
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    td {
+                        display: none;
+                        width: 100%;
+                        height: auto;
+                        border-right: 0.2vw solid $Border_03;
+                        vertical-align: middle;
+                        padding: 2vw 3vw;
+
+                        &:last-child {
+                            border-right: none;
+                        }
+                        
+                        .outer {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        p {
+                            width: 100%;
+                            color: $Font_Color07;
+                            font-size: 3.8vw;
+                            font-weight: bold;
+                            line-height: 5vw;
+
+                            span {
+                                color: $Font_Color03;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

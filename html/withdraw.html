@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ZH-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_2/style.css">
+    <link rel="shortcut icon" href="../img/newBall_64x64.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="https://kit.fontawesome.com/8858aac5ee.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="innerPage">
+        <p class="pageTitle">取款</p>
+        <i class="leftArrow_Icon backTo_LastPage" onclick="window.location.href='./index.html'"></i>
+    </header>
+    <main class="decoBG">
+        <span class="grayBG"></span>
+        <div class="wrapContainer withdrawPage">
+            <span class="grayBG"></span>
+            <div class="topArea">
+                <label>
+                    <p class="itemName">銀行卡</p>
+                    <input type="text" placeholder="工商銀行123456789" class="unEdit" disabled>
+                </label>
+                <label>
+                    <p class="itemName">銀行名稱</p>
+                    <input type="text" placeholder="工商銀行"  class="unEdit" disabled>
+                </label>
+                <label>
+                    <p class="itemName">帳戶</p>
+                    <input type="text" placeholder="123456"  class="unEdit" disabled>
+                </label>
+                <label>
+                    <p class="itemName">使用者名稱</p>
+                    <input type="text" placeholder="假名" class="unEdit" disabled>
+                </label>
+                <label>
+                    <p class="itemName">提款金額</p>
+                    <input type="text" placeholder="1000">
+                </label>
+            </div>
+            <button type="button" class="checkBtn">確認提款</button>
+            <p class="hint">一次取款的最低金額為1元</p>
+            <div class="remindBox">
+                <p class="title">請注意</p>
+                <p class="normal"> 關於銀行存款和取款，基於取款時銀行的上班時間
+                    前台的開放時間為日本時間09：00至23：00。 </p>
+                <p class="normal"> 如果超過接待時間，它將反映在下一個業務中。 </p>
+                <p class="normal"> 銀行之間的存款不同，因此在15：00之後存款
+                    它可能會反映在下一個工作日。
+                    請注意。 </p>
+                <p class="highlight"> 使用我們的網站進行洗錢或欺詐活動或
+                    違反其他法律法規的犯罪行為，以及不當使用。 這個網站是
+                    沒收此帳戶中獲得的所有獎金和獎金，
+                    您有權立即關閉您的帳戶。 </p>
+            </div>
+        </div>
+    </main>
+   <footer>
+        <ul class="mainNav">
+            <li onclick="window.location.href='./index.html'">
+                <i class="home_ic"></i>
+                <span>首頁</span>
+            </li>
+            <li onclick="window.location.href='../html/gameResult.html'">
+                <i class="event_ic"></i>
+                <span>賽事結果</span>
+            </li>
+            <li onclick="window.location.href='../html/csService.html'">
+                <i class="cs_ic"></i>
+                <span>客服</span>
+            </li>
+            <li onclick="window.location.href='../html/betRecord.html'">
+                <i class="sponsor_ic"></i>
+                <span>投注紀錄</span>
+            </li>
+            <li onclick="window.location.href='../html/member.html'" class="notify">
+                <i class="member_ic"></i>
+                <span>我的</span>
+            </li>
+        </ul>
+    </footer>
+    <!-- 彈窗 -->
+    <div class="filter">
+    </div>
+</body>
+</html>

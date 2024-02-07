@@ -1,0 +1,1324 @@
+.filter {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: $filter_BG;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+
+    &.display {
+        display: flex;
+    }
+
+    .jumpWindow {
+        display: none;
+        background: $BG_Color05;
+        border: 0.2vw solid $Border_01;
+        position: relative;
+
+        &.display {
+            display: block;
+        }
+
+        //公告
+        &.announcement {
+            width: pxToVw(1925);
+            height: pxToVw(1441);
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 20px;
+            overflow: hidden;
+            
+            &.display {
+                display: flex;
+            }
+
+            .title {
+                width: 100%;
+                height: auto;
+                color: $Font_Color07;
+                font-size: 5vw;
+                text-align: center;
+                padding: 7vw 8vw 0;
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                max-height:28vw;
+                padding: 0vw 8vw 4vw;
+                overflow-y: hidden;
+
+                p {
+                    color: $Font_Color02;
+                    font-size: 4.4vw;
+                    line-height: 5.5vw;
+                    text-align: center;
+                }
+            }
+
+            .btnBlock {
+                width: 100%;
+                height: pxToVw(306);
+                display: flex;
+                align-items: center;
+                border-top: pxToVw(1) solid $Border_06;
+
+                button {
+                    width: calc(100% / 2);
+                    height: 100%;
+                    background: $BG_Color00;
+                    color: $Font_Color01;
+                    font-size: 4.4vw;
+
+                    &:first-child {
+                        color: $Font_Color09;
+                        border-right: pxToVw(1) solid $Border_06;
+                    }
+
+                    &.seeMore {
+                        color: $Font_Color03;
+                    }
+                }
+            }
+        }
+
+        //熱門賽事
+        &.betHotGame {
+            width: pxToVw(1679);
+            height: pxToVw(2500);
+            flex-direction: column;
+            align-items: center;
+            padding: 5vw 8vw 0;
+            position: relative;
+
+            &.display {
+                display: flex;
+            }
+
+            .reFresh {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: -45px;
+                left: 10px;
+
+                p {
+                    color: $Font_Color03;
+                    font-size: 4.4vw;
+                    margin-right: 2vw;
+                }
+
+                .reFresh_icon {
+                    width: 6vw;
+                    height: 6vw;
+                }
+            }
+
+            .titleArea {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                top: -39px;
+                left: -2vw;
+
+                .decoPic {
+                    width: 38vw;
+                    height: 26vw;
+                }
+
+                .textPic {
+                    width: pxToVw(716);
+                    height: pxToVw(280);
+                    margin: 47px 0 0 5px;
+                }
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                margin-top: -8vw;
+
+                .gameBlock {
+                    width: 100%;
+                    height: pxToVw(561);
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-around;
+                    background: $BG_Color14;
+                    border-radius: pxToVw(30);
+                    padding: 3vw 5vw;
+                    margin: 0 0 2vw;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    .teamBlock, 
+                    .detailBlock {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .teamPic {
+                            width: 9vw;
+                            height: 10vw;
+                        }
+
+                        p {
+                            color: $Font_Color07;
+                            font-size: 3.75vw;
+                            text-align: center;
+                            white-space: nowrap;
+
+                            &.gameName {
+                                font-size: 4vw;
+                                font-weight: bold;
+                                margin-bottom: 2vw;
+                            }
+
+                            &.time {
+                                color: $Font_Color02;
+                                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                font-size: 3.2vw;
+                                font-weight: bold;
+                                margin-bottom: 4vw;
+                            }
+
+                            &.vs {
+                                color: $Font_Color04;
+                                font-family: sans-serif;
+                                font-size: 4.6vw;
+                                font-weight: bold;
+                            }
+
+                            &.teamName {
+                                color: $Font_Color03;
+                               max-width: pxToVw(360);
+                               margin-top: 2vw;
+                               @include textHidden;
+                            }
+                        }
+                    }
+                }
+            }
+
+            button {
+                width: pxToVw(1679);
+                height: pxToVw(238);
+                display: flex;
+                align-items: center;
+                justify-content: center;                                      
+                background: $gradient01;
+                position: absolute;
+                bottom: -45px;
+
+                p {
+                    color: $Font_Color01;
+                    font-size: 4.4vw;
+                    font-weight: bold;
+                    margin-right: 2vw;
+                }
+
+                .doubleArrow_icon {
+                    width: 3.8vw;
+                    height: 3.8vw;
+                    margin-top: 1vw;
+                }
+            }
+        }
+
+        //下注彈窗
+        &.betGame {
+            width: pxToVw(1679);
+            height: auto;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 5vw;
+            padding: 5vw 0 0;
+            position: relative;
+
+            &.display {
+                display: flex;
+            }
+
+            .titleArea {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 4vw;
+
+                .gameName {
+                    width: auto;
+                    height: auto;
+                    color: $Font_Color03;
+                    font-size: 4.2vw;
+                    font-weight: bold;
+                    text-align: center;
+                    @include textHidden;
+                    padding: 0 5vw;
+                    position: relative;
+
+                    &::before {
+                        content: "//";
+                        width: auto;
+                        height: auto;
+                        color: $Font_Color04;
+                        font-size: 3.8vw;
+                        font-weight: bold;
+                        position: absolute;
+                        left: 0;
+                    }
+
+                    &::after {
+                        content: "//";
+                        width: auto;
+                        height: auto;
+                        color: $Font_Color04;
+                        font-size: 3.8vw;
+                        font-weight: bold;
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                padding: 0 4vw;
+
+                .gameBlock {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: space-around;
+                    border-radius: pxToVw(30);
+                    padding: 3vw 0;
+                    margin: 0 0 2vw;
+
+                    &:last-child {
+                        margin: 0;
+                    }
+
+                    .teamBlock {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 2vw;
+                        margin-bottom: 4vw;
+
+                        .teamPic {
+                            width: 9vw;
+                            height: 10vw;
+                        }
+
+                        p {
+                            color: $Font_Color01;
+                            font-size: 4vw;
+                            white-space: nowrap;
+
+                            &.vs {
+                                width: 10%;
+                                color: $Font_Color03;
+                                font-family: sans-serif;
+                                font-weight: bold;
+                                text-align: center;
+                                flex-shrink: 0;
+                                margin: 0 5vw;
+                            }
+
+                            &.teamName {
+                                width: 100%;
+                                color: $Font_Color07;
+                                font-weight: bold;
+                                @include textHidden;
+                                text-align: end;
+
+                                &:last-child {
+                                    text-align: start;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .betDetail {
+                    width: 100%;
+                    height: 28vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background: $gradient02;
+                    border-radius: 2vw;
+                    padding: 4vw 2vw 2vw;
+                    position: relative;
+
+                    .infoWrap {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        p {
+                            width: 100%;
+                            color: $Font_Color01;
+                            text-align: end;
+
+                            &.betRate {
+                                text-align: start;
+                            }
+                        }
+
+                        span {
+                            width: 6%;
+                            flex-shrink: 0;
+                            color: $Font_Color03;
+                            font-size: 4.2vw;
+                            margin: 0 2vw;
+                        }
+                    }
+
+                    .betChoose {
+                        color: $Font_Color01;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        margin-top: 2vw;
+                        text-align: center;
+                    }
+
+                    .num {
+                        width: 6vw;
+                        height: 6vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: $BG_Color05;
+                        border-radius: 30vw;
+                        color: $Font_Color04;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        position: absolute;
+                        bottom: 2vw;
+                        right: 2vw;
+                    }
+                }
+
+                .moneyState {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    margin: 2vw 0;
+                    
+                    .group {
+                        width: 40%;
+                        display: flex;
+                        align-items: center;
+                        flex-shrink: 0;
+
+                        &:first-child {
+
+                            span {
+                                color: $Font_Color03;
+                            }
+                        }
+                        &:last-child {
+                            width: 60%;
+                            justify-content: flex-end;
+
+                            span {
+                                width: auto;
+                                max-width: 100%;
+                                text-align: end;
+                            }
+                        }
+
+                        p {
+                            color: $Font_Color02;
+                            font-size: 4vw;
+                            font-weight: bold;
+                            white-space: nowrap;
+                            margin-right: 1vw;
+                            flex-shrink: 0;
+                        }
+
+                        span {
+                            width: 100%;
+                            color: $Font_Color07;
+                            font-size: 4vw;
+                            font-weight: bold;
+                            @include textHidden;
+                        }
+                    }
+                }
+
+                form {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    label {
+                        width: 100%;
+                        height: auto;
+                        position: relative;
+
+                        input {
+                            width: 100%;
+                            height: 10vw;
+                            @include input01;
+                            padding: 0 9vw 0 3vw;
+                            
+                        }
+
+                        p {
+                            color: $Font_Color01;
+                            font-size: 4vw;
+                            font-weight: bold;
+                            position: absolute;
+                            top: 50%;
+                            right: 4vw;
+                            transform: translateY(-50%);
+                        }
+                    }
+
+                    .btnWrap {
+                        width: 100%;
+                        height: auto;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 2vw;
+                        padding: 3vw 0 6vw;
+
+                        button {
+                            width: 100%;
+                            height: 9vw;
+                            background: $BG_Color09;
+                            border-radius: 1vw;
+                            color: $Font_Color03;
+                            font-size: 4vw;
+                            font-weight: bold;
+
+                            &.active {
+                                border-color: $Border_01;
+                                color: $Font_Color07;
+                            }
+                        }
+                    }
+
+                    .winWrap {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        p,
+                        span {
+                            color: $Font_Color08;
+                            font-size: 4vw;
+                            font-weight: bold;
+                            white-space: nowrap;
+                        }
+
+                        span {
+                            color: $Font_remind;
+                            margin-left: 2vw;
+                        }
+                    }
+                    
+                }
+            }
+
+            .btnBlock {
+                width: 100%;
+                height: 13vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $BG_Color06;
+                border-radius: 0 0 5vw 5vw;
+                overflow: hidden;
+                position: relative;
+
+                p {
+                    color: $Font_Color01;
+                    font-size: 4.4vw;
+                    text-align: 1px;
+                }
+
+                .grabBar {
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    background: $gradient02;
+                    border-radius: 0 3vw 3vw 3vw;
+                    padding: 0 2vw;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    i {
+                        &:nth-of-type(1) {
+                            animation: move 1.2s ease-in infinite;
+
+                            @keyframes move {
+                                0% {
+                                    transform: translateX(0%);
+                                }
+                                100% {
+                                    transform: translateX(30%);
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(2) {
+                            filter: brightness(2);
+                            transform: translateX(-20%);
+                        }
+                    }
+                }
+            }
+
+            .close_icon {
+                top: -40px;
+                right: -20px;
+            }
+        }
+
+        //未結注單
+        &.unFinish_bet  {
+            width: 92vw;
+            height: auto;
+            flex-direction: column;
+            border-radius: 3vw;
+            background: $BG_Color00;
+
+            &.display {
+                display: flex;
+            }
+
+            .titleArea {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $BG_Color00;
+                border-radius: 20px 20px 0 0;
+                padding: 3vw 4vw;
+                flex-shrink: 0;
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    color: $Font_Color07;
+                    font-size: 4.2vw;
+                    font-weight: bold;
+
+                    .num {
+                        width: 6vw;
+                        height: 6vw;
+                        background: $BG_Color06;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50vw;
+                        color: $Font_Color01;
+                        font-size: 3.8vw;
+                        font-weight: bold;
+                        margin-left: 2vw;
+                        padding: 1vw;
+                    }
+                }
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                min-height: 87vw;
+                max-height: 94vw;
+                background: $BG_Color09;
+                padding: 2vw;
+                overflow-y: auto;
+                margin-bottom: 16vw;
+
+                .tableOuter {
+                    width: 100%;
+                    height: auto;
+                    border: 0.3vw solid $Border_05;
+                    margin-bottom: 2vw;
+    
+                    &.active {
+        
+                        table {
+                        
+                            tr {
+    
+                                &.gameName {
+    
+                                    th {
+                                        background: $BG_Color06;
+
+                                        p {
+                                            color: $Font_Color01;
+                                        }
+    
+                                        &:nth-of-type(2) {
+    
+                                            .outer {
+
+                                                i {
+                                                    filter: brightness(0.2);
+                                                    transform: rotate(0deg);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                &:not(:nth-of-type(2)) {
+    
+                                    td {
+                                        display: table-cell;
+                                    }
+                                }
+    
+                                &.summary {
+    
+                                    td {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    table {
+                        width: 100%;
+                        height: auto;
+                        border-collapse: collapse;
+                        overflow: hidden;
+    
+                        tr {
+                            border-bottom: 0.1vw solid $Border_06;
+                            
+                            &.gameName {
+    
+                                th {
+                                    height: 7vw;
+                                    background: $BG_Color00;
+                                    vertical-align: middle;
+    
+                                    &:nth-of-type(2) {
+    
+                                        .outer {
+                                            width: 100%;
+                                            align-items: center;
+                                            justify-content: flex-end;
+    
+                                            i {
+                                                flex-shrink: 0;
+                                                margin: 0 1vw 0 3vw;
+                                                transform: rotate(-180deg);
+                                                transition: transform 0.3s;
+                                            }
+                                        }
+                                    }
+    
+                                    .outer {
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 0 2vw;
+    
+                                        .state {
+                                            border-left: 0.6vw solid $Font_link;
+                                            padding-left: 2vw;
+                                            margin-left: 4vw;
+                                        }
+                                    }
+    
+                                    p {
+                                        color: $Font_Color07;
+                                        font-size: 3.8vw;
+                                        font-weight: bold;
+                                        white-space: nowrap;
+                                    }
+                                }
+                            }
+    
+                            &:nth-of-type(1) {
+                                border-bottom: none;
+                            }
+    
+                            &.summary {
+    
+                                td {
+                                    height: 10vw;
+
+                                    &:nth-of-type(1) {
+
+                                        p {
+                                            color: $Font_Color03 !important;
+                                        }
+                                    }
+    
+                                    .outer {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-end;
+                                        padding: 0 0 0 2vw;
+                                        box-sizing: border-box;
+                                        
+                                        p {
+    
+                                            &:first-child {
+                                                width: auto;
+                                                flex-shrink: 0;
+                                                padding: 0;
+                                                margin-right: 2vw;
+                                            }
+    
+                                            &:last-child {
+                                                width: 100%;
+                                                max-width: 18vw;
+                                                @include textHidden;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+    
+                            &:nth-of-type(4),
+                            &:nth-of-type(5),
+                            &:nth-of-type(6),
+                            &:nth-of-type(7) {
+    
+                                td {
+                                    border-right: 0.1vw solid $Border_06;
+                                    
+                                    &:last-child {
+                                        border-right: none;
+                                    }
+    
+                                    &:nth-of-type(odd) {
+                                        width: 5%;
+                                        background: $BG_Color00;
+                                    
+                                        p {
+                                            text-align: center;
+                                        }
+                                    }
+    
+                                    &:nth-of-type(even) {
+                                        width: 45%;
+                                    }
+                                }
+                            }
+                        
+                            &:last-child {
+                                border-bottom: none;
+                            }
+    
+                            &:not(:nth-of-type(2)) {
+    
+                                td {
+                                    display: none;
+                                }
+                            }
+    
+                            td {
+                                height: 10vw;
+                                background: $BG_Color04-3;
+                                vertical-align: middle;
+                                padding: 0 2vw;
+    
+                                &.gameInfo {
+                                    height: 16vw;
+                                    background: $BG_Color00;
+    
+                                    .outer {
+    
+                                        .team {
+                                            display: flex;
+                                            margin: 2vw 0;
+
+                                            &:last-child {
+                                                margin: 2vw 0 0;
+                                            }
+    
+                                            span {
+                                                color: $Font_Color02;
+                                                font-size: 3.8vw;
+                                                font-weight: bold;
+                                                margin: 0 1vw;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                                p {
+                                    color: $Font_Color07;
+                                    font-size: 3.8vw;
+                                    font-weight: bold;
+                                    white-space: nowrap;
+    
+                                    &.highLight {
+                                        color: $Font_Color03;
+                                    }
+    
+                                    &.important {
+                                        color: $Font_remind;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .countBlock {
+                width: 100%;
+                height: 16vw;
+                display: flex;
+                align-items: center;
+                background: $BG_Color05;
+                border-radius: 0 0 3vw 3vw;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 8;
+        
+                &::before {
+                    content: "";
+                    width: 0.1vw;
+                    height: 50%;
+                    background: $Border_04;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+        
+                .half {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 3vw;
+        
+                    p {
+                        color: $Font_Color07;
+                        font-size: 3.8vw;
+                        margin-bottom: 1vw;
+                    }
+        
+                    span {
+                        max-width: 100%;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        @include textHidden;
+        
+                        &.bet {
+                            color: $Font_Color04;
+                        }
+        
+                        &.result {
+                            color: $Font_positive;
+                        }
+                    }
+                }
+            }
+        }
+
+        .close_icon {
+            width: 8vw;
+            height: 8vw;
+            position: absolute;
+            top: -50px;
+            right: 0;
+        }
+    }
+
+    .jumpBlock {
+        display: none;
+        @include jumpBlock;
+    }
+
+    .jumpMenu {
+        display: none;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        background: $BG_Color00;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        &.display {
+            display: flex;
+        }
+
+        .setUnions {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: $BG_Color01;
+            padding: 4vw;
+
+            .group {
+                width: auto;
+                display: flex;
+                align-items: center;
+
+                .more {
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        color: $Font_Color02;
+                        font-size: 3.8vw;
+                    }
+                    
+                    i {
+                        width: 2.8vw;
+                        height: 2.8vw;
+                        margin-left: 2vw;
+                    }
+                }
+            }
+        }
+
+        ul {
+            width: 100%;
+            height: auto;
+            margin: 3vw 0;
+            border-top: 0.2vw solid $Border_01;
+
+            li {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background: $BG_Color08;
+                border-bottom: 0.2vw solid $Border_06;
+                padding: 4vw;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .switchBtn {
+                    width: 40%;
+                    height: 8vw;
+                    @include switchBtnStyle;
+                    background: $BG_Color10;
+
+                    &.on {
+                    
+                        p {
+                            &:nth-of-type(1) {
+                                color: $Font_Color02;
+                            }
+                            &:nth-of-type(2) {
+                                color: $Font_Color03;
+                            }
+                        }
+
+                        .bar {
+                            transform: translate(-4%, -51%);
+                        }
+                    }
+
+                    p {
+                        color: $Font_Color03;
+
+                        &:nth-of-type(2) {
+                            color: $Font_Color02;
+                        }
+                    }
+
+                    .bar {
+                        height: 84%;
+                        background: $BG_Color07;
+                    }
+                }
+            }
+        }
+
+        p {
+            color: $Font_Color07;
+            font-size: 4vw;
+            font-weight: bold;
+
+            .state {
+                color: $Font_Color02;
+                font-size: 3.4vw;
+            }
+        }
+
+        button {
+            width: 100%;
+            height: auto;
+            background: $BG_Color06;
+            color: $Font_Color01;
+            font-size: 4vw;
+            font-weight: bold;
+            padding: 4vw;
+            box-shadow: 0 2px 4px transparent,
+                  0px 0px 15px $shadow_02;
+        }
+    }
+
+    //新手介紹
+    .noviceWindow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        display: none;
+
+        &.display {
+            display: flex;
+        }
+
+        &.basic {
+
+            div {
+
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+
+                    .next {
+                        top: 70%;
+                    }
+                }
+
+                &:nth-of-type(3) {
+
+                    .cancelBtn {
+                        left: 2vw;
+                    }
+
+                    .next {
+                        top: 70%;
+                    }
+                }
+
+                &:nth-of-type(4) {
+
+                    .cancel {
+                        top: 40%;
+                    }
+                }
+            }
+        }
+        &.single {
+
+            div {
+
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(7) {
+    
+                    .next {
+                        top: 75%;
+                    }
+                }
+    
+                &:nth-of-type(4),
+                &:nth-of-type(5),
+                &:nth-of-type(6) {
+    
+                    .next {
+                        top: 35%;
+                    }
+                }
+
+                &:nth-of-type(8) {
+
+                    .play {
+                        top: 54%;
+                    }
+
+                    .cancel {
+                        top: 62%;
+                    }
+
+                    .again {
+                        top: 70%;
+                    }
+                }
+            }
+        }
+        &.multi {
+            
+            div {
+
+                &:nth-of-type(1),
+                &:nth-of-type(4),
+                &:nth-of-type(6),
+                &:nth-of-type(8) {
+
+                    .next {
+                        top: 40%;
+                    }
+                }
+
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(9) {
+
+                    .next {
+                        top: 70%;
+                    }
+                }
+
+                &:nth-of-type(5) {
+
+                    .next {
+                        top: 30%;
+                    }
+                }
+
+                &:nth-of-type(7) {
+
+                    .next {
+                        top: 25%;
+                    }
+                }
+
+                &:nth-of-type(10) {
+
+                    .play {
+                        top: 54%;
+                    }
+
+                    .cancel {
+                        top: 62%;
+                    }
+
+                    .again {
+                        top: 70%;
+                    }
+                }
+            }
+        }
+        &.bet {
+            
+            div {
+
+                &:nth-of-type(1) {
+
+                    .next {
+                        top: 40%;
+                    }
+                }
+
+                &:nth-of-type(2) {
+
+                    .next {
+                        top: 70%;
+                    }
+                }
+
+                &:nth-of-type(3) {
+
+                    .cancel {
+                        top: 70%;
+                    }
+                }
+            }
+        }
+
+        div {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: none;
+            overflow-y: auto;
+
+            &.display {
+                display: block;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .cancelBtn {
+                position: absolute;
+                top: 5vw;
+                right: 2vw;
+                width: 9vw;
+                height: 9vw;
+                border-radius: 50%;
+                border: solid 1px $Border_07;
+                background: none;
+    
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 52%;
+                    width: 0.5vw;
+                    height: 5vw;
+                    background: $Border_07;
+                    border-radius: 1vw;
+                }
+    
+                &::before {
+                    transform: translate(-50%,-50%) rotate(45deg);
+                }
+                &::after {
+                    transform: translate(-50%,-50%) rotate(-45deg);
+                }
+            }
+    
+            button:not(.cancelBtn) {
+                width: 70vw;
+                height: 14vw;
+                color: $Font_Color03;
+                font-size: 4vw;
+                font-weight: bold;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                background: $BG_Color13;
+                border-radius: 10vw;
+                border: solid 1px $Border_07;
+
+                &.play {
+                    background: $BG_Color06;
+                    color: $Font_Color01;
+                }
+            }
+        }
+    }
+}

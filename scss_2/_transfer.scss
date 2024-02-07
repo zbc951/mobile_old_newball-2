@@ -1,0 +1,346 @@
+.transferPage {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: $BG_Color00;
+    padding: 0 0 17vw 0;
+    position: relative;
+
+    .topArea {
+        width: 100%;
+        height: auto;
+        background: $BG_Color05;
+        padding: 3vw;
+        margin-bottom: 4vw;
+        position: relative;
+        z-index: 6;
+
+        .walletWrap {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            border-bottom: 0.2vw solid $Border_06;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 0.2vw;
+                height: 6vw;
+                background: $Border_06;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+
+            .wallet {
+                width: 50%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 3vw 4vw;
+
+                &:last-child {
+
+                    i {
+                        background-position-x: 100%;
+                    }
+                }
+
+                p {
+                    color: $Font_Color07;
+                    font-size: 3.8vw;
+                    margin-bottom: 2vw;
+
+                    i {
+                        width: 4vw;
+                        height: 4vw;
+                        display: inline-flex;
+                        background-position-x: 0%;
+                    }
+                }
+
+                span {
+                    width: 100%;
+                    color: $Font_Color03;
+                    font-size: 4.8vw;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                    text-align: center;
+                    @include textHidden;
+                }
+            }
+        }
+
+        .platBlock {
+            width: 100%;
+            height: 60.8vw;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+            gap: 1.6vw;
+            padding: 2vw 0;
+            border-bottom: 0.2vw solid $Border_06;
+            margin: 0 0 2vw;
+            overflow: hidden;
+
+            &.active {
+                height: auto;
+            }
+
+            .platform {
+                width: 100%;
+                height: 13vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: $BG_Color00;
+                border-radius: 1vw;
+                padding: 2vw;
+                position: relative;
+
+                p {
+                    width: 100%;
+                    color: $Font_Color07;
+                    font-size: 3.6vw;
+                    font-weight: bold;
+                    text-align: center;
+                    @include textHidden;
+                    margin-bottom: 1vw;
+                }
+
+                span {
+                    color: $Font_Color03;
+                    font-size: 3.8vw;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                }
+
+                i {
+                    width: 3vw;
+                    height: 3vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $Font_Color04;
+                    font-size: 12px;
+                    position: absolute;
+                    top: 3vw;
+                    right: 2vw;
+
+                    &.active {
+
+                        span {
+                            opacity: 1;
+                        }
+                    }
+
+                    span {
+                        width: auto;
+                        height: auto;
+                        background: $BG_Color03;
+                        color: $Font_Color03;
+                        font-size: 3.6vw;
+                        font-family: unset;
+                        font-weight: unset;
+                        border-radius: 1vw;
+                        padding: 1.2vw 2vw 1vw;
+                        margin: 0;
+                        position: absolute;
+                        top: -10vw;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        opacity: 0;
+                        z-index: 10;
+
+                        &::before {
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 3vw 1.5vw 0 1.5vw;
+                            border-color: $BG_Color03 transparent transparent transparent;
+                            position: absolute;
+                            bottom: -2.6vw;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .platWrap_Switcher {
+            width: 100%;
+            height: 6vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.active {
+
+                i {
+                    transform: rotate(-90deg);
+                }
+            }
+
+            p {
+                color: $Font_Color02;
+                font-size: 3.6vw;
+                margin-right: 1vw;
+            }
+
+            i {
+                width: 2vw;
+                height: 3vw;
+                filter: brightness(0.5);
+                transform: rotate(90deg);
+                translate: transform 0.3s;
+            }
+        }
+    }
+
+    .bottomArea {
+        width: 100%;
+        height: auto;
+        background: $BG_Color05;
+        padding: 3vw;
+        margin-bottom: 4vw;
+        box-shadow: 0 2px 4px $shadow_02,
+                    0 -1px 4px transparent;
+        
+        label {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            padding: 2vw 0;
+            border-bottom: 0.2vw solid $Border_06;
+            position: relative;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:has(select) {
+
+                &::before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 2vw 1.5vw 0 1.5vw;
+                    border-color: $BG_Color06 transparent transparent transparent;
+                    position: absolute;
+                    top: 50%;
+                    right: 4vw;
+                    transform: translateY(-50%);
+                }
+            }
+
+            select,
+            input {
+                width: 100%;
+                height: 10vw;
+                @include input01;
+                padding: 0 2vw;
+                margin: 2vw 0;
+            }
+
+            i {
+                position: absolute;
+                top: 50%;
+                right: 4vw;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .checkBtn {
+        width: 95%;
+        height: 11vw;
+        margin: 0 auto;
+        @include btnStyle01;
+        font-size: 4vw;
+        font-weight: bold;
+    }
+
+    .blockTitle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0 3vw;
+        border-bottom: 0.2vw solid $Border_06;
+        font-size: 4vw;
+        font-weight: bold;
+        color: $Font_Color07;
+        font-size: 4vw;
+        font-weight: bold;
+
+        i {
+            color: $Font_Color08;
+            margin-left: 1vw;
+        }
+
+        .switcher {
+            width: 13vw;
+            height: 7vw;
+            background: $BG_Color10;
+            border-radius: 50px;
+            position: relative;
+
+            .dot {
+                width: 6.2vw;
+                height: 6.2vw;
+                background: $BG_Color03;
+                border-radius: 50vw;
+                box-shadow: 0 2px 4px $shadow_01;
+                position: absolute;
+                top: 50%;
+                left: 0.4vw;
+                transform: translateY(-50%);
+                translate: all 0.3s;
+            }
+
+            &.on {
+
+                .dot {
+                    left: unset;
+                    right: 0.4vw;
+                }
+            }
+        }
+    }
+
+    p {
+        font-size: 4vw;
+        font-weight: bold;
+
+        &.returnAll {
+            color: $Font_Color02;
+        }
+
+        &.itemName {
+            width: 20%;
+            font-weight: 4.3vw;
+            flex-shrink: 0;
+            color: $Font_Color07;
+        }
+
+        &.point {
+            color: $Font_Color03;
+            margin-left: 2vw;
+        }
+
+        &.hint {
+            color: $Font_remind;
+            font-size: 3.4vw;
+            line-height: 3.6vw;
+        }
+    }
+}

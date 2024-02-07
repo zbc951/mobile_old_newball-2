@@ -1,0 +1,7 @@
+@function pxToVw ($px) {
+    @return $px * 100 / 2160 + vw;
+}
+
+@function pxToRem ($px) {
+    @return $px / 16 + rem;
+}

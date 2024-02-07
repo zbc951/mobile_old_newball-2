@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ZH-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_2/style.css">
+    <link rel="shortcut icon" href="../img/newBall_64x64.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="innerPage">
+        <p class="pageTitle">投注紀錄</p>
+    </header>
+    <main class="fullScreen">
+        <div class="wrapContainer betRecordPage">
+           <ul class="recordType">
+            <li class="active">
+                <p>即時注單</p>
+            </li>
+            <li>
+                <p>歷史注單</p>
+            </li>
+            <li>
+                <p>審單狀態</p>
+            </li>
+           </ul>
+           <div class="searchFilters">
+                <button type="button" class="active">今日</button>
+                <button type="button">昨日</button>
+                <button type="button">明日</button>
+                <button type="button">本周</button>
+                <button type="button">上周</button>
+                <button type="button">本月</button>
+                <div class="dateFilter">
+                    <label>
+                        <input type="date" value="2024-01-02">
+                    </label>
+                    <span>~</span>
+                    <label>
+                        <input type="date" value="2024-01-02">
+                    </label>
+                    <button type="button" class="dateSearch_btn">OK</button>
+                </div>
+            </div>
+           <ul class="dataTable current noData_mode display">
+                <div class="no_data noBet">
+                    <button type="button" class="goBet_btn" onclick="window.location.href='./index.html'">
+                        前往下注
+                    </button>
+                </div>
+                <li>
+                    <div class="detailBlock active">
+                        <div class="tableOuter">
+                            <table>
+                                <tbody>
+                                    <tr class="gameName">
+                                        <th colspan="2">
+                                            <div class="outer">
+                                                <p>足球-全場-獨贏</p>
+                                                <p class="state">未開獎</p>
+                                            </div>
+                                        </th>
+                                        <th colspan="2" class="oddNum">
+                                            <div class="outer">
+                                                <p>M11513352</p>
+                                                <i class="downArrow_Icon"></i>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr class="summary">
+                                        <td colspan="2">
+                                            <p>智利甲組聯賽全場FT1820340</p>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="outer">
+                                                <p>投注</p>
+                                                <p class="important">100</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="gameInfo">
+                                            <div class="outer">
+                                                <p>智利甲組聯賽全場FT1820340</p>
+                                                <div class="team">
+                                                    <p>梅里比拉[主]</p>
+                                                    <span>VS</span>
+                                                    <p>艾斯潘諾拉</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>有效下注</p>
+                                        </td>
+                                        <td>
+                                            <p>0</p>
+                                        </td>
+                                        <td>
+                                            <p>賠率</p>
+                                        </td>
+                                        <td>
+                                            <p class="highLight">1.13</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>投注選項</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="highLight">梅里比拉</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>結果</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="state">未開獎</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>投注</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">100</p>
+                                        </td>
+                                        <td>
+                                            <p>可贏(參考)</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">113</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="detailBlock">
+                        <div class="tableOuter">
+                            <table>
+                                <tr class="gameName">
+                                        <th colspan="2">
+                                            <div class="outer">
+                                                <p>足球-全場-獨贏</p>
+                                                <p class="state">未開獎</p>
+                                            </div>
+                                        </th>
+                                        <th colspan="2" class="oddNum">
+                                            <div class="outer">
+                                                <p>M11513352</p>
+                                                <i class="downArrow_Icon"></i>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr class="summary">
+                                        <td colspan="2">
+                                            <p>智利甲組聯賽全場FT1820340</p>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="outer">
+                                                <p>投注</p>
+                                                <p class="important">100</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="gameInfo">
+                                            <div class="outer">
+                                                <p>智利甲組聯賽全場FT1820340</p>
+                                                <div class="team">
+                                                    <p>梅里比拉[主]</p>
+                                                    <span>VS</span>
+                                                    <p>艾斯潘諾拉</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>有效下注</p>
+                                        </td>
+                                        <td>
+                                            <p>0</p>
+                                        </td>
+                                        <td>
+                                            <p>賠率</p>
+                                        </td>
+                                        <td>
+                                            <p class="highLight">1.13</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>投注選項</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="highLight">梅里比拉</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>結果</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="state">未開獎</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>投注</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">100</p>
+                                        </td>
+                                        <td>
+                                            <p>可贏(參考)</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">113</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="detailBlock">
+                        <div class="tableOuter">
+                            <table>
+                                <tr class="gameName">
+                                        <th colspan="2">
+                                            <div class="outer">
+                                                <p>足球-全場-獨贏</p>
+                                                <p class="state">未開獎</p>
+                                            </div>
+                                        </th>
+                                        <th colspan="2" class="oddNum">
+                                            <div class="outer">
+                                                <p>M11513352</p>
+                                                <i class="downArrow_Icon"></i>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr class="summary">
+                                        <td colspan="2">
+                                            <p>智利甲組聯賽全場FT1820340</p>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="outer">
+                                                <p>投注</p>
+                                                <p class="important">100</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="gameInfo">
+                                            <div class="outer">
+                                                <p>智利甲組聯賽全場FT1820340</p>
+                                                <div class="team">
+                                                    <p>梅里比拉[主]</p>
+                                                    <span>VS</span>
+                                                    <p>艾斯潘諾拉</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>有效下注</p>
+                                        </td>
+                                        <td>
+                                            <p>0</p>
+                                        </td>
+                                        <td>
+                                            <p>賠率</p>
+                                        </td>
+                                        <td>
+                                            <p class="highLight">1.13</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>投注選項</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="highLight">梅里比拉</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>結果</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="state">未開獎</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>投注</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">100</p>
+                                        </td>
+                                        <td>
+                                            <p>可贏(參考)</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">113</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+           </ul>
+           <ul class="dataTable history">
+                <div class="itemName_Wrap">
+                    <div class="time">
+                        <p>時間</p>
+                    </div>
+                    <div class="total">
+                        <p>投注金額 / 有效下注</p>
+                    </div>
+                    <div class="result">
+                        <p>結果</p>
+                    </div>
+                </div>
+                <li class="active">
+                    <div class="overView">
+                        <div class="timeBlock">
+                            <span class="countNum">2</span>
+                            <p>2021-09-08</p>
+                        </div>
+                        <div class="totalBlock">
+                            <p class="betNum">100</p>
+                            <span class="slash">/</span>
+                            <p class="permitNum">0</p>
+                        </div>
+                        <div class="resultBlock">
+                            <p class="resultNum">0</p>
+                        </div>
+                    </div>
+                    <div class="detailBlock active">
+                        <div class="tableOuter">
+                            <table class="active">
+                                <tr class="gameName">
+                                        <th colspan="2">
+                                            <div class="outer">
+                                                <p>足球-全場-獨贏</p>
+                                                <p class="state">未開獎</p>
+                                            </div>
+                                        </th>
+                                        <th colspan="2" class="oddNum">
+                                            <div class="outer">
+                                                <p>M11513352</p>
+                                                <i class="downArrow_Icon"></i>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr class="summary">
+                                        <td colspan="2">
+                                            <p>智利甲組聯賽全場FT1820340</p>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="outer">
+                                                <p>投注</p>
+                                                <p class="important">100</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="gameInfo">
+                                            <div class="outer">
+                                                <p>智利甲組聯賽全場FT1820340</p>
+                                                <div class="team">
+                                                    <p>梅里比拉[主]</p>
+                                                    <span>VS</span>
+                                                    <p>艾斯潘諾拉</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>有效下注</p>
+                                        </td>
+                                        <td>
+                                            <p>0</p>
+                                        </td>
+                                        <td>
+                                            <p>賠率</p>
+                                        </td>
+                                        <td>
+                                            <p class="highLight">1.13</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>投注選項</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="highLight">梅里比拉</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>結果</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="state">未開獎</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>投注</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">100</p>
+                                        </td>
+                                        <td>
+                                            <p>可贏(參考)</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">113</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tableOuter">
+                            <table>
+                                <tr class="gameName">
+                                        <th colspan="2">
+                                            <div class="outer">
+                                                <p>足球-全場-獨贏</p>
+                                                <p class="state">未開獎</p>
+                                            </div>
+                                        </th>
+                                        <th colspan="2" class="oddNum">
+                                            <div class="outer">
+                                                <p>M11513352</p>
+                                                <i class="downArrow_Icon"></i>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr class="summary">
+                                        <td colspan="2">
+                                            <p>智利甲組聯賽全場FT1820340</p>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="outer">
+                                                <p>投注</p>
+                                                <p class="important">100</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="gameInfo">
+                                            <div class="outer">
+                                                <p>智利甲組聯賽全場FT1820340</p>
+                                                <div class="team">
+                                                    <p>梅里比拉[主]</p>
+                                                    <span>VS</span>
+                                                    <p>艾斯潘諾拉</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>有效下注</p>
+                                        </td>
+                                        <td>
+                                            <p>0</p>
+                                        </td>
+                                        <td>
+                                            <p>賠率</p>
+                                        </td>
+                                        <td>
+                                            <p class="highLight">1.13</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>投注選項</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="highLight">梅里比拉</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>結果</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="state">未開獎</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>投注</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">100</p>
+                                        </td>
+                                        <td>
+                                            <p>可贏(參考)</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">113</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="overView">
+                        <div class="timeBlock">
+                            <span class="countNum">1</span>
+                            <p>2021-09-08</p>
+                        </div>
+                        <div class="totalBlock">
+                            <p class="betNum">100</p>
+                            <span class="slash">/</span>
+                            <p class="permitNum">0</p>
+                        </div>
+                        <div class="resultBlock">
+                            <p class="resultNum">0</p>
+                        </div>
+                    </div>
+                    <div class="detailBlock">
+                        <div class="tableOuter">
+                            <table>
+                                <tr class="gameName">
+                                        <th colspan="2">
+                                            <div class="outer">
+                                                <p>足球-全場-獨贏</p>
+                                                <p class="state">未開獎</p>
+                                            </div>
+                                        </th>
+                                        <th colspan="2" class="oddNum">
+                                            <div class="outer">
+                                                <p>M11513352</p>
+                                                <i class="downArrow_Icon"></i>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr class="summary">
+                                        <td colspan="2">
+                                            <p>智利甲組聯賽全場FT1820340</p>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="outer">
+                                                <p>投注</p>
+                                                <p class="important">100</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="gameInfo">
+                                            <div class="outer">
+                                                <p>智利甲組聯賽全場FT1820340</p>
+                                                <div class="team">
+                                                    <p>梅里比拉[主]</p>
+                                                    <span>VS</span>
+                                                    <p>艾斯潘諾拉</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>有效下注</p>
+                                        </td>
+                                        <td>
+                                            <p>0</p>
+                                        </td>
+                                        <td>
+                                            <p>賠率</p>
+                                        </td>
+                                        <td>
+                                            <p class="highLight">1.13</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>投注選項</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="highLight">梅里比拉</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>結果</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="state">未開獎</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>投注</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">100</p>
+                                        </td>
+                                        <td>
+                                            <p>可贏(參考)</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">113</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="overView">
+                        <div class="timeBlock">
+                            <span class="countNum">1</span>
+                            <p>2021-09-08</p>
+                        </div>
+                        <div class="totalBlock">
+                            <p class="betNum">100</p>
+                            <span class="slash">/</span>
+                            <p class="permitNum">0</p>
+                        </div>
+                        <div class="resultBlock">
+                            <p class="resultNum">0</p>
+                        </div>
+                    </div>
+                    <div class="detailBlock">
+                        <div class="tableOuter">
+                            <table>
+                                <tr class="gameName">
+                                        <th colspan="2">
+                                            <div class="outer">
+                                                <p>足球-全場-獨贏</p>
+                                                <p class="state">未開獎</p>
+                                            </div>
+                                        </th>
+                                        <th colspan="2" class="oddNum">
+                                            <div class="outer">
+                                                <p>M11513352</p>
+                                                <i class="downArrow_Icon"></i>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr class="summary">
+                                        <td colspan="2">
+                                            <p>智利甲組聯賽全場FT1820340</p>
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="outer">
+                                                <p>投注</p>
+                                                <p class="important">100</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" class="gameInfo">
+                                            <div class="outer">
+                                                <p>智利甲組聯賽全場FT1820340</p>
+                                                <div class="team">
+                                                    <p>梅里比拉[主]</p>
+                                                    <span>VS</span>
+                                                    <p>艾斯潘諾拉</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>有效下注</p>
+                                        </td>
+                                        <td>
+                                            <p>0</p>
+                                        </td>
+                                        <td>
+                                            <p>賠率</p>
+                                        </td>
+                                        <td>
+                                            <p class="highLight">1.13</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>投注選項</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="highLight">梅里比拉</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            <p>結果</p>
+                                        </td>
+                                        <td colspan="3">
+                                            <p class="state">未開獎</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>投注</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">100</p>
+                                        </td>
+                                        <td>
+                                            <p>可贏(參考)</p>
+                                        </td>
+                                        <td>
+                                            <p class="important">113</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+           </ul>
+           <ul class="dataTable censor">
+           </ul>
+           <div class="countBlock">
+            <div class="half">
+                <p>投注</p>
+                <span>100</span>
+            </div>
+            <div class="half">
+                <p>可贏(參考)</p>
+                <span class="bet">0</span>
+            </div>
+        </div>
+        </div>
+    </main>
+   <footer class="betRecord_Style">
+        <ul class="mainNav">
+            <li onclick="window.location.href='./index.html'">
+                <i class="home_ic"></i>
+                <span>首頁</span>
+            </li>
+            <li onclick="window.location.href='../html/gameResult.html'">
+                <i class="event_ic"></i>
+                <span>賽事結果</span>
+            </li>
+            <li onclick="window.location.href='../html/csService.html'">
+                <i class="cs_ic"></i>
+                <span>客服</span>
+            </li>
+            <li class="active" onclick="window.location.href='../html/betRecord.html'">
+                <i class="sponsor_ic"></i>
+                <span>投注紀錄</span>
+            </li>
+            <li onclick="window.location.href='../html/member.html'" class="notify">
+                <i class="member_ic"></i>
+                <span>我的</span>
+            </li>
+        </ul>
+    </footer>
+    <!-- 彈窗 -->
+    <div class="filter">
+    </div>
+</body>
+</html>

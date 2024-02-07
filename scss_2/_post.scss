@@ -1,0 +1,124 @@
+.postPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $BG_Color00;
+    position: relative;
+
+    .postType {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        background: $BG_Color00;
+        padding: 13.43vw 0vw 0vw;
+        box-shadow: 0 2px 4px $shadow_02,
+                    0 -1px 4px transparent;
+        position: relative;
+        z-index: 6;
+
+        li {
+            width: 25%;
+            height: 8vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 4vw;
+            margin-right: 2vw;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 0.6vw;
+                background: $Border_01;
+                position: absolute;
+                bottom: -0.4vw;
+                opacity: 0;
+            }
+
+            p {
+                color: $Font_Color08;
+                font-size: 3.8vw;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:active,&.active {
+
+                &::before {
+                    opacity: 1;
+                }
+                
+                p {
+                    color: $Font_Color04;
+                }
+            }
+        }
+    }
+
+    .typeContainer {
+        display: none;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+
+        &.display {
+            display: block;
+        }
+
+        li {
+            width: 100%;
+            height: 25vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $BG_Color05;
+            border-bottom: 0.2vw solid $Border_06;
+            padding: 4vw;
+
+            .post_ic {
+                width: 10vw;
+                height: 10vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                border-radius: 50vw;
+                margin-right: 3vw;
+            }
+
+            .textBox {
+                width: 100%;
+                height: 100%;
+
+                p {
+
+                    &.date {
+                        color: $Font_Color02;
+                        font-size: 3.4vw;
+                        margin-bottom: 2vw;
+                    }
+    
+                    &.content {
+                        width: 100%;
+                        max-height: 12vw;
+                        color: $Font_Color07;
+                        font-size: 3.8vw;
+                        font-weight: bold;
+                        line-height: 4vw;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

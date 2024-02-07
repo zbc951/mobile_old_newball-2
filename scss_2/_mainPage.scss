@@ -1,0 +1,1606 @@
+.mainPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $BG_Color00;
+    position: relative;
+
+    .betType_mode {
+        display: none;
+        width: 100%;
+        height: 32vw;
+        align-items: center;
+        justify-content: space-between;
+        background: $BG_Color08;
+        flex-shrink: 0;
+        padding: 15vw 4vw 2vw;
+
+        &.display {
+            display: flex;
+        }
+
+        li {
+            width: 23%;
+            height: 9vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0.2vw solid $Border_01;
+            border-radius: 1vw;
+
+            &.active {
+                background: $gradient01;
+                border: none;
+
+                p {
+                    color: $Font_Color01;
+                }
+            }
+
+            p {
+                width: 100%;
+                color: $Font_Color07;
+                font-size: 4vw;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+    }
+
+    .topContainer {
+        display: none;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        background: $BG_Color00;
+        padding: 13.4vw 0 0;
+        box-shadow: 0 2px 4px $shadow_02,
+                    0 -1px 4px transparent;
+        position: relative;
+        z-index: 6;
+
+        &.display {
+            display: flex;
+        }
+
+        .dayFilter {
+            display: none;
+            width: 100%;
+            height: auto;
+            align-items: center;
+            flex-shrink: 0;
+            border-bottom: 0.2vw solid $Border_04;
+            padding: 0 4vw;
+            overflow-x: auto;
+
+            &.display {
+                display: flex;
+            }
+            
+            li {
+                width: auto;
+                margin-right: 3vw;
+                position: relative;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 0.5vw;
+                    background: $Border_01;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                }
+
+                &.active {
+
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+               
+                p {
+                    color: $Font_Color02;
+                    font-size: 3.8vw;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    padding: 2vw 1.4vw;
+                }
+            }
+        }
+
+        .gameType {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            background: $BG_Color04-3;
+            padding: 2vw;
+            overflow-x: overlay;
+
+            li {
+                width: 21vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                border: pxToVw(1) solid transparent;
+                box-shadow: none;
+                border-radius: 2vw;
+                padding: 2vw 4vw 3vw;
+                margin-right: 2vw;
+                position: relative;
+    
+                &.active {
+                    background: $BG_Color06;
+    
+                    p {
+                        color: $Font_Color01;
+                        font-weight: bold;
+                    }
+    
+                    .num {
+                        color: $Font_Color01;
+                        font-weight: bold;
+                    }
+                }
+
+                i {
+                    width: 7vw;
+                    height: 7vw;
+                    background-position-y: 0%;
+                    position: relative;
+
+                    &.soccer_ic {
+                        background-position-x: 12%;
+                    }
+
+                    &.basketball_ic {
+                        background-position-x: 23.5%;
+                    }
+
+                    &.compare_ic {
+                        background-position-x: 29.5%;
+                    }
+
+                    &.stock_ic {
+                        background-position-x: 41.5%;
+                    }
+
+                    &.coloredBall_ic {
+                        background-position-x: 47%;
+                    }
+
+                    &.iceHockey_ic {
+                        background-position-x: 53%;
+                    }
+    
+                    .num {
+                        color: $Font_Color02;
+                        font-size: 3vw;
+                        position: absolute;
+                        top: 0vw;
+                        right: -6.4vw;
+                    }
+                }
+    
+                p {
+                    color: $Font_Color02;
+                    font-size: 3.6vw;
+                    white-space: nowrap;
+                    margin-top: 0.8vw;
+                }
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .currentType {
+        width: 100%;
+        height: 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 0;
+        padding: 0 4vw;
+
+        .group {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            color: $Font_Color03;
+            font-size: 3.4vw;
+            font-weight: bold;
+        }
+
+        .switchBtn {
+            width: 30%;
+            height: 6vw;
+            @include switchBtnStyle;
+            background: $BG_Color03;
+
+            &.on {
+
+                .bar {
+                    background: $Font_positive;
+                    transform: translate(-4%, -50%);
+                }
+
+                p {
+                    &:nth-of-type(1) {
+                        color: $Font_Color08;
+                    }
+                    &:nth-of-type(2) {
+                        color: $Font_Color01;
+                    }
+                }
+            }
+
+            p {
+                width: 47%;
+                font-size: 3vw;
+                color: $Font_Color01;
+                margin-left: 1vw;
+
+                &:nth-of-type(2) {
+                    color: $Font_Color08;
+                    margin-right: 1vw;
+                }
+            }
+
+            .bar {
+                width: 50%;
+                height: 77%;
+                background: $gradient01;
+            }
+        }
+    }
+
+    .dataContainer {
+        display: none;
+        width: 100%;
+        height: auto;
+        overflow-y: auto;
+
+        &.display {
+            display: block;
+        }
+
+        .dataType {
+            width: 100%;
+            height: auto;
+            background: $BG_Color00;
+            position: relative;
+            z-index: 3;
+    
+            &.active {
+                display: block;
+
+                .filterBlock {
+
+                    .state {
+
+                        i {
+                            margin: 0 1vw 0 0;
+                        }
+                    }
+
+                    &>ul {
+                        display: block;
+                    }
+                }
+            }
+
+            //已開賽
+            &.inProgress {
+
+                .state {
+                    border-top: 0.6vw solid $Font_positive;
+
+                    p {
+                        color: $Font_positive;
+                    }
+                }
+
+                .functionState {
+
+                    &>p { //隱藏比賽日期&&時間
+                        display: none;
+                    }
+
+                    .group { //會有滾球動畫
+
+                        &::before {
+                            content: "";
+                            width: 1rem;
+                            height: 1rem;
+                            margin: 0 0.5vw 0 0;
+                        }
+
+                        &>i {  
+                            display: none;
+                        }
+
+                        &>.gameDuration {
+                            display: block !important;
+                        }
+                    }
+                }
+            }
+            
+            //未開賽
+            &.unProgress {
+    
+                .state {
+                    border-top: 0.6vw solid $Font_em-2 !important;
+
+                    p {
+                        color: $Font_em-2;
+                        padding: 1vw 1vw 0.5vw 1vw;
+                    }
+                }
+
+                &.active {
+        
+                    .state {
+
+                        p {
+                            background: $BG_Color03;
+                            color: $BG_Color01;
+                        }
+                    }
+                }
+            }
+
+            .filterBlock {
+                position: relative;
+
+                .state {
+                    width: 100%;
+                    height: 8vw;
+                    display: flex;
+                    align-items: center;
+                    background: $BG_Color11;
+                    padding: 0 4vw;
+                    box-shadow: 0 2px 4px $shadow_02,
+                    0 -1px 4px transparent;
+                    position: sticky;
+                    top: -0.06vw;
+                    z-index: 30;
+        
+                    i {
+                        width: 4vw;
+                        height: 4vw;
+                    }
+        
+                    p {
+                        font-size: 3vw;
+                        font-weight: bold;
+                        padding: 1vw;
+                        border-radius: 50vw;
+                    }
+                }
+
+                ul {
+                    display: none;
+                    width: 100%;
+                    height: auto;
+                    padding: 2vw 1vw 1vw;
+        
+                    li {
+                        width: 100%;
+                        height: 7vw;
+                        border: 0.3vw solid $Border_01;
+                        margin: 0 0 0.5vw;
+                        position: relative;
+        
+                        &.active {
+                            height: auto;
+                            margin: 0 0 3vw;
+
+                            &:last-of-type {
+                                margin: 0 0 1vw;
+                            }
+
+                            &.pro {
+
+                                .betRateType {
+                                    display: flex;
+                                }
+                            } 
+                            
+                            .gameName {
+                                position: sticky;
+                                top: 8vw;
+                            }
+
+                            .gameBlock {
+                                display: block;
+                            }
+                        }
+
+                        //專業版
+                        &.pro {
+    
+                            .betRateType {
+                                display: none;
+                            }
+
+                            .gameName {
+                                position: sticky;
+                                top: 8vw;
+                            }
+
+                            .gameBlock {
+                                padding: 0vw 0 2vw;
+                                position: relative;
+
+                                &.forBasketball { //專業版籃球
+
+                                    &>.proMode {
+                                        
+                                        &>.betRate {
+
+                                            &>.rateBlock {
+
+                                                &:nth-of-type(2), 
+                                                &:nth-of-type(3), 
+                                                &:nth-of-type(5), 
+                                                &:nth-of-type(6) {
+                                                    height: auto !important;
+                                                }
+
+                                                &:nth-of-type(5) {
+                                                    grid-row-end: 1 !important;
+                                                }
+
+                                                //更改排序
+                                                &:nth-of-type(1) {
+                                                    order: 3;
+                                                }
+                                                &:nth-of-type(2) {
+                                                    order: 2;
+                                                }
+                                                &:nth-of-type(3) {
+                                                    order: 4;
+                                                }
+                                                &:nth-of-type(4) {
+                                                    order: 5;
+                                                }
+                                                &:nth-of-type(5) {
+                                                    order: 1;
+                                                }
+                                                &:nth-of-type(6) {
+                                                    order: 6;
+                                                }
+
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+
+                                &.forRace, //專業版賽馬賽狗
+                                &.forStock,//指數
+                                &.forLottery { //彩球
+
+                                    .betRateType {
+                                        padding: 0 2vw;
+
+                                        p {
+                                            width: 15.5vw;
+                                        }
+                                    }
+                                    
+                                    &>.proMode {
+
+                                        .teamRow {
+                                            width: 57%;
+
+                                            p {
+                                                width: 100%;
+                                                max-width: 80%;
+                                                white-space: wrap;
+                                                text-align: left !important;
+                                            }
+                                        }
+                                        
+                                        &>.betRate {
+
+                                            &.four {
+                                                width: 43%;
+                                                display: grid;
+                                                grid-template-columns: repeat(2, 1fr);
+    
+                                                &>.rateBlock {
+                                                    height: 19vw !important;
+                                                    flex-direction: column;
+
+                                                    &:nth-of-type(1) {
+                                                        order: 2;
+                                                    }
+                                                    &:nth-of-type(2) {
+                                                        order: 1;
+                                                    }
+                                                    
+                                                    &.proNone {
+                                                        display: none;
+                                                    }
+
+                                                    p {
+                                                        margin: 0 0 4vw 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.forRace {
+
+                                    .betRateType {
+
+                                        p {
+                                            width: 20.5vw;
+                                        }
+                                    }
+                                }
+
+                                &.forIceHockey { //專業版冰球
+
+                                    .betRateType {
+                                        padding: 0 2vw;
+
+                                        p {
+                                            width: 16.5vw;
+                                        }
+                                    }
+
+                                    &>.proMode {
+                                        justify-content: space-between;
+
+                                        .teamRow {
+                                            height: 38vw !important;
+                                        }
+
+                                        .teamName {
+                                            white-space: unset !important;
+
+                                            &:first-of-type {
+                                                margin: 0 0 4vw;
+                                            }
+                                        }
+                                        
+                                        &>.betRate {
+                                            width: 55%;
+
+                                            &>.rateBlock {
+                                                height: 19vw !important;
+                                                flex-direction: column;
+
+                                                &:nth-of-type(5) {
+                                                    grid-row-end: 1 !important;
+                                                }
+
+                                                //更改排序
+                                                &:nth-of-type(1) {
+                                                    order: 3;
+                                                }
+                                                &:nth-of-type(2) {
+                                                    order: 3;
+                                                }
+                                                &:nth-of-type(3) {
+                                                    order: 4;
+                                                }
+                                                &:nth-of-type(4) {
+                                                    order: 5;
+                                                }
+                                                &:nth-of-type(5) {
+                                                    order: 1;
+                                                }
+                                                &:nth-of-type(6) {
+                                                    order: 6;
+                                                }
+
+                                                p {
+                                                    text-align: center !important;
+                                                    margin: 0 0 4vw;
+                                                }
+
+                                            }
+                                            
+                                        }
+                                    }
+                                }
+
+                                .infoWrap {
+                                    padding: 0 4vw;
+
+                                    .functionState {
+                                        position: relative;
+    
+                                        p {
+                                            margin: 0 1vw 0 0;
+                                        }
+    
+                                        .group {
+                                            position: absolute;
+                                            top: 34vw;
+                                        }
+                                    }
+    
+                                    .more {
+    
+                                        p {
+                                            font-size: 3vw;
+                                        }
+    
+                                        i {
+                                            width: 2.4vw;
+                                            height: 2.4vw;
+                                        }
+                                    }
+                                }
+
+                                .proMode {
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 0 2vw 1vw;
+
+                                    .teamRow {
+                                        width: 40%;
+                                        height: 55%;
+                                        flex-shrink: 0;
+                                        flex-direction: column;
+                                        justify-content: space-around;
+                                        align-items: unset;
+                                        margin-bottom: 0;
+
+                                        &>div {
+                                            max-width: 34vw;
+                                            @include textHidden;
+                                            
+                                            &:first-of-type {
+                                                margin: 0 0 1vw;
+                                            }
+                                        }
+
+                                        .teamName {
+                                            max-width: 30vw;
+                                            height: 10vw;
+                                            display: inline-flex;
+                                            align-items: center;
+                                            text-align: unset;
+                                            @include textHidden;
+                                        }
+    
+                                        .vs {
+                                            display: none;
+                                        }
+    
+                                        .teamLogo {
+                                            display: none;
+                                        }
+
+                                        .point {
+                                            height: 10vw;
+                                            display: inline-flex;
+                                            align-items: center;
+                                            flex-shrink: 0;
+
+                                            &:last-of-type {
+                                                order: 5;
+                                            }
+                                        }
+                                    }
+    
+                                    .betRate {
+                                        width: 60%;
+                                        height: auto;
+                                        display: grid;
+                                        grid-template-columns: repeat(3, 1fr);
+                                        gap: 1vw;
+
+                                        &.two {
+                                            
+                                            .rateBlock {
+                                                
+                                                &.normal_mid {
+                                                    display: flex;
+                                                }
+                                            }
+                                        }
+
+                                        .rateBlock {
+                                            width: 100%;
+                                            height: auto;
+    
+                                            &.proType {
+                                                display: flex;
+                                                
+                                                &:nth-of-type(2),
+                                                &:nth-of-type(3){
+                                                    height: 150%;
+                                                    align-self: start;
+                                                }
+
+                                                &:nth-of-type(5),
+                                                &:nth-of-type(6) {
+                                                    height: 74.5%;
+                                                    align-self: end;
+                                                    grid-row-end: span 2;
+                                                }
+                                            }
+
+                                            p {
+                                                font-size: 3.4vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                        .gameName {
+                            width: 100%;
+                            height: 7vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background: $BG_Color08;
+                            padding: 0 3vw;
+        
+                            p {
+                                color: $Font_Color07;
+                                font-size: 4vw;
+                                font-weight: bold;
+                            }
+                        }
+                        
+                        .gameBlock {
+                            display: none;
+                            width: 100%;
+                            height: auto;
+                            background: $BG_Color04-2;
+                            padding: 0vw 3vw 3vw;
+                            border-bottom: 0.2vw solid $Border_03;
+        
+                            &:nth-of-type(odd) {
+                                background: $BG_Color09 !important;
+    
+                                .betRate {
+                                    
+                                    .rateBlock {
+                                        background: $BG_Color11;
+                                    }
+                                }
+                            }
+                            
+                            &:last-child {
+                                border-bottom: none;
+                            }
+
+                            &.forRace, //專業版賽馬賽狗
+                            &.forStock,//指數
+                            &.forLottery {
+
+                                .teamName {
+                                    text-align: center !important;
+
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            &.forIceHockey {  //彩球
+
+                                .teamName {
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+                            }
+    
+                            &.eSport {
+    
+                                .betRate {
+                                    
+                                    .rateBlock {
+                                        width: 40vw;
+                                        height: 9vw;
+                                    }
+                                }
+                            }
+
+                            .betRateType {
+                                display: none;
+                                width: 100%;
+                                height: 7vw;
+                                align-items: center;
+                                justify-content: flex-end;
+                                background: $BG_Color03;
+                                padding: 0 2vw 0;
+        
+                                p {
+                                    width: 17.5vw;
+                                    color: $Font_Color07;
+                                    font-size: 3.6vw;
+                                    font-weight: bold;
+                                    text-align: center;
+                                    white-space: nowrap;
+                                }
+                            }
+        
+                            .infoWrap {
+                                width: 100%;
+                                height: 7vw;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+        
+                                .functionState,
+                                .more {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+        
+                                    i {
+                                        width: 4vw;
+                                        height: 4vw;
+        
+                                        &.rightArrow_Icon {
+                                            width: 3vw;
+                                            height: 3vw;
+                                        }
+                                    }
+        
+                                    p {
+                                        color: $Font_Color02;
+                                        font-size: 3vw;
+                                        font-weight: bold;
+                                        margin-top: 0.5vw;
+                                        margin-left: 2vw;
+        
+                                        &.num {
+                                            color: $Font_em;
+                                            margin: 0 1vw 0 0;
+                                        }
+                                    }
+    
+                                    .group {
+                                        display: flex;
+                                        align-items: center;
+                                        display: none;
+    
+                                        //已開賽比賽時長
+                                        &>.gameDuration {
+                                            display: none;
+                                            padding: 1vw 1vw 0.5vw 1vw;
+                                            border: 1px solid $Border_01;
+                                            border-radius: 1vw;
+                                            color: $Border_01;
+                                            font-size: 3vw;
+                                            margin: 0 1vw;
+                                        }
+                                    }
+                                }
+                            }
+        
+                            .teamRow {
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-bottom: 3vw;
+    
+                                &>div {
+                                    display: flex;
+                                    align-items: center;
+                                }
+        
+                                .vs {
+                                    color: $Font_Color05;
+                                    font-size: 3.4vw;
+                                    font-weight: bold;
+                                    flex-shrink: 0;
+                                    margin: 0 2vw;
+                                }
+        
+                                .teamLogo {
+                                    width: 6vw;
+                                    height: 6vw;
+                                    flex-shrink: 0;
+                                    margin: 0 0 0 2vw;
+        
+                                    &:nth-of-type(2) {
+                                        margin: 0 2vw 0 0;
+                                    }
+                                }
+        
+                                .teamName {
+                                    width: 100%;
+                                    color: $Font_Color03;
+                                    font-size: 4vw;
+                                    @include textHidden;
+        
+                                    &:first-child {
+                                        text-align: end;
+    
+                                        &::after {
+                                            content: "[主]";
+                                        }
+                                    }
+                                }
+        
+                                .vs {
+                                    color: $Font_Color07;
+                                    font-size: 3.4vw;
+                                    font-weight: bold;
+                                }
+    
+                                .point {
+                                    color: $Font_remind;
+                                    font-size: 3.6vw;
+                                    font-weight: bold;
+                                }
+                            }
+        
+                            .betRate {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+    
+                                &.two {
+    
+                                    .rateBlock {
+                                        width: 100%;
+    
+                                        &.normal_mid {
+                                            display: none;
+                                        }
+                                    }
+                                }
+
+
+                                &.four {
+                                    display: grid;
+                                    grid-template-columns: repeat(2, 1fr);
+                                    gap: 1vw;
+
+                                    .rateBlock {
+                                        width: 100%;
+                                        height: 10vw;
+                                        flex-direction: row;
+                                        align-items: center;
+    
+                                        p,
+                                        span {
+                                            text-align: center;
+                                        }
+
+                                        p {
+                                            margin: 0 3vw 0 0;
+                                        }
+                                    }
+                                }
+        
+                                .rateBlock {
+                                    width: 25vw;
+                                    height: auto;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border-radius: 1vw;
+                                    background: $BG_Color13;
+                                    padding: 1vw;
+                                    margin-right: 1vw;
+                                    
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+    
+                                    &.active {
+                                        background: $Font_Color04;
+                                    }
+    
+                                    &.proType {
+                                        display: none;
+                                    }
+        
+                                    p {
+                                        color: $Font_Color02;
+                                        font-size: 3.5vw;
+                                        font-weight: bold;
+                                        margin-bottom: 1vw;
+                                    }
+        
+                                    span {
+                                        color: $Font_remind;
+                                        font-size: 3.8vw;
+                                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .noData {
+            width: 100%;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // background: $BG_Color01;
+
+            i {
+                color: $Font_Color02;
+                font-size: 10vw;
+                margin-bottom: 2vw;
+            }
+
+            p {
+                color: $Font_Color02;
+                font-size: 4vw;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .betGame_Detail {
+        display: none;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        background: $BG_Color04-2;
+        animation: fadeIn 0.3s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+
+        &.display {
+            display: flex;
+        }
+
+        &>div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &.topArea {
+                height: 61vw;
+                flex-shrink: 0;
+    
+                .topWrap {
+                    width: 100%;
+                    height: 12.6vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                    color: $BG_Color01;
+                    position: relative;
+    
+                    i {
+                        width: 4vw;
+                        height: 4vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        top: 50%;
+                        left: 4vw;
+                        transform: translateY(-50%);
+                    }
+    
+                    p {
+                        font-size: 4.8vw;
+                        font-weight: bold;
+                    }
+                }
+    
+                .content {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0 4vw;
+    
+                    &>div {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
+                        &.teamWrap {
+                            margin: 10vw 0 6vw;
+    
+                            .team {
+                                width: 100%;
+                                
+                                @include textHidden;
+    
+                                p {
+                                    color: $Font_Color07;
+                                    font-weight: bold;
+                                    font-size: 5vw;
+                                    text-align: center;
+                                }
+    
+                                i {
+                                    width: 8vw;
+                                    height: 8vw;
+                                    margin: 0 auto 2vw;
+                                }
+                            }
+    
+                            .info {
+                                width: 20vw;
+                                margin: 0 6vw;
+                                flex-shrink: 0;
+    
+                                p {
+                                    color: $Font_Color03;
+                                    text-align: center;
+    
+                                    &.date {
+                                        font-size: 3.8vw;
+                                        margin-bottom: 2vw;
+                                    }
+    
+                                    &.time {
+                                        font-size: 8vw;
+                                        font-family: Arial, Helvetica, sans-serif;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+    
+                        &.functionState {
+                            width: 70%;
+                            height: 10vw;
+                            background: $filter_BG;
+                            border-radius: 50px;
+                            margin: 0 auto;
+                            position: relative;
+    
+                            &::before {
+                                content: "";
+                                width: 0.2vw;
+                                height: 100%;
+                                background: $Font_Color01;
+                                position: absolute;
+                                top: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+    
+                            .group {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: $Font_Color03;
+                                margin-right: 10vw;
+    
+                                &:nth-of-type(2) {
+                                    margin-right: 0;
+                                }
+    
+                                p {
+                                    white-space: nowrap;
+                                }
+    
+                                i {
+                                    width: 5vw;
+                                    height: 5vw;
+                                    filter: brightness(3);
+                                    margin-right: 1vw;
+    
+                                    &.live {
+                                        background-position-x: 0%;
+                                    }
+    
+                                    &.animate {
+                                        background-position-x: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            &.downArea {
+                height: 100%;
+                overflow-y: auto;
+                padding: 2vw;
+
+                .typeBlock {
+                    width: 100%;
+                    height: auto;
+                    padding: 3vw 2vw;
+                    margin: 0 0 2vw;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .typeName {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-bottom: 0.15vw solid $Border_04;
+                        padding: 0 0 2vw;
+
+                        p {
+                            color: $Font_Color03;
+                            font-size: 4vw;
+                            font-weight: bold;
+                            padding: 0 0 0 2vw;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                width: 01vw;
+                                height: 100%;
+                                border-radius: 50px;
+                                background: $BG_Color06;
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%);
+                            }
+                        }
+
+                        i {
+                            color: $Border_03;
+                            font-size: 4vw;
+                            transform: rotate(30deg);
+
+                            &.active {
+                                color: $Border_01;
+                            }
+                        }
+                    }
+
+                    .rateWrap {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 2vw;
+                        padding: 2vw 0 0;
+
+                        .teamBlock {
+                            width: 100%;
+                            height: 8vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: $Border_06;
+                            position: relative;
+
+                            &.active {
+                                background: $BG_Color05;
+                            }
+
+                            &.multi {
+
+                                span {
+                                    position: absolute;
+                                    bottom: 2vw;
+                                    right: 2vw;
+                                }
+                            }
+
+                            p {
+                                max-width: 60%;
+                                color: $Font_Color03;
+                                font-size: 4vw;
+                                font-weight: bold;
+                                @include textHidden;
+                            }
+
+                            span {
+                                color: $Font_Color07;
+                                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                                font-size: 3.8vw;
+                                font-weight: bold;
+
+                                &.gray {
+                                    color: $Font_Color08;
+                                    margin-right: 2vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .searchFilter {
+        display: none;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        background: $BG_Color05;
+        animation: fadeIn 0.3s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+
+        &.display {
+            display: flex;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12.96vw 0 0 ;
+
+            &>div {
+                width: 100%;
+
+                &.searchBlock {
+                    width: 100%;
+                    height: 15vw;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 4vw;
+                    position: relative;
+
+                    i {
+                        color: $Font_Color07;
+                        font-size: 4.2vw;
+                        position: absolute;
+                        top: 50%;
+                        left: 9vw;
+                        transform: translateY(-50%);
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 10vw;
+                        @include input01;
+                        border: none;
+                        border-radius: 50px;
+                        padding: 0 4vw 0 12vw;
+                        color: $Font_Color02;
+                        font-size: 4.2vw;
+
+                        &::placeholder {
+                            color: $Font_Color02;
+                        }
+                    }
+                }
+
+                &.allGames {
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: auto;
+
+                    label {
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+
+                        input {
+                            width: 4vw;
+                            height: 4vw;
+                            border: 0.2vw solid $Border_01;
+                            border-radius: 50px;
+                            margin-left: 2vw;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                width: 2.5vw;
+                                height: 2.5vw;
+                                background: $BG_Color06;
+                                border-radius: 50px;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                                opacity: 0;
+                            }
+
+                            &:checked {
+    
+                                &::before {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+
+                    .selectAll {
+                        height: 8vw;
+                        display: flex;
+                        flex-shrink: 0;
+                        align-items: center;
+                        justify-content: flex-end;
+                        padding: 0 6vw 0 4vw;
+
+                        p {
+                            color: $Font_Color07;
+                        }
+                    }
+
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        flex-shrink: 0;
+                        overflow: hidden;
+
+                        &:not(:first-child) {
+
+                            &.active {
+    
+                                li {
+                                    display: flex;
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(1) {
+
+                            &.active {
+
+                                .typeName {
+                                    background: $BG_Color08;
+    
+                                    p {
+                                        color: $Font_Color03;
+                                    }
+    
+                                    i {
+                                        filter: brightness(2);
+                                    }
+                                }
+    
+                                li {
+                                    display: flex;
+                                }
+                            }
+                        }
+                        
+                        .typeName {
+                            width: 100%;
+                            height: 8vw;
+                            display: flex;
+                            align-items: center;
+                            background: $BG_Color09;
+                            padding: 0 6vw;
+
+                            i {
+                                margin-right: 2vw;
+                            }
+
+                            p {
+                                color: $Font_Color05;
+                                font-size: 4vw;
+                                font-weight: bold;
+                            }
+                        }
+
+                        li {
+                            display: none;
+                            width: 100%;
+                            height: 8vw;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 0 6vw 0 11vw;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                width: 90%;
+                                height: 0.1vw;
+                                background: $Border_06;
+                                bottom: 0;
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+
+                            &:last-child {
+
+                                &::before {
+                                    display: none;
+                                }
+                            }
+
+                            .group {
+                                width: auto;
+                                height: 100%;
+                                display: flex;
+                                align-items: center;
+
+                                i {
+                                    width: 4vw;
+                                    height: 4vw;
+                                    margin-right: 2vw;
+                                }
+
+                                p {
+                                    color: $Font_Color07;
+                                    font-size: 3.6vw;
+                                    font-weight: bold;
+                                }
+
+                                .total {
+                                    color: $Font_Color04;
+                                    font-size: 3.4vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .nameTitle_select {
+            display: none;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 65vw;
+            right: 1.4vw;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: $Font_Color06;
+                font-size: 3.4vw;
+
+                &:not(:first-child) {
+                    margin-bottom: 1vw;
+                }
+
+                span {
+                    height: auto;
+                    display: block;
+                    margin:  -1vw auto 1vw;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,185 @@
+.cardPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $BG_Color00;
+    position: relative;
+
+    .cardList {
+        width: 100%;
+        height: 30vw;
+        flex-shrink: 0;
+        margin: 2vw 0;
+
+        ul {
+            width: auto;
+            height: 100%;
+            display: flex;
+            padding: 0 4vw;
+            overflow-x: auto;
+
+            li {
+                width: 55vw;
+                height: 100%;
+                background: $gradient01;
+                border-radius: 2vw;
+                flex-shrink: 0;
+                margin-right: 2vw;
+                padding: 4vw;
+                position: relative;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.addCard {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    filter: grayscale(0.98);
+
+                    i {
+                        color: $Font_Color03;
+                        font-size: 12vw;
+                    }
+
+                    p {
+                        color: $Font_Color01;
+                        font-size: 4vw;
+                        margin-top: 3vw;
+                    }
+                }
+
+                p {
+                    color: $Font_Color05;
+
+                    &.bankName {
+                        font-size: 4.4vw;
+                        font-weight: bold;
+                    }
+
+                    &.company {
+                        font-size: 3.8vw;
+                        margin: 2vw 0 3vw;
+                    }
+
+                    &.cardNum {
+                        font-size: 4.6vw;
+                        font-weight: bold;
+                    }
+                }
+
+                .state {
+                    width: auto;
+                    height: 5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $BG_Color05;
+                    border-radius: 0 0 2vw 0;
+                    padding: 0 2vw;
+                    position: absolute;
+                    right: 0;
+                    bottom: -0.1vw;
+
+                    &::before {
+                        content: "";
+                        width: 2.9vw;
+                        height: 100%;
+                        background: $BG_Color05;
+                        transform: skewX(-30deg);
+                        filter: drop-shadow(-4.8vw 0 0.5px $BG_Color05);
+                        position: absolute;
+                        left: -1.6vw;
+                    }
+
+                    p {
+                        color: $Font_Color04;
+                        font-size: 3.8vw;
+                        font-weight: bolder;
+                    }
+                }
+            }
+        }
+    }
+
+    form {
+        width: 100%;
+        height: auto;
+        background: $BG_Color05;
+        padding: 2vw 4vw;
+
+        label {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 0.2vw solid $Border_06;
+            padding: 2vw 0;
+
+            &:last-child {
+                border-bottom: none
+            }
+
+            &.forSelect {
+                
+                .wrap {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .outer {
+                        width: 49%;
+                        height: auto;
+                        position: relative;
+
+                        select {
+                            width: 100%;
+                            height: 8vw;
+                            @include input01;
+                            padding: 0 2vw;
+                        }
+
+                        i {
+                            color: $Font_Color04;
+                            position: absolute;
+                            top: 50%;
+                            right: 2vw;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+
+            .itemName {
+                color: $Font_Color07;
+                font-size: 3.8vw;
+                margin-bottom: 2vw;
+            }
+
+            input {
+                width: 100%;
+                height: 8vw;
+                @include input01;
+                padding: 0 2vw;
+            }
+            
+            
+        }
+    }
+
+    .submitBtn {
+        width: 95%;
+        height: 11vw;
+        flex-shrink: 0;
+        margin: 4vw auto 3vw;
+        background: $BG_Color06;
+        border-radius: 0.9259259259vw;
+        color: $Font_Color01;
+        font-size: 4vw;
+        font-weight: bold;
+    }
+}

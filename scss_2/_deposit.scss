@@ -1,0 +1,204 @@
+.depositPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $BG_Color00;
+    overflow-y: auto;
+    position: relative;
+
+    .topArea {
+        width: 100%;
+        height: auto;
+        background: $BG_Color05;
+        padding: 3vw;
+        margin-bottom: 4vw;
+        box-shadow: 0 2px 4px $shadow_02,
+                    0 -1px 4px transparent;
+        position: relative;
+        z-index: 6;
+
+        .payTypeBlock {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+            gap: 1.6vw;
+            padding: 2vw 0;
+            border-bottom: 0.2vw solid $Border_06;
+            margin: 0 0 2vw;
+
+            .type {
+                width: 100%;
+                height: 16vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: $BG_Color03;
+                border-radius: 2vw;
+                border: 0.4vw solid $Border_01;
+                padding: 2vw;
+                overflow: hidden;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 0 5vw 5vw;
+                    border-color: transparent transparent $BG_Color01 transparent;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                &::after {
+                    content: "✓";
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $Font_em;
+                    font-size: 3.4vw;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                &:active,&.active {
+                    border-color: $Border_07;
+
+                    &::before,
+                    &::after {
+                        opacity: 1;
+                    }
+
+                    i {
+                        color: $Font_Color04;
+                    }
+
+                    p {
+                        color: $Font_Color03;
+                    }
+                }
+                
+                i {
+                    width: 8vw;
+                    height: 8vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $Font_Color08;
+                    font-size: 4vw;
+                    margin-bottom: 0.4vw;
+
+                    &.fa-weixin,
+                    &.fa-alipay,
+                    &.fa-bitcoin {
+                        font-size: 4.2vw;
+                    }
+                }
+
+                p {
+                    width: 100%;
+                    color: $Font_Color07;
+                    font-size: 3.6vw;
+                    font-weight: bold;
+                    text-align: center;
+                    @include textHidden;
+                }
+            }
+        }
+
+        label {
+            width: 100%;
+            height: auto;
+            padding: 2vw 0;
+
+            input {
+                width: 100%;
+                height: 10vw;
+                @include input01;
+                padding: 0 2vw;
+                margin: 2vw 0;
+            }       
+        }
+    }
+
+    .bottomArea {
+        width: 100%;
+        height: auto;
+        background: $BG_Color05;
+        padding: 3vw;
+        margin-bottom: 4vw;
+        box-shadow: 0 2px 4px $shadow_02,
+                    0 -1px 4px transparent;
+        
+        .quickMoneyBlock {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+            gap: 1.6vw;
+            padding: 2vw 0;
+            border-bottom: 0.2vw solid $Border_06;
+            margin: 0 0 2vw;
+
+            button {
+                width: 100%;
+                height: 9vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $BG_Color14;
+                color: $Font_Color03;
+                font-size: 3.6vw;
+                font-weight: bold;
+                white-space: nowrap;
+                text-align: center;
+                border-radius: 1vw;
+                padding: 4vw;
+
+                &.other {
+                    grid-column: -4 / span 2;
+                }
+
+                &:active,&.active {
+                    background: $gradient02;
+                    color: $Font_Color01;
+                }
+            }
+        }
+    }
+
+    .checkBtn {
+        width: 95%;
+        height: 11vw;
+        margin: 0 auto 4vw;
+        @include btnStyle01;
+        font-size: 4vw;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+
+    p {
+        font-size: 4vw;
+        font-weight: bold;
+
+        &.blockTitle {
+            color: $Font_Color04;
+            font-size: 4vw;
+            font-weight: bold;
+        }
+
+        &.itemName {
+            color: $Font_Color04;
+        }
+
+        &.hint {
+            color: $Font_em;
+            font-size: 3.4vw;
+            font-weight: unset;
+            line-height: 3.8vw;
+        }
+    }
+}

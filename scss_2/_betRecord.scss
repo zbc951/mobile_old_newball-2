@@ -1,0 +1,782 @@
+.betRecordPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $BG_Color00;
+    position: relative;
+  
+    .recordType {
+        width: 100%;
+        height: 31vw;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        background: $BG_Color10;
+        padding: pxToVw(350) 3vw 3vw;
+        box-shadow: 0 2px 4px $shadow_02,
+                    0 -1px 4px transparent;
+        position: relative;
+        z-index: 6;
+
+        li {
+            width: 24vw;
+            height: 10vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include btnStyle02;
+            background: $BG_Color04-2;
+            box-shadow: none;
+            border-radius: 50px;
+            margin-right: 2vw;
+
+            p {
+                color: $Font_Color08;
+                font-size: 4.2vw;
+                font-weight: bold;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:active,&.active {
+                background: $BG_Color09;
+                border: pxToVw(1) solid $Border_01;
+                
+                p {
+                    color: $Font_Color03;
+                }
+            }
+        }
+    }
+
+    .searchFilters {
+        width: 100%;
+        height: auto;
+        display: none;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 3vw 2vw;
+        background: $BG_Color00;
+        box-shadow: 0 2px 4px $shadow_02,
+        0 -1px 4px transparent;
+        padding: 3vw;
+        position: relative;
+        z-index: 5;
+
+        button {
+            width: 14vw;
+            height: 8vw;
+            background: $BG_Color09;
+            border-radius: pxToVw(20);
+            border: 1px solid $Border_01;
+            color: $Font_Color07;
+            font-size: 3.8vw;
+            font-weight: bold;
+            white-space: nowrap;
+
+            &:active,&.active {
+                background: $BG_Color06;
+                color: $Font_Color01;
+            }
+        }
+
+        .dateFilter {
+            width: 100%;
+            grid-column-start: span 6;
+            display: flex;
+            align-items: center;
+
+            label {
+
+                input {
+                    @include  input01;
+                    height: 8vw;
+                    padding: 0 2vw;
+                }
+            }
+
+            span {
+                color: $Font_Color02;
+                margin: 0 2vw;
+            }
+
+            .dateSearch_btn {
+                width: 14vw;
+                height: 7vw;
+                @include btnStyle01;
+                margin: 0 0 0 2vw;
+            }
+        }
+    }
+
+    .dataTable {
+        display: none;
+        width: 100%;
+        height: auto;
+        padding: 0 0 pxToVw(300) 0;
+        overflow-y: auto;
+        position: relative;
+        z-index: 3;
+
+        &.display {
+            display: block;
+        }
+
+        &.noData_mode {
+
+            &>li {
+                display: none;
+            }
+        }
+        
+        .detailBlock {
+            width: 100%;
+            height: auto;
+            border-radius: 30px 0 0 0;
+            padding: 3vw 3vw 0 3vw;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            &.active {
+                padding: 3vw;
+
+                &:not(:first-child) {
+                    padding: 0 3vw;
+                }
+
+                .tableOuter {
+
+                    table {
+                    
+                        tr {
+
+                            &.gameName {
+
+                                th {
+
+                                    &:nth-of-type(2) {
+
+                                        .outer {
+
+                                            i {
+                                                transform: rotate(0deg);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:not(:nth-of-type(2)) {
+
+                                td {
+                                    display: table-cell;
+                                }
+                            }
+
+                            &.summary {
+
+                                td {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tableOuter {
+                width: auto;
+                height: auto;
+                border-radius: 2vw;
+                box-shadow: 0 1px 4px $shadow_01;
+
+                table {
+                    width: 100%;
+                    height: auto;
+                    border-collapse: collapse;
+                    border-radius: 2vw;
+                    overflow: hidden;
+
+                    tr {
+                        border-bottom: 0.1vw solid $Border_06;
+                        
+                        &.gameName {
+
+                            th {
+                                height: 10vw;
+                                background: $BG_Color03;
+                                vertical-align: middle;
+
+                                &:nth-of-type(2) {
+
+                                    .outer {
+                                        width: 100%;
+                                        justify-content: flex-end;
+
+                                        i {
+                                            flex-shrink: 0;
+                                            filter: brightness(2);
+                                            margin: 0 1vw 0 3vw;
+                                            transform: rotate(-180deg);
+                                            translate: transform 0.3s;
+                                        }
+                                    }
+                                }
+
+                                .outer {
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 0 2vw;
+
+                                    .state {
+                                        border-left: 0.6vw solid $Font_link;
+                                        padding-left: 2vw;
+                                        margin-left: 4vw;
+                                    }
+                                }
+
+                                p {
+                                    color: $Font_Color03;
+                                    font-size: 3.8vw;
+                                    font-weight: bold;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(1) {
+                            border-bottom: none;
+                        }
+
+                        &.summary {
+
+                            td {
+                                height: 10vw;
+
+                                .outer {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-end;
+                                    padding: 0 0 0 2vw;
+                                    box-sizing: border-box;
+                                    
+                                    p {
+
+                                        &:first-child {
+                                            width: auto;
+                                            flex-shrink: 0;
+                                            padding: 0;
+                                            margin-right: 2vw;
+                                        }
+
+                                        &:last-child {
+                                            width: 100%;
+                                            max-width: 18vw;
+                                            @include textHidden;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(4),
+                        &:nth-of-type(5),
+                        &:nth-of-type(6),
+                        &:nth-of-type(7) {
+
+                            td {
+                                border-right: 0.1vw solid $Border_06;
+                                
+                                &:last-child {
+                                    border-right: none;
+                                }
+
+                                &:nth-of-type(odd) {
+                                    width: 5%;
+                                    background: $BG_Color00;
+                                
+                                    p {
+                                        text-align: center;
+                                    }
+                                }
+
+                                &:nth-of-type(even) {
+                                    width: 45%;
+                                }
+                            }
+                        }
+                    
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                        &:not(:nth-of-type(2)) {
+
+                            td {
+                                display: none;
+                            }
+                        }
+
+                        td {
+                            height: 10vw;
+                            background: $BG_Color01;
+                            vertical-align: middle;
+                            padding: 0 2vw;
+
+                            &.gameInfo {
+                                height: 18vw;
+                                background: $BG_Color00;
+
+                                .outer {
+
+                                    .team {
+                                        display: flex;
+                                        margin: 2vw 0;
+
+                                        span {
+                                            color: $Font_Color02;
+                                            font-size: 3.8vw;
+                                            font-weight: bold;
+                                            margin: 0 1vw;
+                                        }
+                                    }
+                                }
+                            }
+
+                            p {
+                                color: $Font_Color01;
+                                font-size: 3.8vw;
+                                font-weight: bold;
+                                white-space: nowrap;
+
+                                &.highLight {
+                                    color: $Font_Color04;
+                                }
+
+                                &.important {
+                                    color: $Font_remind;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.current {
+            min-height: calc(100% - 82vw);
+            padding-bottom: 16vw;
+
+           li {
+            width: 100%;
+            height: auto;
+           }
+        }
+        
+        &.history {
+            min-height: calc(100% - 82vw);
+            padding-bottom: 18vw;
+    
+            .itemName_Wrap {
+                width: 100%;
+                height: 8vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $BG_Color10;
+                box-shadow: 0 1px 4px $shadow_02,
+                0 -1px 4px transparent;
+    
+                &>div {
+                    width: 100%;
+                    height: 60%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 5vw;
+    
+                    &:last-child {
+                        border: none;
+                    }
+    
+                    &:nth-of-type(2) {
+                        width: 40%;
+                        flex-shrink: 0;
+                        padding: 0 4vw;
+                    }
+    
+                    p {
+                        color: $Font_Color09;
+                        font-size: 3.8vw;
+                        font-weight: bold;
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            li {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: $BG_Color03;
+                margin: 0 0 2vw;
+
+                &:last-of-type {
+                    margin: 0;
+                }
+    
+                &.active {
+                    height: auto;
+                    border-bottom: none;
+    
+                    .detailBlock {
+                        display: block;
+                        padding: 3vw;
+    
+                        .downArrow_Icon {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+    
+                &:last-of-type {
+                    border-bottom: none;
+                }
+    
+                .overView {
+                    width: 100%;
+                    height: 12vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background: $BG_Color11;
+                    position: relative;
+                    z-index: 2;
+    
+                    &>div {
+                        width: 100%;
+                        height: 60%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0 2vw;
+        
+                        &.totalBlock {
+                            width: 40%;
+                            flex-shrink: 0;
+                        }
+    
+                        p {
+                            color: $Font_Color07;
+                            font-size: 3.4vw;
+                            font-weight: bold;
+                            white-space: nowrap;
+                            text-align: center;
+    
+                            &.betNum {
+                                color: $Font_Color07;
+                            }
+
+                            &.resultNum {
+                                color: $Font_positive;
+                            }
+                        }
+    
+                        .countNum {
+                            width: 5.6vw;
+                            height: 5.6vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: $BG_Color06;
+                            border-radius: 50px;
+                            color: $Font_Color01;
+                            font-size: 3.4vw;
+                            font-weight: bold;
+                            margin-right: 1vw;
+                        }
+    
+                        .slash {
+                            color: $Font_Color07;
+                            margin: 0 1vw;
+                        }
+                    }
+                }
+    
+                .detailBlock {
+                    display: none;
+                    padding: 3vw;
+
+                    .tableOuter {
+
+                        table {
+
+                            &.active {
+                                
+                                tr {
+        
+                                    &.gameName {
+        
+                                        th {
+        
+                                            &:nth-of-type(2) {
+        
+                                                .outer {
+        
+                                                    i {
+                                                        transform: rotate(269deg);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+        
+                                    td {
+                                        display: table-cell !important;
+                                    }
+        
+                                    &.summary {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            tr {
+                                border-bottom: 0.1vw solid $Border_06;
+                                
+                                &.gameName {
+        
+                                    th {
+                                        height: 10vw;
+                                        background: $BG_Color06;
+                                        vertical-align: middle;
+        
+                                        &:nth-of-type(2) {
+        
+                                            .outer {
+                                                width: 100%;
+                                                justify-content: flex-end;
+        
+                                                i {
+                                                    flex-shrink: 0;
+                                                    filter: brightness(2);
+                                                    margin: 0 1vw 0 3vw;
+                                                    transform: rotate(-269deg);
+                                                    translate: all 0.3s;
+                                                }
+                                            }
+                                        }
+        
+                                        .outer {
+                                            display: flex;
+                                            align-items: center;
+                                            padding: 0 2vw;
+        
+                                            .state {
+                                                border-left: 0.6vw solid $Font_link;
+                                                padding-left: 2vw;
+                                                margin-left: 4vw;
+                                            }
+                                        }
+        
+                                        p {
+                                            color: $Font_Color01;
+                                            font-size: 3.8vw;
+                                            font-weight: bold;
+                                            white-space: nowrap;
+                                        }
+                                       
+                                    }
+                                }
+        
+                                &:nth-of-type(1) {
+                                    border-bottom: none;
+                                }
+        
+                                &.summary {
+        
+                                    td {
+                                        display: table-cell;
+                                        height: 10vw;
+        
+                                        .outer {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: flex-end;
+                                            padding: 0 0 0 2vw;
+                                            box-sizing: border-box;
+                                            
+                                            p {
+        
+                                                &:first-child {
+                                                    width: auto;
+                                                    flex-shrink: 0;
+                                                    padding: 0;
+                                                    margin-right: 2vw;
+                                                }
+        
+                                                &:last-child {
+                                                    width: 100%;
+                                                    max-width: 18vw;
+                                                    @include textHidden;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+        
+                                &:nth-of-type(4),
+                                &:nth-of-type(5),
+                                &:nth-of-type(6),
+                                &:nth-of-type(7) {
+        
+                                    td {
+                                        border-right: 0.1vw solid $Border_06;
+                                        
+                                        &:last-child {
+                                            border-right: none;
+                                        }
+        
+                                        &:nth-of-type(odd) {
+                                            width: 5%;
+                                            background: $BG_Color04-3;
+                                        
+                                            p {
+                                                text-align: center;
+                                            }
+                                        }
+        
+                                        &:nth-of-type(even) {
+                                            width: 45%;
+                                        }
+                                    }
+                                }
+                            
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+        
+                                &:not(.summary) {
+        
+                                    td {
+                                        display: none;
+                                    }
+                                }
+        
+                                td {
+                                    height: 10vw;
+                                    background: $BG_Color00;
+                                    vertical-align: middle;
+                                    padding: 0 2vw;
+        
+                                    &.gameInfo {
+                                        height: 18vw;
+                                        background: $BG_Color00;
+        
+                                        .outer {
+                                            margin: 2vw 0 0;
+        
+                                            .team {
+                                                display: flex;
+                                                margin: 2vw 0;
+        
+                                                span {
+                                                    color: $Font_Color02;
+                                                    font-size: 3.8vw;
+                                                    font-weight: bold;
+                                                    margin: 0 1vw;
+                                                }
+                                            }
+                                        }
+                                    }
+        
+                                    p {
+                                        color: $Font_Color07;
+                                        font-size: 3.8vw;
+                                        font-weight: bold;
+                                        white-space: nowrap;
+        
+                                        &.highLight {
+                                            color: $Font_Color04;
+                                        }
+        
+                                        &.important {
+                                            color: $Font_remind;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:not(:first-child) {
+                            margin-top: 3vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .countBlock {
+        width: 100%;
+        height: 14vw;
+        display: flex;
+        align-items: center;
+        background: $BG_Color08;
+        border-top: 1px solid $Border_05;
+        box-shadow: 0 2px 4px transparent,
+                    0 -1px 16px $shadow_02;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        z-index: 50;
+
+        &::before {
+            content: "";
+            width: 0.1vw;
+            height: 70%;
+            background: $Border_05;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .half {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 3vw;
+
+            p {
+                color: $Font_Color07;
+                font-size: 3.6vw;
+                font-weight: bold;
+                margin-bottom: 1.5vw;
+            }
+
+            span {
+                max-width: 100%;
+                color: $Font_Color04;
+                font-size: 4vw;
+                font-weight: bold;
+                font-family: 'Times New Roman', Times, serif;
+                @include textHidden;
+
+                &.bet {
+                    color: $Font_positive;
+                }
+
+                &.result {
+                    color: $Font_positive;
+                }
+            }
+        }
+    }
+}

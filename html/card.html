@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ZH-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_2/style.css">
+    <link rel="shortcut icon" href="../img/newBall_64x64.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="https://kit.fontawesome.com/8858aac5ee.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="innerPage">
+        <p class="pageTitle">卡片管理</p>
+        <i class="leftArrow_Icon backTo_LastPage" onclick="window.location.href='./member.html'"></i>
+    </header>
+    <main>
+        <div class="wrapContainer cardPage">
+           <ol class="cardList">
+                <ul>
+                    <li class="addCard">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <p>添加銀行卡</p>
+                    </li>
+                    <li>
+                        <p class="bankName">OOXX銀行</p>
+                        <p class="company">XX分公司</p>
+                        <p class="cardNum">1234 5678 9001</p>
+                        <div class="state">
+                            <p>審核中</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="bankName">OOXX銀行</p>
+                        <p class="company">XX分公司</p>
+                        <p class="cardNum">1234 5678 9001</p>
+                    </li>
+                </ul>
+           </ol>
+           <form>
+                <label>
+                    <p class="itemName">銀行名稱</p>
+                    <input type="text" placeholder="輸入以顯示銀行選項">
+                </label>
+                <label class="forSelect">
+                    <p class="itemName">您開立帳戶的城市</p>
+                    <div class="wrap">
+                        <div class="outer">
+                            <select>
+                                <option>選擇狀態</option>
+                            </select>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                        <div class="outer">
+                            <select>
+                                <option>請選擇一個城市</option>
+                            </select>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </label>
+                <label>
+                    <p class="itemName">分行名稱</p>
+                    <input type="text" placeholder="">
+                </label>
+                <label>
+                    <p class="itemName">使用者名稱</p>
+                    <input type="text" placeholder="">
+                </label>
+                <label>
+                    <p class="itemName">銀行帳戶</p>
+                    <input type="text" placeholder="">
+                </label>
+                <label>
+                    <p class="itemName">驗證您的帳戶</p>
+                    <input type="text" placeholder="">
+                </label>
+                <label>
+                    <p class="itemName">行動電話</p>
+                    <input type="text" placeholder="">
+                </label>
+                <label>
+                    <p class="itemName">QQ</p>
+                    <input type="text" placeholder="">
+                </label>
+                <label>
+                    <p class="itemName">WeChat</p>
+                    <input type="text" placeholder="">
+                </label>
+           </form>
+           <button type="button" class="submitBtn">添加銀行卡</button>
+        </div>
+    </main>
+   <footer>
+        <ul class="mainNav">
+            <li onclick="window.location.href='./index.html'">
+                <i class="home_ic"></i>
+                <span>首頁</span>
+            </li>
+            <li onclick="window.location.href='../html/gameResult.html'">
+                <i class="event_ic"></i>
+                <span>賽事結果</span>
+            </li>
+            <li onclick="window.location.href='../html/csService.html'">
+                <i class="cs_ic"></i>
+                <span>客服</span>
+            </li>
+            <li onclick="window.location.href='../html/betRecord.html'">
+                <i class="sponsor_ic"></i>
+                <span>投注紀錄</span>
+            </li>
+            <li onclick="window.location.href='../html/member.html'" class="notify">
+                <i class="member_ic"></i>
+                <span>我的</span>
+            </li>
+        </ul>
+    </footer>
+    <!-- 彈窗 -->
+    <div class="filter">
+        <div class="jumpBlock sportType">
+            <div class="titleBlock">
+                <p>選擇球種</p>
+                <i class="fa-solid fa-xmark closeWindow"></i>
+            </div>
+            <div class="content">
+                <button type="button" class="active">足球</button>
+                <button type="button">NBA</button>
+                <button type="button">來自其他國家的籃球</button>
+                <button type="button">美國職業棒球大聯盟</button>
+                <button type="button">台灣職業棒球</button>
+                <button type="button">日本職業棒球</button>
+                <button type="button">其他國家的棒球</button>
+                <button type="button">美式足球</button>
+                <button type="button">賽馬和賽狗</button>
+                <button type="button">電子競技</button>
+                <button type="button">股票指數</button>
+                <button type="button">樂天</button>
+                <button type="button">網球</button>
+                <button type="button">檯球</button>
+                <button type="button">高爾夫球</button>
+                <button type="button">手球</button>
+                <button type="button">冰球</button>
+                <button type="button">拳擊</button>
+                <button type="button">排球</button>
+            </div>
+        </div>
+        <div class="jumpBlock dateFilter">
+            <div class="titleBlock">
+                <p>選擇球種</p>
+                <i class="fa-solid fa-xmark closeWindow"></i>
+            </div>
+            <div class="content">
+                <button type="button" class="active">07/13</button>
+                <button type="button">07/14</button>
+                <button type="button">07/15</button>
+                <button type="button">07/16</button>
+                <button type="button">07/17</button>
+                <button type="button">07/18</button>
+                <button type="button">07/19</button>
+                <button type="button">07/20</button>
+                <button type="button">07/21</button>
+                <button type="button">07/22</button>
+                <button type="button">07/23</button>
+                <button type="button">07/24</button>
+                <button type="button">07/25</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

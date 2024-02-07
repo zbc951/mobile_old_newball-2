@@ -1,0 +1,206 @@
+header {
+    width: 100%;
+    height: pxToVw(280);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $BG_Color06;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0 15px $shadow_01;
+    padding: 0 pxToVw(110);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    &.active {
+        z-index: 18;
+    }
+
+    &.innerPage {
+        justify-content: center;
+        padding: 0 4vw;
+
+        .pageTitle {
+            color: $Font_Color06;
+            font-size: 4.8vw;
+            font-weight: bold;
+        }
+
+        i {
+            width: 4vw;
+            height: 4vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &.leftArrow_Icon {
+                left: 4vw;
+            }
+
+            &.fa-circle-question {
+                font-size: 18px;
+                padding: 0 0 1vw;
+                right: 5vw;
+            }
+
+            &.fa-circle-dollar-to-slot {
+                width: 5vw;
+                height: 5vw;
+                color: $Font_Color06;
+                font-size: 7vw;
+                padding-top: 1.4vw;
+                border-radius: 30vw;
+                overflow: hidden;
+                left: unset;
+                right: 12.2vw;
+            }
+
+            &.fa-magnifying-glass {
+                color: $Font_Color06;
+                font-size: 4.8vw;
+                left: unset;
+                right: 4vw;
+            }
+        }
+
+        .mainPage_group {
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .fa-sort-down {
+                font-size: 4vw;
+                padding: 0vw 2vw 2vw 3vw;
+                position: relative;
+                top: unset;
+                left: unset;
+                transform: unset;
+            }
+        }
+
+        //deposit
+        .balance {
+            display: none;
+            background: $filter_BG;
+            padding: 2vw;
+            border-radius: 1vw;
+            position: absolute;
+            bottom: -11vw;
+            right: 4vw;
+
+            &.display {
+                display: block;
+            }
+
+            p,
+            span {
+                font-size: 3.6vw;
+                color: $Font_Color03;
+            }
+
+            span {
+                display: block;
+                margin: 2vw 0 0;
+            }
+
+            &::before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 1.5vw 2vw 1.5vw;
+                border-color: transparent transparent $filter_BG transparent;
+                position: absolute;
+                top: -1.79vw;
+                right: 1.3vw;
+            }
+        }
+    }
+
+    &>.logo {
+        width: 25vw;
+        height: 9vw;
+        object-fit: contain;
+    }
+
+    .message {
+        width: 6vw;
+        height: 6vw;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 2vw;
+            height: 2vw;
+            background: $Font_remind;
+            border-radius: 50px;
+            opacity: 0;
+            position: absolute;
+            top: -5px;
+            right: -8px;
+        }
+
+        &.notify {
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.innerMode_header {
+    width: 100%;
+    height: pxToVw(280);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $BG_Color06;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0 15px $shadow_01;
+    padding: 0 4vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    .pageTitle {
+        color: $Font_Color06;
+        font-size: 4.8vw;
+        font-weight: bold;
+    }
+
+    .finish {
+        color: $Font_Color01;
+        font-size: 4.8vw;
+        position: absolute;
+        top: 50%;
+        right: 4vw;
+        transform: translateY(-50%);
+    }
+
+    .leftArrow_Icon,
+    .cross_icon  {
+        width: 4vw;
+        height: 4vw;
+        position: absolute;
+        top: 50%;
+        left: 4vw;
+        transform: translateY(-50%);
+    }
+
+    .quickHref {
+        color: $Font_Color02;
+        font-size: 4.8vw;
+        position: absolute;
+        top: 50%;
+        right: 4vw;
+        transform: translateY(-50%);
+    }
+}

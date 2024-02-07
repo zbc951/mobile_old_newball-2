@@ -1,0 +1,119 @@
+.withdrawPage{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: $BG_Color00;
+    padding: 0 0 17vw 0;
+    position: relative;
+
+    .topArea {
+        width: 100%;
+        height: auto;
+        background: $BG_Color05;
+        padding: 3vw;
+        margin-bottom: 4vw;
+        box-shadow: 0 2px 4px $shadow_02,
+                    0 -1px 4px transparent;
+        position: relative;
+        z-index: 6;
+
+        label {
+            width: 100%;
+            height: auto;
+            padding: 2vw 0;
+            border-bottom: 0.2vw solid $Border_06;
+            position: relative;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            input {
+                width: 100%;
+                height: 10vw;
+                @include input01;
+                font-size: 3.8vw;
+                padding: 0 2vw;
+                margin: 2vw 0;
+
+                &.unEdit {
+                    background: transparent;
+                    color: $Font_Color03;
+                    border-width: 0 0 0.2vw 0;
+                    padding: 0;
+                    margin: 0 0 2vw;
+
+                    &::placeholder {
+                        color: $Font_Color03;
+                    }
+                }
+            }
+
+            i {
+                position: absolute;
+                top: 50%;
+                right: 4vw;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .checkBtn {
+        width: 95%;
+        height: 11vw;
+        margin: 0 auto;
+        @include btnStyle01;
+        font-size: 4vw;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 4vw;
+        font-weight: bold;
+
+        &.itemName {
+            width: auto;
+            font-weight: 4.3vw;
+            color: $Font_Color07;
+        }
+
+        &.hint {
+            width: 100%;
+            text-align: center;
+            color: $Font_em;
+            font-size: 3.8vw;
+            margin: 1.8vw 0 ;
+        }
+    }
+
+    .remindBox {
+        width: 95%;
+        height: auto;
+        background: $BG_Color04-2;
+        border-radius: 2vw;
+        border: 0.2vw solid $Border_01;
+        padding: 3vw;
+        margin: 3vw auto 7vw;
+
+        p {
+            font-size: 3.8vw;
+
+            &.title {
+                color: $Font_Color07;
+                margin-bottom: 3vw;
+            }
+
+            &.normal {
+                color: $Font_Color02;
+                line-height: 4.4vw;
+            }
+
+            &.highlight {
+                color: $Font_em;
+                margin-top: 3vw;
+                line-height: 4.4vw;
+            }
+        }
+    }
+}

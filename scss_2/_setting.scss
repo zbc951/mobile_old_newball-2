@@ -1,0 +1,238 @@
+.settingPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $BG_Color00;
+  overflow-y: auto;
+  position: relative;
+
+  .topArea {
+      width: 100%;
+      height: auto;
+      background: $BG_Color04-3;
+      padding: 3vw 3vw 0;
+      margin-bottom: 4vw;
+      box-shadow: 0 2px 4px $shadow_02,
+                  0 -1px 4px transparent;
+      position: relative;
+      z-index: 6;
+
+      .settingTitle {
+          color: $Font_Color07;
+          font-size: 4vw;
+          font-weight: bold;
+      }
+
+      .controller {
+          width: 30vw;
+          height: 8vw;
+          @include switchBtnStyle;
+          margin: 1vw 0;
+          z-index: inherit;
+
+          .bar {
+            background: $BG_Color07;
+          }
+
+          p {
+            color: $Font_Color03;
+
+            &:nth-of-type(2) {
+                color: $Font_Color08;
+            }
+          }
+
+          &.close {
+
+            .bar {
+                left: unset;
+                right: 0.2vw;
+                transform: translate(-2%,-50%);
+            }
+    
+            p {
+                &:nth-of-type(1) {
+                    color: $Font_Color08;
+                }
+                &:nth-of-type(2) {
+                    color: $Font_Color03;
+                }
+            }
+          }
+      }
+
+      .row {
+          width: 100%;
+          height: 13vw;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid $Border_06;
+          position: relative;
+
+          &:last-of-type {
+            border-bottom: none;
+          }
+
+          .switch {
+              width: 18%;
+              height: 8vw;
+              background: $BG_Color00;
+              border-radius: 30vw;
+              padding: 1vw;
+              position: relative;
+
+              &.close {
+
+                  span {
+                      background: $BG_Color07;
+                      left: unset;
+                      right: 1vw;
+                      transform: translate(-2%,-50%);
+                  }
+
+                  p {
+
+                      &.open {
+                          display: flex;
+                      }
+
+                      &.close {
+                          display: none;
+                      }
+                  }
+              }
+
+              p {
+                  width: 60%;
+                  height: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: $Font_Color03;
+                  font-size: 3.6vw;
+                  position: absolute;
+                  top: 0;
+
+                  &.open {
+                      display: none;
+                      left: 0;
+                  }
+
+                  &.close {
+                      left: unset;
+                      right: 0;
+                  }
+              }
+
+              span {
+                  width: 5.8vw;
+                  height: 5.8vw;
+                  background: $BG_Color08;
+                  border-radius: 30vw;
+                  position: absolute;
+                  top: 50%;
+                  left: 1vw;
+                  transform: translate(0%,-50%);
+                  transition: all 0.3s;
+              }
+          }
+      }
+  }
+
+  .bottomArea {
+      width: 100%;
+      height: auto;
+      background: $BG_Color04-3;
+      padding: 0 3vw;
+      margin-bottom: 4vw;
+      box-shadow: 0 2px 4px $shadow_02,
+                  0 -1px 4px transparent;
+      
+      .row {
+          width: 100%;
+          height: 15vw;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 0.2vw solid $Border_06;
+          font-size: 4vw;
+      }
+
+      .quit {
+          width: 100%;
+          text-align: center;
+          margin: 4vw 0;
+      }
+
+      p {
+          color: $Font_Color07;
+          font-weight: bold;
+      }
+  }
+
+  .changePW {
+      display: none;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      background: $BG_Color00;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 20;
+
+      &.display {
+          display: flex;
+      }
+
+      form {
+          width: 100%;
+          height: auto;
+          background: $BG_Color01;
+          padding: 4vw 4vw;
+
+          label {
+              width: 100%;
+              height: auto;
+              display: block;
+              border-bottom: 0.2vw solid $Border_04;
+              padding-bottom: 3vw;
+              margin-bottom: 3vw;
+
+              &:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+              }
+
+              .itemName {
+                  color: $Font_Color04;
+                  font-size: 3.8vw;
+              }
+
+              input {
+                  width: 100%;
+                  height: 10vw;
+                  @include input01;
+                  padding: 0 2vw;
+                  margin: 2vw 0 1vw;
+              }
+
+              .hint {
+                  color: $Font_remind;
+                  font-size: 3.4vw;
+                  line-height: 3.6vw;
+              }
+          }
+      }
+
+      .checkBtn {
+          width: 95%;
+          height: 11vw;
+          @include btnStyle01;
+          margin: 4vw auto;
+          font-size: 4vw;
+      }
+  }
+}

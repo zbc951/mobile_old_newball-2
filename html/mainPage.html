@@ -1,0 +1,3097 @@
+<!DOCTYPE html>
+<html lang="ZH-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_2/style.css">
+    <link rel="shortcut icon" href="../img/newBall_64x64.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="https://kit.fontawesome.com/8858aac5ee.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="innerPage">
+        <div class="mainPage_group">
+            <p class="pageTitle">全部</p>
+            <i class="fa-solid fa-sort-down"></i>
+        </div>
+        <i class="leftArrow_Icon backTo_LastPage" onclick="window.location.href='./index.html'"></i>
+        <i class="fa-solid fa-circle-dollar-to-slot" onclick="window.location.href='./deposit.html'"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </header>
+    <main class="fullScreen">
+        <div class="wrapContainer mainPage">
+            <!-- 下注選擇 -->
+            <ul class="betType_mode">
+                <li class="active">
+                    <p>今日</p>
+                </li>
+                <li>
+                    <p>滾球</p>
+                </li>
+                <li>
+                    <p>早盤</p>
+                </li>
+                <li>
+                    <p>串關</p>
+                </li>
+            </ul>
+            <!-- 球種選擇 -->
+           <ol class="topContainer display">
+            <!-- 串關日期選項 -->
+            <ul class="dayFilter">
+                <li class="active">
+                    <p>今日</p>
+                </li>
+                <li>
+                    <p>2/07</p>
+                </li>
+                <li>
+                    <p>2/08</p>
+                </li>
+                <li>
+                    <p>2/09</p>
+                </li>
+                <li>
+                    <p>2/10</p>
+                </li>
+                <li>
+                    <p>2/11</p>
+                </li>
+                <li>
+                    <p>2/12</p>
+                </li>
+                <li>
+                    <p>2/13</p>
+                </li>
+            </ul>
+            <ul class="gameType">
+                <li class="active">
+                    <i class="soccer_ic">
+                        <span class="num">(228)</span>
+                    </i>
+                    <p>足球</p>
+                </li>
+                <li>
+                    <i class="basketball_ic">
+                        <span class="num">(33)</span>
+                    </i>
+                    <p>籃球</p>
+                </li>
+                <li>
+                    <i class="basketball_ic">
+                        <span class="num">(105)</span>
+                    </i>
+                    <p>其他籃球</p>
+                </li>
+                <li>
+                    <i class="compare_ic">
+                        <span class="num">(249)</span>
+                    </i>
+                    <p>賽馬賽狗</p>
+                </li>
+                <li>
+                    <i class="stock_ic">
+                        <span class="num">(21)</span>
+                    </i>
+                    <p>指數</p>
+                </li>
+                <li>
+                    <i class="coloredBall_ic">
+                        <span class="num">(93)</span>
+                    </i>
+                    <p>彩球</p>
+                </li>
+                <li>
+                    <i class="iceHockey_ic">
+                        <span class="num">(0)</span>
+                    </i>
+                    <p>冰球</p>
+                </li>
+            </ul>
+           </ol>
+           <!-- 當前球種顯示 -->
+           <div class="currentType">
+                <div class="group">
+                    <p class="typeName">足球</p>
+                    <span class="num">(96)</span>
+                </div>
+                <div class="switchBtn">
+                    <p class="junior">新手版</p>
+                    <p class="professional">專業版</p>
+                    <div class="bar"></div>
+                </div>
+           </div>
+           <!-- 個別資料 -->
+           <div class="dataContainer display">
+                <div class="dataType inProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="inProgress_ic"></i>
+                            <p>進行中</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>球會友誼賽</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 21:33</span>
+                                            </div>
+                                            <p class="date">02月06日</p>
+                                            <p class="time">03:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">薩基列斯</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">DFK戴拿瓦</p>
+                                        </div>
+                                        <div class="betRate">
+                                            <div class="rateBlock">
+                                                <p>主勝</p>
+                                                <span>0.13</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>和</p>
+                                                <span>0.78</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>大3+50</p>
+                                                <span>0.66</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>和</p>
+                                                <span>3.5</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p></p>
+                                                <span>1</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>小</p>
+                                                <span>1.13</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>客勝</p>
+                                                <span>5.2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>英格蘭超級聯賽</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 30:40</span>
+                                            </div>
+                                            <p class="date">02月06日</p>
+                                            <p class="time">03:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">威斯咸</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">般尼茅夫</p>
+                                        </div>
+                                        <div class="betRate">
+                                            <div class="rateBlock">
+                                                <p>主勝</p>
+                                                <span>0.13</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>和</p>
+                                                <span>0.78</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>大3+50</p>
+                                                <span>0.66</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>和</p>
+                                                <span>3.5</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p></p>
+                                                <span>1</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>小</p>
+                                                <span>1.13</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>客勝</p>
+                                                <span>5.2</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">2H 79:12</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">韋斯咸</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">般尼茅夫</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>0</p>
+                                                <span>1.44</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>-6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>大5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock normal_mid">
+                                                <p>和</p>
+                                                <span>4.70</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>+6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>小5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>&nbsp</p>
+                                                <span>7.30</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 32:26</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">韋斯咸</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">般尼茅夫</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>0.5</p>
+                                                <span>1.36</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>-6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>大5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock normal_mid">
+                                                <p>和</p>
+                                                <span>4.70</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>+6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>小5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>&nbsp;</p>
+                                                <span>0.65</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dataType unProgress">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="unProgress_ic"></i>
+                            <p>未開賽</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>義大利甲組聯賽</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                            </div>
+                                            <p class="date">02月06日</p>
+                                            <p class="time">03:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">拉素</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">維羅納</p>
+                                        </div>
+                                        <div class="betRate">
+                                            <div class="rateBlock">
+                                                <p>主勝</p>
+                                                <span>1.44</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>-6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>大5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>和</p>
+                                                <span>4.70</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>+6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>小5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>客勝</p>
+                                                <span>7.30</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                            </div>
+                                            <p class="date">02月06日</p>
+                                            <p class="time">03:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">拉素</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">維羅納</p>
+                                        </div>
+                                        <div class="betRate">
+                                            <div class="rateBlock">
+                                                <p>主勝</p>
+                                                <span>1.44</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>-6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>大5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>和</p>
+                                                <span>4.70</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>+6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>小5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>客勝</p>
+                                                <span>7.30</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>義大利甲組聯賽</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                            </div>
+                                            <p class="date">02月06日</p>
+                                            <p class="time">03:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">拉素</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">維羅納</p>
+                                        </div>
+                                        <div class="betRate">
+                                            <div class="rateBlock">
+                                                <p>主勝</p>
+                                                <span>1.44</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>-6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>大5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>和</p>
+                                                <span>4.70</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>+6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>小5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>客勝</p>
+                                                <span>7.30</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                            </div>
+                                            <p class="date">02月06日</p>
+                                            <p class="time">03:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">拉素</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">維羅納</p>
+                                        </div>
+                                        <div class="betRate">
+                                            <div class="rateBlock">
+                                                <p>主勝</p>
+                                                <span>1.44</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>-6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>大5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>和</p>
+                                                <span>4.70</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>+6.5</p>
+                                                <span>2.02</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>小5+50</p>
+                                                <span>1.125</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>客勝</p>
+                                                <span>7.30</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                 </div>
+            </div>
+           <div class="dataContainer">
+                <!-- <div class="noData">
+                    <i class="fa-solid fa-file-circle-xmark"></i>
+                    <p>尚無賽事</p>
+                </div> -->
+                <div class="dataType inProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="inProgress_ic"></i>
+                            <p>進行中</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>NBA 美國職業籃球</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock forBasketball">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">UTA 爵士</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">PHI七六人</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>大</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dataType unProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="umProgress_ic"></i>
+                            <p>未開賽</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>NBA 美國職業籃球</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock forBasketball">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">WAS 巫師</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">MIA 熱火</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>大</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forBasketball">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">DET 活塞</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">LAC 快艇</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>大</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forBasketball">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">ATL 老鷹</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">PHX 太陽</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>大</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+           <div class="dataContainer">
+                <div class="dataType inProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="inProgress_ic"></i>
+                            <p>進行中</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>WSBL 台灣女子超級籃球聯賽</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock forBasketball">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">2and 06:56</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <div>
+                                                <p class="teamName">國泰人壽(女)</p>
+                                                <span class="point">42</span>
+                                                <i class="teamLogo teamLogo_01"></i>
+                                            </div>
+                                            <p class="vs">VS</p>
+                                            <div>
+                                                <i class="teamLogo teamLogo_02"></i>
+                                                <span class="point">26</span>
+                                                <p class="teamName">中華電信(女)</p>
+                                            </div>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>19.5</p>
+                                                <span>0.75</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>大149.5</p>
+                                                <span>0.7</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>0.7</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>&nbsp;</p>
+                                                <span>0.75</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dataType unProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="umProgress_ic"></i>
+                            <p>未開賽</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>NBA 美國職業籃球</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock forBasketball">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">WAS 巫師</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">MIA 熱火</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>大</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>歐洲籃球聯賽</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock forBasketball">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">DET 活塞</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">LAC 快艇</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>大</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forBasketball">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">ATL 老鷹</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">PHX 太陽</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>大</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forBasketball">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">IND 溜馬</p>
+                                            <i class="teamLogo teamLogo_01"></i>
+                                            <p class="vs">VS</p>
+                                            <i class="teamLogo teamLogo_02"></i>
+                                            <p class="teamName">SAC 國王</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>大</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>&nbsp;</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>-</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dataContainer">
+                <div class="dataType unProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="umProgress_ic"></i>
+                            <p>未開賽</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>新加坡賽馬-克蘭芝</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock forRace">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">第一場~第一名小數點後一位[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forRace">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">第一場~第一名小數點後一位[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>日本賽馬-東京</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock forRace">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">第一場~第一名小數點後一位[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forRace">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">第一場~第一名小數點後一位[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dataContainer">
+                <div class="dataType unProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="umProgress_ic"></i>
+                            <p>未開賽</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>指數-美洲股票指數</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock forStock">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">美國那斯達克指數 (IXIC)[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>0.94</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.94</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.94</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.94</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forStock">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">美國道瓊斯工業平均指數 (DJI)[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forStock">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">加拿大多倫多綜合指數 (GSPTSE)[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dataContainer">
+                <div class="dataType unProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="umProgress_ic"></i>
+                            <p>未開賽</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>台灣 三星彩</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock forIceHockey">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">台灣三星彩：(百位數)[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>0.94</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.94</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.94</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.94</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forIceHockey">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">台灣三星彩：(十位數)[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forStock">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">台灣三星彩：(個位數)[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forStock">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">台灣三星彩：(三立總和)[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dataContainer">
+                <div class="dataType unProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="umProgress_ic"></i>
+                            <p>未開賽</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>KHL大陸冰球聯賽-不包括加時賽與點球賽</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock forIceHockey">
+                                    <div class="betRateType">
+                                        <p>獨贏</p>
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">新西伯利亞西伯爾[主]</p>
+                                            <p class="vs">VS</p>
+                                            <p class="teamName">哈巴羅夫斯克老虎</p>
+                                        </div>
+                                        <div class="betRate two">
+                                            <div class="rateBlock">
+                                                <p>&nbsp;</p>
+                                                <span>0.465</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>大4平</p>
+                                                <span>0.72</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <p>0.5</p>
+                                                <span>1.39</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>0.5</p>
+                                                <span>1.39</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forIceHockey">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">台灣三星彩：(十位數)[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forStock">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">台灣三星彩：(個位數)[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock forStock">
+                                    <div class="betRateType">
+                                        <p>讓分</p>
+                                        <p>大/小</p>
+                                    </div>
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <div class="group">
+                                                <i class="animate"></i>
+                                                <i class="live"></i>
+                                                <span class="gameDuration">1H 11:10</span>
+                                            </div>
+                                            <p class="date">02月09日</p>
+                                            <p class="time"> 10:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="proMode">
+                                        <div class="teamRow">
+                                            <p class="teamName">台灣三星彩：(三立總和)[主]</p>
+                                        </div>
+                                        <div class="betRate four">
+                                            <div class="rateBlock">
+                                                <p>大4.5</p>
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock proType">
+                                                <span>-</span>
+                                            </div>
+                                            <div class="rateBlock">
+                                                <p>小</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>單</p>
+                                                <span>0.93</span>
+                                            </div>
+                                            <div class="rateBlock proNone">
+                                                <p>雙</p>
+                                                <span>0.93</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dataContainer">
+                <div class="dataType inProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="inProgress_ic"></i>
+                            <p>進行中</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>LCK韓國職業聯賽(英雄聯盟)(3場2勝)</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock eSport">
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <i class="live"></i>
+                                            <span class="gameDuration">1H 21:33</span>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="teamRow">
+                                        <p class="teamName">T 1</p>
+                                        <p class="vs">VS</p>
+                                        <p class="teamName">DAMWON Gaming</p>
+                                    </div>
+                                    <div class="betRate">
+                                        <div class="rateBlock">
+                                            <span>1.81</span>
+                                        </div>
+                                        <div class="rateBlock">
+                                            <span>1.99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>玩家直播(絕地求生)</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock eSport">
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <i class="live gray"></i>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="teamRow">
+                                        <p class="teamName">HuYaTV_381854</p>
+                                        <p class="vs">VS</p>
+                                        <p class="teamName">其他</p>
+                                    </div>
+                                    <div class="betRate">
+                                        <div class="rateBlock">
+                                            <span>-</span>
+                                        </div>
+                                        <div class="rateBlock">
+                                            <span>-</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dataType unProgress active">
+                    <div class="filterBlock">
+                        <div class="state">
+                            <i class="unProgress_ic"></i>
+                            <p>未開賽</p>
+                        </div>
+                        <ul>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>ICE Challenge(反恐精英)(3場2勝)</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock eSport">
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <i class="live"></i>
+                                            <p class="date">02月06日</p>
+                                            <p class="time">02:00</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">更多(97)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="teamRow">
+                                        <p class="teamName">Mousesports</p>
+                                        <p class="vs">VS</p>
+                                        <p class="teamName">Mad Lions</p>
+                                    </div>
+                                    <div class="betRate">
+                                        <div class="rateBlock">
+                                            <span>1.29</span>
+                                        </div>
+                                        <div class="rateBlock">
+                                            <span>3.90</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gameBlock eSport">
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <i class="live"></i>
+                                            <p class="date">02月06日</p>
+                                            <p class="time"> 03:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">更多(92)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="teamRow">
+                                        <p class="teamName">Natus Vincere</p>
+                                        <p class="vs">VS</p>
+                                        <p class="teamName">GODSENT</p>
+                                    </div>
+                                    <div class="betRate">
+                                        <div class="rateBlock">
+                                            <span>1.28</span>
+                                        </div>
+                                        <div class="rateBlock">
+                                            <span>4.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <div class="gameName">
+                                    <p>LCK韓國職業聯賽(英雄聯盟)(3場2勝)</p>
+                                    <i class="downArrow_Icon"></i>
+                                </div>
+                                <div class="gameBlock eSport">
+                                    <div class="infoWrap">
+                                        <div class="functionState">
+                                            <i class="live"></i>
+                                            <p class="date">02月06日</p>
+                                            <p class="time">03:45</p>
+                                        </div>
+                                        <div class="more">
+                                            <p class="num">(更多)</p>
+                                            <i class="rightArrow_Icon"></i>
+                                        </div>
+                                    </div>
+                                    <div class="teamRow">
+                                        <p class="teamName">拉素</p>
+                                        <p class="vs">VS</p>
+                                        <p class="teamName">維羅納</p>
+                                    </div>
+                                    <div class="betRate">
+                                        <div class="rateBlock">
+                                            <span>1.44</span>
+                                        </div>
+                                        <div class="rateBlock">
+                                            <span>7.30</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                 </div>
+            </div>
+            <div class="betGame_Detail">
+                <div class="topArea">
+                    <div class="topWrap">
+                        <p class="gameName">今日</p>
+                        <i class="fa-solid fa-chevron-left" onclick="window.location.href='./mainPage.html'"></i>
+                    </div>
+                    <div class="content">
+                        <div class="teamWrap">
+                            <div class="team">
+                                <i class="teamLogo teamLogo_02"></i>
+                                <p>里昂</p>
+                            </div>
+                            <div class="info">
+                                <p class="date">02月06日</p>
+                                <p class="time">18:00</p>
+                            </div>
+                            <div class="team">
+                                <i class="teamLogo teamLogo_04"></i>
+                                <p>里昂</p>
+                            </div>
+                        </div>
+                        <div class="functionState">
+                            <div class="group">
+                                <i class="live"></i>
+                                <p>視頻直播</p>
+                            </div>
+                            <div class="group">
+                                <i class="animate"></i>
+                                <p>動畫直播</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="downArea">
+                    <div class="typeBlock">
+                        <div class="typeName">
+                            <p>冠軍</p>
+                            <i class="fa-solid fa-thumbtack"></i>
+                        </div>
+                        <div class="rateWrap">
+                            <div class="teamBlock multi">
+                                <p class="teamA">里昂</p>
+                                <span>1.76</span>
+                            </div>
+                            <div class="teamBlock multi">
+                                <p class="teamB">亞眠</p>
+                                <span>1.76</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="typeBlock">
+                        <div class="typeName">
+                            <p>讓盤</p>
+                            <i class="fa-solid fa-thumbtack"></i>
+                        </div>
+                        <div class="rateWrap">
+                            <div class="teamBlock">
+                                <p class="teamA">里昂</p>
+                            </div>
+                            <div class="teamBlock pureNum">
+                                <span class="gray">-1.5</span>
+                                <span>2.25</span>
+                            </div>
+                            <div class="teamBlock">
+                                <p class="teamB">亞眠</p>
+                            </div>
+                            <div class="teamBlock pureNum">
+                                <span class="gray">+1.5</span>
+                                <span>1.50</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="typeBlock">
+                        <div class="typeName">
+                            <p>冠軍-第一局</p>
+                            <i class="fa-solid fa-thumbtack"></i>
+                        </div>
+                        <div class="rateWrap">
+                            <div class="teamBlock multi">
+                                <p class="teamA">里昂</p>
+                                <span>1.80</span>
+                            </div>
+                            <div class="teamBlock multi">
+                                <p class="teamB">亞眠</p>
+                                <span>1.91</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="typeBlock">
+                        <div class="typeName">
+                            <p>讓分-第一局</p>
+                            <i class="fa-solid fa-thumbtack"></i>
+                        </div>
+                        <div class="rateWrap">
+                            <div class="teamBlock">
+                                <p class="teamA">里昂</p>
+                            </div>
+                            <div class="teamBlock pureNum">
+                                <span class="gray">-2.5</span>
+                                <span>2.35</span>
+                            </div>
+                            <div class="teamBlock">
+                                <p class="teamB">亞眠</p>
+                            </div>
+                            <div class="teamBlock pureNum">
+                                <span class="gray">+1.5</span>
+                                <span>1.50</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="typeBlock">
+                        <div class="typeName">
+                            <p>總分:大 / 小-第一局</p>
+                            <i class="fa-solid fa-thumbtack"></i>
+                        </div>
+                        <div class="rateWrap">
+                            <div class="teamBlock">
+                                <p>大</p>
+                            </div>
+                            <div class="teamBlock pureNum">
+                                <span class="gray">45.5</span>
+                                <span>1.69</span>
+                            </div>
+                            <div class="teamBlock">
+                                <p>小</p>
+                            </div>
+                            <div class="teamBlock pureNum">
+                                <span class="gray">45.5</span>
+                                <span>2.01</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="typeBlock">
+                        <div class="typeName">
+                            <p>冠軍-第二局</p>
+                            <i class="fa-solid fa-thumbtack"></i>
+                        </div>
+                        <div class="rateWrap">
+                            <div class="teamBlock multi">
+                                <p class="teamA">里昂</p>
+                                <span>1.80</span>
+                            </div>
+                            <div class="teamBlock multi">
+                                <p class="teamB">亞眠</p>
+                                <span>1.91</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="typeBlock">
+                        <div class="typeName">
+                            <p>讓分-第一局</p>
+                            <i class="fa-solid fa-thumbtack"></i>
+                        </div>
+                        <div class="rateWrap">
+                            <div class="teamBlock">
+                                <p class="teamA">里昂</p>
+                            </div>
+                            <div class="teamBlock pureNum">
+                                <span class="gray">-2.5</span>
+                                <span>2.35</span>
+                            </div>
+                            <div class="teamBlock">
+                                <p class="teamB">亞眠</p>
+                            </div>
+                            <div class="teamBlock pureNum">
+                                <span class="gray">+1.5</span>
+                                <span>1.50</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="typeBlock">
+                        <div class="typeName">
+                            <p>總分:大 / 小-第二局</p>
+                            <i class="fa-solid fa-thumbtack"></i>
+                        </div>
+                        <div class="rateWrap">
+                            <div class="teamBlock">
+                                <p>大</p>
+                            </div>
+                            <div class="teamBlock pureNum">
+                                <span class="gray">45.5</span>
+                                <span>1.69</span>
+                            </div>
+                            <div class="teamBlock">
+                                <p>小</p>
+                            </div>
+                            <div class="teamBlock pureNum">
+                                <span class="gray">45.5</span>
+                                <span>2.01</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 搜尋 -->
+            <div class="searchFilter">
+                <div class="innerMode_header">
+                    <p class="pageTitle">選擇聯賽</p>
+                    <p class="finish close_innerMode">完成</p>
+                    <i class="cross_icon close_innerMode"></i>
+                </div>
+                <div class="content">
+                    <div class="searchBlock">
+                        <input type="text" placeholder="請輸入隊名">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="allGames">
+                        <div class="selectAll">
+                            <p>全選</p>
+                            <label>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                        <ul class="active">
+                            <!-- <div class="typeName">
+                                <i class="downArrow_Icon"></i>
+                                <p>熱門賽事</p>
+                            </div> -->
+                            <li>
+                                <div class="group">
+                                    <i class="teamLogo_01"></i>
+                                    <p class="gameName">義大利甲組聯賽</p>
+                                </div>
+                                <div class="group">
+                                    <span class="total">(1)</span>
+                                    <label>
+                                        <input type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="group">
+                                    <i class="teamLogo_02"></i>
+                                    <p class="gameName">法國甲組聯賽</p>
+                                </div>
+                                <div class="group">
+                                    <span class="total">(7)</span>
+                                    <label>
+                                        <input type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="group">
+                                    <i class="teamLogo_03"></i>
+                                    <p class="gameName">英國足總杯</p>
+                                </div>
+                                <div class="group">
+                                    <span class="total">(1)</span>
+                                    <label>
+                                        <input type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nameTitle_select">
+                    <li>熱
+                        <span>.</span>
+                    </li>
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                    <li>D</li>
+                    <li>E</li>
+                    <li>F</li>
+                    <li>G</li>
+                    <li>H</li>
+                    <li>I</li>
+                    <li>J</li>
+                    <li>K</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+   <footer>
+        <ul class="multiBet_mode">
+            <div class="current_state">
+                <div class="group">
+                    <span class="count">4</span>
+                    <p>串關投注</p>
+                </div>
+                <div class="group">
+                    <p class="balance">餘額</p>
+                    <p class="currency">NT$</p>
+                    <p class="balance_num">0.00</p>
+                    <i class="fa-solid fa-angles-up"></i>
+                </div>
+            </div>
+            <ul class="betList">
+                <li>
+                    <i class="cross_icon"></i>
+                    <div class="group_normal">
+                        <div class="title">
+                            <p>亞眠</p>
+                        </div>
+                        <p class="betType">獨贏盤</p>
+                        <div class="teamWrap">
+                            <p class="team">里昂</p>
+                            <span>VS</span>
+                            <p class="team">亞眠</p>
+                        </div>
+                    </div>
+                    <div class="group_normal">
+                        <p>@
+                            <span class="rate">1.95</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <i class="cross_icon"></i>
+                    <div class="group_normal">
+                        <div class="title">
+                            <p>
+                                波爾多
+                                <span class="point">+1.5</span>
+                            </p>
+                        </div>
+                        <p class="betType">獨贏盤</p>
+                        <div class="teamWrap">
+                            <p class="team">里昂</p>
+                            <span>VS</span>
+                            <p class="team">亞眠</p>
+                        </div>
+                    </div>
+                    <div class="group_normal">
+                        <p>@
+                            <span class="rate">1.95</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <i class="cross_icon"></i>
+                    <div class="group_normal">
+                        <div class="title">
+                            <p>蒙彼利埃</p>
+                        </div>
+                        <p class="betType">獨贏盤</p>
+                        <div class="teamWrap">
+                            <p class="team">蒙彼利埃</p>
+                            <span>VS</span>
+                            <p class="team">梅斯</p>
+                        </div>
+                    </div>
+                    <div class="group_normal">
+                        <p>@
+                            <span class="rate">1.95</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <i class="cross_icon"></i>
+                    <div class="group_normal">
+                        <div class="title">
+                            <p>
+                                維羅納
+                                <span class="point">-1.5</span>
+                            </p>
+                        </div>
+                        <p class="betType">獨贏盤</p>
+                        <div class="teamWrap">
+                            <p class="team">拉素</p>
+                            <span>VS</span>
+                            <p class="team">維羅納</p>
+                        </div>
+                    </div>
+                    <div class="group_normal">
+                        <p>@
+                            <span class="rate">1.95</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="total_count">
+                <div class="group_normal">
+                    <div class="title">
+                        <p class="countNum">4</p>
+                        <p>串</p>
+                        <p class="amountNum">1</p>
+                    </div>
+                    <p class="win">
+                        預計可贏:
+                        <span class="tot">NT$0.00</span>
+                    </p>
+                    <p class="moreType">
+                        更多串關類型
+                        <i class="doubleArrow2_icon"></i>
+                    </p>
+                </div>
+                <div class="group_normal">
+                    <input type="text" class="limit" placeholder="限額 NT$0.50-8300.00">
+                    <p class="totMoney">
+                        小計:
+                        <span class="tot">NT$0.00</span>
+                    </p>
+                </div>
+            </div>
+            <div class="moreCount">
+                <div class="numBlock">1</div>
+                <div class="numBlock">2</div>
+                <div class="numBlock">3</div>
+                <div class="functionBlock">
+                    <i class="fa-solid fa-delete-left"></i>
+                </div>
+                <div class="numBlock">4</div>
+                <div class="numBlock">5</div>
+                <div class="numBlock">6</div>
+                <div class="numBlock">7</div>
+                <div class="numBlock">8</div>
+                <div class="numBlock">9</div>
+                <div class="functionBlock close">收起</div>
+                <div class="numBlock">.</div>
+                <div class="numBlock">0</div>
+            </div>
+            <div class="checkBlock">
+                <div class="addBtn">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>添加比賽</p>
+                </div>
+                <button type="button">
+                    <span>投注</span>
+                    <p class="total">
+                        合計
+                        <span class="money">NT$0.00</span>
+                    </p>
+                </button>
+            </div>
+        </ul>
+        <ul class="mainPageNav">
+            <li onclick="window.location.href='../html/tutorial.html'">
+                <i class="tutorial_ic"></i>
+                <span>盤口教程</span>
+            </li>
+            <li class="setMenu">
+                <i class="setMenu_ic"></i>
+                <span>設置菜單</span>
+            </li>
+            <li class="showUnFinish_bet">
+                <i class="undone_ic"></i>
+                <span>未結注單</span>
+            </li>
+            <li onclick="window.location.href='../html/betRecord.html'">
+                <i class="done_ic"></i>
+                <span>已結注單</span>
+            </li>
+            <li onclick="window.location.href='../html/mainPage.html'">
+                <i class="refresh_ic"></i>
+                <span>刷新</span>
+            </li>
+        </ul>
+    </footer>
+    <!-- 彈窗 -->
+    <div class="filter">
+        <!-- 下注彈窗 -->
+        <div class="jumpWindow betGame">
+            <i class="close_icon closeWindow"></i>
+            <div class="titleArea">
+                <p class="gameName">法國甲組聯賽</p>
+            </div>
+            <div class="content">
+                <div class="gameBlock">
+                    <div class="teamBlock">
+                        <p class="teamName">利華古遜</p>
+                        <p class="vs">VS</p>
+                        <p class="teamName">司徒加特</p>
+                    </div>
+                    <div class="betDetail">
+                        <div class="infoWrap">
+                            <p class="betSide">平</p>
+                            <span>@</span>
+                            <p class="betRate">5.10</p>
+                        </div>
+                        <p class="betChoose">獨贏</p>
+                        <span class="num">8</span>
+                    </div>
+                    <div class="moneyState">
+                        <div class="group">
+                            <p>餘額:</p>
+                            <span>0.00元</span>
+                        </div>
+                        <div class="group">
+                            <p>下注限額:</p>
+                            <span>10100.00元</span>
+                        </div>
+                    </div>
+                    <form>
+                        <label>
+                            <input type="text" placeholder="請輸入金額">
+                            <p>元</p>
+                        </label>
+                        <div class="btnWrap">
+                            <button type="button" class="quickMoneyBtn">100</button>
+                            <button type="button" class="quickMoneyBtn">500</button>
+                            <button type="button" class="quickMoneyBtn">1000</button>
+                            <button type="button" class="quickMoneyBtn">2000</button>
+                            <button type="button" class="quickMoneyBtn">5000</button>
+                            <button type="button" class="quickMoneyBtn">最大</button>
+                        </div>
+                        <div class="winWrap">
+                            <p>可贏金額:</p>
+                            <span>NT$0</span>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="btnBlock betBtn">
+                <p>向右滑動投注</p>
+                <div class="grabBar">
+                    <i class="rightArrow_Icon"></i>
+                    <i class="rightArrow_Icon"></i>
+                </div>
+            </div>
+        </div>
+        <!-- 未結注單 -->
+        <div class="jumpWindow unFinish_bet">
+            <i class="close_icon closeWindow"></i>
+            <div class="titleArea">
+                <p>
+                    投注清單
+                    <span class="num">2</span>
+                </p>
+            </div>
+            <div class="content">
+                <div class="tableOuter active">
+                    <table>
+                        <tbody>
+                            <tr class="gameName">
+                                <th colspan="2">
+                                    <div class="outer">
+                                        <p>足球-全場-獨贏</p>
+                                        <p class="state">未開獎</p>
+                                    </div>
+                                </th>
+                                <th colspan="2" class="oddNum">
+                                    <div class="outer">
+                                        <p>M11513352</p>
+                                        <i class="downArrow_Icon"></i>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="summary">
+                                <td colspan="2">
+                                    <p>智利甲組聯賽全場FT1820340</p>
+                                </td>
+                                <td colspan="2">
+                                    <div class="outer">
+                                        <p>投注</p>
+                                        <p class="important">100</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="gameInfo">
+                                    <div class="outer">
+                                        <p>智利甲組聯賽全場FT1820340</p>
+                                        <div class="team">
+                                            <p>梅里比拉[主]</p>
+                                            <span>VS</span>
+                                            <p>艾斯潘諾拉</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>有效下注</p>
+                                </td>
+                                <td>
+                                    <p>0</p>
+                                </td>
+                                <td>
+                                    <p>賠率</p>
+                                </td>
+                                <td>
+                                    <p class="highLight">1.13</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>投注選項</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="highLight">梅里比拉</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>結果</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="state">未開獎</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>投注</p>
+                                </td>
+                                <td>
+                                    <p class="important">100</p>
+                                </td>
+                                <td>
+                                    <p>可贏(參考)</p>
+                                </td>
+                                <td>
+                                    <p class="important">113</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tableOuter">
+                    <table>
+                        <tbody>
+                            <tr class="gameName">
+                                <th colspan="2">
+                                    <div class="outer">
+                                        <p>足球-全場-獨贏</p>
+                                        <p class="state">未開獎</p>
+                                    </div>
+                                </th>
+                                <th colspan="2" class="oddNum">
+                                    <div class="outer">
+                                        <p>M11513352</p>
+                                        <i class="downArrow_Icon"></i>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="summary">
+                                <td colspan="2">
+                                    <p>智利甲組聯賽全場FT1820340</p>
+                                </td>
+                                <td colspan="2">
+                                    <div class="outer">
+                                        <p>投注</p>
+                                        <p class="important">100</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="gameInfo">
+                                    <div class="outer">
+                                        <p>智利甲組聯賽全場FT1820340</p>
+                                        <div class="team">
+                                            <p>梅里比拉[主]</p>
+                                            <span>VS</span>
+                                            <p>艾斯潘諾拉</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>有效下注</p>
+                                </td>
+                                <td>
+                                    <p>0</p>
+                                </td>
+                                <td>
+                                    <p>賠率</p>
+                                </td>
+                                <td>
+                                    <p class="highLight">1.13</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>投注選項</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="highLight">梅里比拉</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>結果</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="state">未開獎</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>投注</p>
+                                </td>
+                                <td>
+                                    <p class="important">100</p>
+                                </td>
+                                <td>
+                                    <p>可贏(參考)</p>
+                                </td>
+                                <td>
+                                    <p class="important">113</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tableOuter">
+                    <table>
+                        <tbody>
+                            <tr class="gameName">
+                                <th colspan="2">
+                                    <div class="outer">
+                                        <p>足球-全場-獨贏</p>
+                                        <p class="state">未開獎</p>
+                                    </div>
+                                </th>
+                                <th colspan="2" class="oddNum">
+                                    <div class="outer">
+                                        <p>M11513352</p>
+                                        <i class="downArrow_Icon"></i>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="summary">
+                                <td colspan="2">
+                                    <p>智利甲組聯賽全場FT1820340</p>
+                                </td>
+                                <td colspan="2">
+                                    <div class="outer">
+                                        <p>投注</p>
+                                        <p class="important">100</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="gameInfo">
+                                    <div class="outer">
+                                        <p>智利甲組聯賽全場FT1820340</p>
+                                        <div class="team">
+                                            <p>梅里比拉[主]</p>
+                                            <span>VS</span>
+                                            <p>艾斯潘諾拉</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>有效下注</p>
+                                </td>
+                                <td>
+                                    <p>0</p>
+                                </td>
+                                <td>
+                                    <p>賠率</p>
+                                </td>
+                                <td>
+                                    <p class="highLight">1.13</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>投注選項</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="highLight">梅里比拉</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>結果</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="state">未開獎</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>投注</p>
+                                </td>
+                                <td>
+                                    <p class="important">100</p>
+                                </td>
+                                <td>
+                                    <p>可贏(參考)</p>
+                                </td>
+                                <td>
+                                    <p class="important">113</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="countBlock">
+                <div class="half">
+                    <p>投注</p>
+                    <span class="bet">100</span>
+                </div>
+                <div class="half">
+                    <p>結果</p>
+                    <span class="result">88</span>
+                </div>
+            </div>
+        </div>
+        <!-- 菜單設置 -->
+        <div class="jumpMenu">
+            <ul>
+                <li>
+                    <p>投注模式</p>
+                    <div class="switchBtn">
+                        <p>新手版</p>
+                        <p>專業版</p>
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <p>排序規則</p>
+                    <div class="switchBtn">
+                        <p>熱門</p>
+                        <p>時間</p>
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <p>盤口設置</p>
+                    <div class="switchBtn">
+                        <p>歐洲盤</p>
+                        <p>香港盤</p>
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <p>主題風格</p>
+                    <div class="switchBtn">
+                        <p>日間</p>
+                        <p>夜間</p>
+                        <div class="bar"></div>
+                    </div>
+                </li>
+            </ul>
+            <button type="button" class="closeMenu">關閉</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,190 @@
+@media only screen and (max-width: 820px)  {  //iPad air
+    main {
+
+        &.homePage {
+            height: auto;
+            padding: pxToVw(295) 4vw 11vw 4vw;
+
+            .homeCenter {
+
+                nav {
+
+                    &.gameFilter {
+
+                        ul {
+
+                            li {
+                                height: calc(80% / 4);
+
+                                &.active {
+
+                                    .outer {
+                                        height: 15vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .gameType {
+                    max-height: 85vw;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 430px)  {  
+
+    main {
+
+        &.homePage {
+            height: 100vh;
+
+            .homeCenter {
+
+                nav {
+
+                    &.gameFilter {
+
+                        ul {
+
+                            li {
+                                height: calc(80% / 4);
+
+                                &.active {
+
+                                    .outer {
+                                        height: 23.5vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                ol {
+
+                    &.gameType {
+                        max-height: 110vw;
+    
+                        ul {
+                            height: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 414px)  {  //iphone xr
+    main {
+
+        &.homePage {
+            height: 100%;
+
+            .homeCenter {
+
+                nav {
+
+                    &.gameFilter {
+
+                        ul {
+
+                            li {
+                                height: 26vw;
+
+                                &.active {
+
+                                    .outer {
+                                        height: 24vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                ol {
+
+                    &.gameType {
+                        max-height: 116vw;
+    
+                        ul {
+                            height: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 412px)  {  //samsung galaxy
+    
+    body {
+
+        main {
+
+            &.homePage {
+    
+                .homeCenter {
+                    padding: 0 !important;
+
+                    ol {
+
+                        &.gameType {
+                            max-height: 113vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media only screen and (max-width: 375px)  {  //iphone se
+    main {
+
+        &.homePage {
+
+            .homeCenter {
+
+                nav {
+
+                    &.gameFilter {
+
+                        ul {
+
+                            li {
+                                height: calc(80% / 4);
+
+                                &.active {
+
+                                    .outer {
+                                        height: 16vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                ol {
+
+                    &.gameType {
+                        max-height: 99vw;
+    
+                        ul {
+                            height: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

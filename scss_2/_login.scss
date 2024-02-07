@@ -1,0 +1,128 @@
+.loginPage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20vw 13vw;
+
+    &>.logo {
+        width: 28vw;
+        height: 12vw;
+        margin: 21vw 0 16.5vw;
+    }
+
+    form {
+        width: 100%;
+        margin: 0 0 10vw;
+
+        .btnBox {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 2vw;
+
+            button {
+                width: 22vw;
+                height: 6.5vw;
+
+                &:first-of-type {
+                    @include btnStyle04;
+                }
+
+                &:last-of-type {
+                    @include btnStyle03;
+                }
+            }
+        }
+
+        label {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin: 0 0 3vw;
+            position: relative;
+
+            &.checkBox {
+                width: auto;
+
+                &>input {
+                    width: 4vw;
+                    height: 4vw;
+                    padding: 0
+                }
+
+                p {
+                    color: $Font_Color02;
+                    font-size: 3.6vw
+                }
+            }
+
+            input {
+                @include input01;
+                width: 100%;
+                height: 10vw;
+                padding: 0 0 0 9vw;
+            }
+
+            i {
+                width: 4vw;
+                height: 4vw;
+                position: absolute;
+                left: 4vw;
+                top: 50%;
+                transform: translateY(-50%);
+
+                &.acc_ic {
+                    background-position-y: 0%;
+                }
+            
+                &.pass_ic {
+                    background-position-y: 100%;
+                }
+            }
+        }
+    }
+
+    .slip {
+        width: 100%;
+        height: 11vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1.5vw;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5vw;
+        position: relative;
+        overflow: hidden;
+        background: $gradient01;
+
+        p {
+            color: $Font_Color01;
+            font-weight: bold;
+        }
+
+        .bar {
+            width: 25%;
+            height: 100%;
+            background: $gradient01;
+            border-radius: 1.5vw;
+            box-shadow: 3px 0 10px 0 $shadow_01;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 4vw;
+                height: 4vw;
+                top: 50%;
+                transform: translateY(-50%) rotate(90deg);
+                right: 2vw;
+                filter: brightness(0.2);
+            }
+        }
+    }
+}

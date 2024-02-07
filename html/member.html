@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ZH-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_2/style.css">
+    <link rel="shortcut icon" href="../img/newBall_64x64.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="https://kit.fontawesome.com/8858aac5ee.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="innerPage">
+        <p class="pageTitle">我的</p>
+    </header>
+    <main class="decoBG">
+        <div class="memberPage">
+            <span class="grayBG"></span>
+            <div class="topArea">
+                <div class="memberBlock">
+                    <img class="memberProfile" src="../img/decoPic/member_profile.png">
+                    <div class="infoText">
+                        <p class="userName">user545</p>
+                        <span class="moneyTotal">50,000</span>
+                    </div>
+                    <i class="rightArrow_Icon"></i>
+                </div>
+                <ul class="quickNav">
+                    <li onclick="window.location.href='./betLimit.html'">
+                        <i class="betLimit"></i>
+                        <p>投注額度</p>
+                    </li>
+                    <li onclick="window.location.href='./gameRule.html'">
+                        <i class="rule"></i>
+                        <p>相關規則</p>
+                    </li>
+                    <li onclick="window.location.href='./setting.html'">
+                        <i class="setting"></i>
+                        <p>設定</p>
+                    </li>
+                    <li onclick="window.location.href='./.html'">
+                        <i class="changeDevice"></i>
+                        <p>回電腦版</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottomArea">
+                <ul class="functionList">
+                    <li class="tutorialBtn">
+                        <i class="fa-regular fa-circle-question"></i>
+                        <p>手機操作教學</p>
+                        <i class="rightArrow_Icon"></i>
+                    </li>
+                    <li onclick="window.location.href='./event.html'">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                        <p>優惠</p>
+                        <i class="rightArrow_Icon"></i>
+                    </li>
+                    <li class="callAnnounce">
+                        <i class="fa-solid fa-scroll"></i>
+                        <p>公告</p>
+                        <i class="rightArrow_Icon"></i>
+                    </li>
+                    <li onclick="window.location.href='./card.html'">
+                        <i class="fa-regular fa-credit-card"></i>
+                        <p>卡片管理</p>
+                        <i class="rightArrow_Icon"></i>
+                    </li>
+                    <li onclick="window.location.href='../index.html'">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>登出</p>
+                        <i class="rightArrow_Icon"></i>
+                    </li>
+                </ul>
+                <ul class="tutorialList">
+                    <li class="endTutorialBtn">
+                        <i class="back_ic"></i>
+                        <p>返回</p>
+                        <i class="rightArrow_Icon"></i>
+                    </li>
+                    <li class="forBasic">
+                        <i class="fa-regular fa-circle-question"></i>
+                        <p>登録.ログインする.顧客サービス.情報</p>
+                        <i class="rightArrow_Icon"></i>
+                    </li>
+                    <li class="forSingle">
+                        <i class="fa-regular fa-circle-question"></i>
+                        <p>シングルレベルの教育</p>
+                        <i class="rightArrow_Icon"></i>
+                    </li>
+                    <li class="forMulti">
+                        <i class="fa-regular fa-circle-question"></i>
+                        <p>クロスリンク教育</p>
+                        <i class="rightArrow_Icon"></i>
+                    </li>
+                    <li class="forBet">
+                        <i class="fa-regular fa-circle-question"></i>
+                        <p>ベット</p>
+                        <i class="rightArrow_Icon"></i>
+                    </li>
+                </ul>
+            </div>
+            <!-- 編輯模式 -->
+            <div class="memberEditing">
+                <div class="innerMode_header">
+                    <p class="pageTitle">個人資料</p>
+                    <i class="leftArrow_Icon backTo_LastPage"></i>
+                </div>
+                <span class="grayBG"></span>
+                <form class="memberData">
+                    <label>
+                        <p class="itemName">個人頭像</p>
+                        <div class="picBox">
+                            <img class="memberProfile" src="../img/decoPic/member_profile.png">
+                            <button type="button" class="editPic_Btn">
+                                <i class="editPic_Icon"></i>
+                            </button>
+                        </div>
+                        <button type="button" class="turnEditBtn">
+                            <p>編輯個人資料</p>
+                        </button>
+                    </label>
+                    <label>
+                        <p class="itemName">用戶名</p>
+                        <input class="normalMode userName">
+                        <p class="oriData">user545</p>
+                    </label>
+                    <label>
+                        <p class="itemName">真實姓名</p>
+                        <input class="normalMode realName">
+                        <p class="hint">姓名與銀行卡持卡人姓名一致，否則無法提款</p>
+                        <i class="rightArrow_Icon"></i>
+                    </label>
+                    <label>
+                        <p class="itemName">性別</p>
+                        <select>
+                            <option>-選擇性別-</option>
+                            <option>男</option>
+                            <option>女</option>
+                        </select>
+                        <p class="hint">未選擇</p>
+                        <i class="rightArrow_Icon"></i>
+                    </label>
+                    <label>
+                        <p class="itemName">出生日期</p>
+                        <input type="date" value="2023-07-22">
+                        <p class="hint">添加日期，確保您已滿18周歲</p>
+                        <i class="rightArrow_Icon"></i>
+                    </label>
+                    <label>
+                        <p class="itemName">手機號碼</p>
+                        <input type="text">
+                        <p class="keep">綁定手機號碼保護帳號安全</p>
+                        <i class="rightArrow_Icon"></i>
+                    </label>
+                    <label>
+                        <p class="itemName">電子信箱</p>
+                        <input type="text">
+                        <p class="keep">綁定信箱保護帳號安全</p>
+                        <i class="rightArrow_Icon"></i>
+                    </label>
+                    <div class="btnBlock">
+                        <button type="button" class="submitBtn">
+                            <p>確認修改</p>
+                        </button>
+                    </div>
+                </form>
+                <div class="hintBox">
+                    <p>為了您的隱私安全，信息在確認候將無法修改</p>
+                    <p>如需幫助，請
+                        <span>聯繫客服</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+   <footer>
+        <ul class="mainNav">
+            <li onclick="window.location.href='./index.html'">
+                <i class="home_ic"></i>
+                <span>首頁</span>
+            </li>
+            <li onclick="window.location.href='../html/gameResult.html'">
+                <i class="event_ic"></i>
+                <span>賽事結果</span>
+            </li>
+            <li onclick="window.location.href='../html/csService.html'">
+                <i class="cs_ic"></i>
+                <span>客服</span>
+            </li>
+            <li onclick="window.location.href='../html/betRecord.html'">
+                <i class="sponsor_ic"></i>
+                <span>投注紀錄</span>
+            </li>
+            <li class="active" onclick="window.location.href='../html/member.html'" class="notify">
+                <i class="member_ic"></i>
+                <span>我的</span>
+            </li>
+        </ul>
+    </footer>
+    <!-- 彈窗 -->
+    <div class="filter">
+        <!-- 公告 -->
+        <div class="jumpWindow announcement">
+            <p class="title">公告標題</p>
+            <div class="content">
+                <p>公告公告公告公告公告公告公告公告
+                    公告公告公告公告公告公告公告公告
+                    公告公告公告公告公告公告公告公告
+                    公告公告公告公告公告公告公告公告
+                    公告公告公告公告</p>
+            </div>
+            <div class="btnBlock">
+                <button type="button" class="closeWindow">關閉</button>
+                <button type="button" class="seeMore" onclick="window.location.href='../html/post.html'">查看全部</button>
+            </div>
+        </div>
+        <div class="jumpWindow noviceWindow basic">
+            <div class="display">
+                <img src="../img/teach/basic/1.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">知っている</button>
+            </div>
+            <div>
+                <img src="../img/teach/basic/2.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">知っている</button>
+            </div>
+            <div>
+                <img src="../img/teach/basic/3.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">知っている</button>
+            </div>
+            <div>
+                <img src="../img/teach/basic/4.jpg">
+                <button class="cancelBtn"></button>
+                <button class="cancel">知っている</button>
+            </div>
+        </div>
+        <div class="jumpWindow noviceWindow single">
+            <div class="display">
+                <img src="../img/teach/single/1.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach/single/2.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach/single/3.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach/single/4.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach/single/5.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach/single/6.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach/single/7.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach/single/8.jpg">
+                <button class="cancelBtn"></button>
+                <button class="play" onclick="window.location.href='./mainPage.html'">今すぐ賭ける</button>
+                <button class="cancel">ホームページに戻る</button>
+                <button class="again">もう一度見てください</button>
+            </div>
+        </div>
+        <div class="jumpWindow noviceWindow multi">
+            <div class="display">
+                <img src="../img/teach//multi/1.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach//multi/2.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach//multi/3.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach//multi/4.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach//multi/5.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach//multi/6.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach//multi/7.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach//multi/8.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach//multi/9.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach//multi/10.jpg">
+                <button class="cancelBtn"></button>
+                <button class="play" onclick="window.location.href='./mainPage.html'">今すぐ賭ける</button>
+                <button class="cancel">ホームページに戻る</button>
+                <button class="again">もう一度見てください</button>
+            </div>
+        </div>
+        <div class="jumpWindow noviceWindow bet">
+            <div class="display">
+                <img src="../img/teach/bet/1.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach/bet/2.jpg">
+                <button class="cancelBtn"></button>
+                <button class="next">次のステップ</button>
+            </div>
+            <div>
+                <img src="../img/teach/bet/3.jpg">
+                <button class="cancelBtn"></button>
+                <button class="cancel">知っている</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

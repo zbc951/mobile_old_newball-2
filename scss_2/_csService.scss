@@ -1,0 +1,384 @@
+.csPage {
+    height: auto;
+
+    .topContainer {
+        width: 100%;
+        height: 34.6vw;
+        margin-bottom: 8vw;
+        position: relative;
+
+        .quickHref {
+            width: 100%;
+            height: pxToVw(280);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            background: $BG_Color06;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 0 15px $shadow_01;
+            padding: 0 pxToVw(110);
+            margin: 0 0 5vw;
+            position: relative;
+
+            p {
+                color: $Font_Color06;
+                font-size: 4.8vw;
+                font-weight: bold;
+                margin: 0 auto ;
+
+                &:first-child {
+                    width: 22vw;
+                    height: 7vw;
+                    @include btnStyle01;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 3.8vw;
+                    margin: 0;
+                    position: absolute;
+                    top: 50%;
+                    right: 5vw;
+                    transform: translateY(-50%);
+                }
+
+
+                &.connectUs {
+                    background: $BG_Color07;
+                    border: 1px solid $Border_07;
+                    color: $Font_Color03;
+                }
+            }
+        }
+
+        .memberBlock {
+            width: 90%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            background: $BG_Color05;
+            border-radius: 10px;
+            padding: 4vw;
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .memberProfile {
+                width: 15vw;
+                height: 15vw;
+                object-fit: contain;
+                margin-right: 4vw;
+            }
+
+            .hiText {
+                color: $Font_Color07;
+                font-family: sans-serif;
+                font-size: 4.4vw;
+                font-weight: bold;
+                margin-bottom: 1vw;
+
+                .userID {
+                    color: $Font_Color03;
+                }
+            }
+
+            .welcomeText {
+                color: $Font_Color02;
+                font-size: 3.8vw;
+            }
+        }
+
+        .grayBG {
+            width: 100%;
+            height: pxToVw(400);
+            position: absolute;
+            bottom: -48px;
+            left: 0;
+            z-index: -3;
+        }
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 4.4vw;
+
+        .csBlock {
+            width: 100%;
+            height: 28vw;
+            display: grid;
+            grid-template-columns: 20% 80%;
+            gap: 2vw;
+            background: $BG_Color03;
+            border-radius: 2vw;
+            border: 1px solid $Border_01;
+            padding: 3.8vw 4.4vw 6vw;
+            margin-bottom: 2vw;
+
+            i {
+                width: 10vw;
+                height: 10vw;
+                margin-right: 2vw;
+                align-self: center;
+                justify-self: center;
+            }
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                align-self: center;
+                
+                p {
+                    color: $Font_Color03;
+                    font-size: 6vw;
+                    text-align: left;
+                    
+                    &:nth-of-type(1) {
+                        color: $Font_Color07;
+                        margin: 0 0 2vw 0;
+                    }
+    
+                    &.subTitle {
+                        color: $Font_Color03;
+                        font-size: 4vw;
+        
+                        &:nth-of-type(2) {
+                            opacity: 0.7;
+                            margin: 0 0 2vw 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .innerMode {
+        display: none;
+        width: 100%;
+        height: auto;
+        background: $BG_Color00;
+        animation: fadeIn 0.3s ease-in-out;
+        position: absolute;
+        top: -10vw;
+        z-index: 13;
+
+        &.display {
+            display: block;
+        }
+
+        .content {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 17vw 0;
+            margin: 18vw 0 0 0;
+
+            ul {
+                width: 100%;
+                height: auto;
+                background: $BG_Color05;
+                padding: 4vw 4vw 0;
+
+                &:first-child {
+                    padding: 10vw 4vw 0 4vw;
+                    margin-bottom: 4vw;
+                }
+
+                .themeTitle {
+                    color: $Font_Color03;
+                    font-size: 4.8vw;
+                    border-left: 2px solid $Border_01;
+                    padding: 0 0 0 4vw;
+                    margin: 0 2vw 4vw;
+                }
+
+                li {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-bottom: pxToVw(1) solid $Border_06;
+                    padding: 8vw 0;
+                    
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    i {
+                        width: 10vw;
+                        height: 10vw;
+                        flex-shrink: 0;
+                        margin: 0 4vw;
+
+                        &.mail_Icon {
+                            background-position-x: 0%;
+                        }
+
+                        &.qq_Icon {
+                            background-position-x: 32%;
+                        }
+
+                        &.skype_Icon {
+                            background-position-x: 65%;
+                        }
+
+                        &.message_Icon {
+                            background-position-x: 100%;
+                        }
+                    }
+
+                    .infoBlock {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-left: pxToVw(1) solid $Border_06;
+
+                        p {
+                            color: $Font_Color07;
+                            font-size: 4.8vw;
+                            margin: 0 0 0 4vw;
+    
+                            span {
+                                color: $Font_Color02;
+                                display: block;
+                                margin-top: 2vw;
+                            }
+                        }
+
+                        .copyBtn {
+                            width: auto;
+                            height: auto;
+                            padding: 2vw 6vw;
+                            @include btnStyle04;
+                            font-size: 3.8vw;
+                        }
+                    }
+                }
+            }
+
+            form {
+                width: 100%;
+                height: auto;
+                padding: 4vw 0 10vw;
+
+                label {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 8vw 0;
+                    position: relative;
+
+                    .itemName {
+                        color: $Font_Color06;
+                        font-size: 4.4vw;
+                        padding: 0 0 4vw 4vw;
+                    }
+
+                    select {
+                        width: 100%;
+                        height: 15vw;
+                        color: $Font_Color02;
+                        font-size: 4vw;
+                        padding: 0 4vw;
+                    }
+
+                    .rightArrow_Icon {
+                        position: absolute;
+                        top: 60%;
+                        right: 4vw;
+                        transform: translateY(-50%);
+                    }
+
+                    textarea {
+                        width: 100%;
+                        height: 60vw;
+                        border: none;
+                        color: $Font_Color02;
+                        font-size: 4vw;
+                        padding: 4vw;
+                        box-sizing: border-box;
+                        resize: none;
+                    }
+
+                    .updateBlock{
+                        width: 100%;
+                        height: auto;
+                        background: $BG_Color01;
+                        padding: 5vw 4vw;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            width: 93%;
+                            height: pxToVw(2);
+                            background: $Border_02;
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+
+                        .picLimit {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            color: $Font_Color02;
+                            font-size: 4vw;
+                            font-weight: bold;
+                            position: absolute;
+                            top: 4vw;
+                            right: 4vw;
+                        }
+
+                        .addPic {
+                            width: 18vw;
+                            height: 18vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: pxToVw(10) dashed $Border_03;
+                            padding: 3vw;
+
+                            i {
+                                width: 10vw;
+                                height: 10vw;
+                            }
+                        }
+
+                        .hint {
+                            color: $Font_Color02;
+                            font-size: 4vw;
+                            margin-top: 6vw;
+                        }
+                    }
+                }
+
+                .btnBlock {
+                    width: 100%;
+                    height: auto;
+                    background: $BG_Color00;
+                    padding: 0 4vw;
+                }
+            }
+
+            .onlineCS_Btn,
+            .subTitle_Btn {
+                width: pxToVw(1984);
+                height: pxToVw(297);
+                @include btnStyle03;
+                font-size: 4.4vw;
+                margin: 8vw auto 2vw;
+            }
+
+            .subTitle_Btn {
+                margin: 8vw auto 0;
+            }
+        }
+    }
+}

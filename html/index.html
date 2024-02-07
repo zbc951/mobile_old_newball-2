@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ZH-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_2/style.css">
+    <link rel="shortcut icon" href="../img/newBall_64x64.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <i class="message notify" onclick="window.location.href='./post.html'"></i>
+    </header>
+    <main class="homePage">
+        <!-- banner -->
+        <div class="swiper_IndexBanner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="banner" src="../img/banner.png">
+                </div>
+                <div class="swiper-slide">
+                    <img class="banner" src="../img/banner.png">
+                </div>
+                <div class="swiper-slide">
+                    <img class="banner" src="../img/banner.png">
+                </div>
+            </div>
+        </div>
+        <!-- 跑馬燈 -->
+        <div class="marqueeWrap">
+            <i class="marqueeIcon"></i>
+            <div class="marquee">
+                <p>公告公告公告公告公告公告公告公告公告公</p>
+            </div>
+            <button type="button" class="hotGameBtn">
+                <i class="hot_Icon"></i>
+                <p>熱門賽事</p>
+            </button>
+        </div>
+        <div class="memberArea">
+            <!--會員資料-->
+            <div class="memberInfo">
+                <div class="nameBlock">
+                    <p class="id">user545</p>
+                    <div class="vipLevel">
+                        <i class="vip_icon"></i>
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="total">
+                    NT$
+                    <p class="walletNum">0.00</p>
+                    <i class="hint_icon"></i>
+                </div>
+            </div>
+            <!--轉存提-->
+            <div class="quickBtnBlock">
+                <a href="./deposit.html">
+                    <i class="deposit_ic"></i>
+                    <p>存款</p>
+                </a>
+                <a href="./transfer.html">
+                    <i class="transfer_ic"></i>
+                    <p>轉帳</p>
+                </a>
+                <a href="./withdraw.html">
+                    <i class="withdrawal_ic"></i>
+                    <p>取款</p>
+                </a>
+            </div>
+        </div>
+        <div class="homeCenter">
+            <nav class="gameFilter">
+                <ul>
+                    <li class="active">
+                        <div class="outer">
+                            <p class="type">
+                                全部
+                            </p>
+                            <P class="num">
+                                1200
+                            </P>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="outer">
+                            <p class="type">
+                                滾球
+                            </p>
+                            <P class="num">
+                                2
+                            </P>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="outer">
+                            <p class="type">
+                                單式
+                            </p>
+                            <P class="num">
+                                1197
+                            </P>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="outer">
+                            <p class="type">
+                                過關
+                            </p>
+                            <P class="num">
+                                222
+                            </P>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <ol class="gameType">
+                <ul>
+                    <li class="soccer" onclick="window.location='./mainPage.html'">
+                        <div class="left_triangle"></div>
+                        <div class="gameDetails">
+                            <p class="name">足球</p>
+                            <p class="num">95</p>
+                            <span>-可投注項-</span>
+                        </div>
+                        <div class="right_triangle"></div>
+                    </li>
+                    <li class="basketball" onclick="window.location='./mainPage.html'">
+                        <div class="left_triangle"></div>
+                        <div class="gameDetails">
+                            <p class="name">美國職籃</p>
+                            <p class="num">54</p>
+                            <span>-可投注項-</span>
+                        </div>
+                        <div class="right_triangle"></div>
+                    </li>
+                    <li class="basketball" onclick="window.location='./mainPage.html'">
+                        <div class="left_triangle"></div>
+                        <div class="gameDetails">
+                            <p class="name">其他籃球</p>
+                            <p class="num">54</p>
+                            <span>-可投注項-</span>
+                        </div>
+                        <div class="right_triangle"></div>
+                    </li>
+                    <li class="raceHorseDog">
+                        <div class="left_triangle"></div>
+                        <div class="gameDetails" onclick="window.location='./mainPage.html'">
+                            <p class="name">賽馬賽狗</p>
+                            <p class="num">243</p>
+                            <span>-可投注項-</span>
+                        </div>
+                        <div class="right_triangle"></div>
+                    </li>
+                    <li class="stock">
+                        <div class="left_triangle"></div>
+                        <div class="gameDetails" onclick="window.location='./mainPage.html'">
+                            <p class="name">指數</p>
+                            <p class="num">34</p>
+                            <span>-可投注項-</span>
+                        </div>
+                        <div class="right_triangle"></div>
+                    </li>
+                    <li class="colorBall">
+                        <div class="left_triangle"></div>
+                        <div class="gameDetails" onclick="window.location='./mainPage.html'">
+                            <p class="name">彩球</p>
+                            <p class="num">34</p>
+                            <span>-可投注項-</span>
+                        </div>
+                        <div class="right_triangle"></div>
+                    </li>
+                    <li class="iceBall">
+                        <div class="left_triangle"></div>
+                        <div class="gameDetails" onclick="window.location='./mainPage.html'">
+                            <p class="name">冰球</p>
+                            <p class="num">18</p>
+                            <span>-可投注項-</span>
+                        </div>
+                        <div class="right_triangle"></div>
+                    </li>
+                </ul>
+            </ol>
+        </div>
+    </main>
+   <footer>
+        <ul class="mainNav">
+            <li class="active" onclick="window.location.href='./index.html'">
+                <i class="home_ic"></i>
+                <span>首頁</span>
+            </li>
+            <li onclick="window.location.href='./gameResult.html'">
+                <i class="event_ic"></i>
+                <span>賽事結果</span>
+            </li>
+            <li onclick="window.location.href='./csService.html'">
+                <i class="cs_ic"></i>
+                <span>客服</span>
+            </li>
+            <li onclick="window.location.href='./betRecord.html'">
+                <i class="sponsor_ic"></i>
+                <span>投注紀錄</span>
+            </li>
+            <li onclick="window.location.href='./member.html'" class="notify">
+                <i class="member_ic"></i>
+                <span>我的</span>
+            </li>
+        </ul>
+    </footer>
+    <!-- 彈窗 -->
+    <div class="filter">
+        <!-- 公告 -->
+        <div class="jumpWindow announcement">
+            <p class="title">公告標題</p>
+            <div class="content">
+                <p>公告公告公告公告公告公告公告公告
+                    公告公告公告公告公告公告公告公告
+                    公告公告公告公告公告公告公告公告
+                    公告公告公告公告公告公告公告公告
+                    公告公告公告公告</p>
+            </div>
+            <div class="btnBlock">
+                <button type="button" class="closeWindow">關閉</button>
+                <button type="button" class="seeMore">查看全部</button>
+            </div>
+        </div>
+        <!-- 熱門賽事 -->
+        <div class="jumpWindow betHotGame">
+            <div class="reFresh">
+                <p>換一批</p>
+                <i class="reFresh_icon"></i>
+            </div>
+            <i class="close_icon closeWindow"></i>
+            <div class="titleArea">
+                <i class="decoPic"></i>
+                <i class="textPic"></i>
+            </div>
+            <div class="content">
+                <div class="gameBlock">
+                    <div class="teamBlock">
+                        <i class="teamPic liwagu"></i>
+                        <p class="teamName">利華古遜</p>
+                    </div>
+                    <div class="detailBlock">
+                        <p class="gameName">德國盃</p>
+                        <p class="time">2023/07/04 10:38</p>
+                        <p class="vs">VS</p>
+                    </div>
+                    <div class="teamBlock">
+                        <i class="teamPic stujia"></i>
+                        <p class="teamName">司徒加特</p>
+                    </div>
+                </div>
+                <div class="gameBlock">
+                    <div class="teamBlock">
+                        <i class="teamPic baijin"></i>
+                        <p class="teamName">拜仁慕尼黑</p>
+                    </div>
+                    <div class="detailBlock">
+                        <p class="gameName">德國盃</p>
+                        <p class="time">2023/07/04 15:45</p>
+                        <p class="vs">VS</p>
+                    </div>
+                    <div class="teamBlock">
+                        <i class="teamPic herfan"></i>
+                        <p class="teamName">賀芬咸</p>
+                    </div>
+                </div>
+                <div class="gameBlock">
+                    <div class="teamBlock">
+                        <i class="teamPic mays"></i>
+                        <p class="teamName">梅斯</p>
+                    </div>
+                    <div class="detailBlock">
+                        <p class="gameName">法國甲組聯賽</p>
+                        <p class="time">2023/07/04 02:00</p>
+                        <p class="vs">VS</p>
+                    </div>
+                    <div class="teamBlock">
+                        <i class="teamPic dian"></i>
+                        <p class="teamName">迪安</p>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="getBet closeWindow">
+                <p>來一注</p>
+                <i class=""></i>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

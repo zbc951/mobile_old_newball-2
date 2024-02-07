@@ -1,0 +1,373 @@
+.tutorialPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $BG_Color00;
+    position: relative;
+
+    .topContainer {
+        display: none;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        background: $BG_Color05;
+        padding: 13.4vw 0 0;
+        box-shadow: 0 2px 4px $shadow_02,
+                    0 -1px 4px transparent;
+        position: relative;
+        z-index: 6;
+
+        &.display {
+            display: flex;
+        }
+
+        .gameType {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content:space-around;
+            flex-shrink: 0;
+            overflow-x: auto;
+            padding: 0 2vw 2vw;
+            margin: 2vw 0 0;
+
+            li {
+                width: auto;
+                height: 8vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: pxToVw(1) solid transparent;
+                box-shadow: none;
+                border-radius: 30vw;
+                padding: 2vw 4vw;
+                margin-right: 2vw;
+                position: relative;
+    
+                &.active {
+                    background: $BG_Color09;
+    
+                    p {
+                        color: $Font_Color03;
+                    }
+
+                    i {
+                        background-position-y: 100%;
+                    }
+                }
+    
+                i {
+                    width: 5vw;
+                    height: 5vw;
+                    margin-right: 1vw;
+                    position: relative;
+    
+                    &.soccer_ic {
+                        background-position-x: 0%;
+                    }
+    
+                    &.basketball_ic {
+                        background-position-x: 50%;
+                    }
+    
+                    &.baseball_ic {
+                        background-position-x: 100%;
+                    }
+    
+    
+                    .num {
+                        color: $Font_Color02;
+                        font-size: 3.4vw;
+                        position: absolute;
+                        top: 0vw;
+                        right: -6.4vw;
+                    }
+                }
+    
+                p {
+                    color: $Font_Color02;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    white-space: nowrap;
+                }
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        .ruleType {
+            width: 100%;
+            height: 10vw;
+            display: flex;
+            align-items: center;
+            background: $BG_Color00;
+
+            li {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 67%;
+                    height: 0.8vw;
+                    background: $Border_01;
+                    opacity: 0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                &.active {
+
+                    &::before {
+                        opacity: 1;
+                    }
+
+                    p {
+                        color: $Font_Color04;
+                    }
+                }
+                
+                p {
+                   color: $Font_Color08;
+                   font-size: 4vw;
+                   font-weight: bold;
+                   white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    .ruleContainer {
+        display: none;
+        width: 100%;
+        height: auto;
+        overflow-y: auto;
+
+        &.display {
+            display: block;
+        }
+
+        .ruleType_content {
+            display: none;
+            width: 100%;
+            height: auto;
+
+            &.display {
+                display: block;
+            }
+
+            .ruleBlock {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                background: $BG_Color05;
+                padding: 0 0 4vw 0;
+                margin: 0 0 2vw 0;
+    
+                &>div {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    &.title {
+                        height: 9vw;
+                        justify-content: flex-start;
+                        padding: 0 3vw;
+                        border-bottom: 0.2vw solid $Border_06;
+    
+                        p {
+                            color: $Font_Color07;
+                            font-weight: bold;
+                            padding: 0 0 0 2vw;
+                            border-left: 0.6vw solid $Border_01;
+                        }
+                    }
+    
+                    &.teamWrap {
+                        padding: 5vw 5vw 0;
+    
+                        .team {
+                            width: 43%;
+                            display: flex;
+                            flex-shrink: 0;
+                            align-items: center;
+                            margin: 2vw 0;
+    
+                            &:nth-of-type(1) {
+                                justify-content: flex-end;
+                            }
+    
+                            &:nth-of-type(2) {
+    
+                                .logo {
+                                    background-position-x: 100%;
+                                }
+                            }
+    
+                            .logo {
+                                width: 8vw;
+                                height: 8vw;
+                                background-position-x: 0%;
+                                flex-shrink: 0;
+                            }
+    
+                            .text {
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                text-align: center;
+                                padding: 0 3vw;
+                                
+                                P {
+                                    line-height: 20px;
+                                    font-weight: bold;
+    
+                                    &.teamName {
+                                        color: $Font_Color07;
+                                        white-space: nowrap;
+                                    }
+    
+                                    &.point {
+                                        color: $Font_Color04;
+                                        font-size: 3.6vw;
+                                    }
+    
+                                    &.rate {
+                                        color: $Font_Color03;
+                                        font-family: 'Times New Roman', Times, serif;
+                                    }
+                                }
+                            }
+                        }
+    
+                        .vs {
+                            width: 100%;
+                            color: $Font_Color07;
+                            font-size: 3.6vw;
+                            font-weight: bold;
+                            text-align: center;
+                        }
+                    }
+    
+                    &.pointWrap {
+                        width: 95%;
+                        height: 20vw;
+                        background: $BG_Color00;
+                        border-radius: 50px;
+                        box-shadow: inset 0 2px 4px $shadow_02,
+                        0 -1px 4px transparent;
+                        margin: 4vw auto;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            height: 20vw;
+                            border-radius: 50px;
+                            box-shadow: 0 2px 2px $shadow_03,
+                            0 -1px 4px transparent;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            z-index: 1;
+                        }
+    
+                        &>div {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+    
+                            p {
+                                color: $Font_Color07;
+                                font-size: 3.6vw;
+                                margin-bottom: 2vw;
+                            }
+    
+                            span {
+                                color: $Font_Color03;
+                                font-size: 3.6vw;
+                                font-weight: bold;
+                            }
+    
+                            &.centerResult {
+                                width: 22vw;
+                                height: 22vw;
+                                background: $gradient04;
+                                border-radius: 50px;
+                                border: 0.2vw solid $Border_06;
+                                margin: 0 6vw;
+                                position: relative;
+                                z-index: 2;
+    
+                                p {
+                                    font-size: 4vw;
+                                    font-weight: bold;
+                                }
+
+                                span {
+                                    color: $Font_Color04;
+                                }
+                            }
+                        }
+                    }
+    
+                    &.explain {
+                        justify-content: space-between;
+                        padding: 0 4vw;
+                        
+                        .half {
+                            width: 40%;
+                            min-height: 12vw;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            color: $Font_em;
+    
+                            &.gray {
+                                color: $Font_Color09;
+                            }
+    
+                            &:nth-of-type(1) {
+                                align-items: flex-end;
+                                margin: 0 10vw 0 0;
+                            }
+    
+                            p {
+                                font-size: 3vw;
+                                line-height: 16px;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+    
+                    p {
+                        font-size: 3.8vw;
+                    }
+                }
+                
+                .betMoney {
+                    color: $Font_em;
+                    font-size: 3.6vw;
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

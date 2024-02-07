@@ -1,0 +1,255 @@
+//BG_Color
+$BG_Color00: #19202a;
+$BG_Color01: #ffffff;
+$BG_Color02: #cccccf;
+$BG_Color03: #3d5261;
+$BG_Color04: #eef1f8;
+$BG_Color04-2: #2f3f58;
+$BG_Color04-3: #25344a;
+$BG_Color05: #25344b;
+$BG_Color06: #feb300;
+$BG_Color07: #3b73c2;
+$BG_Color08: #455c80;
+$BG_Color09: #44608a;
+$BG_Color10: #27303c;
+$BG_Color11: #31425b;
+$BG_Color12: #ededed;
+$BG_Color13: #fffccf;
+$BG_Color14: #5c7293;
+
+//Font_color
+$Font_Color01: #212832;
+$Font_Color02: #9ea5af;
+$Font_Color03: #ffffff;
+$Font_Color04: #ffcc41;
+$Font_Color05: #1b255c;
+$Font_Color06: #4d515d;
+$Font_Color07: #feb300;
+$Font_Color08: #a8b0be;
+$Font_Color09: #97a0ad;
+$Font_link: #599bcf;
+$Font_em: #ff8207;
+$Font_em-2: #2ac5ff;
+$Font_remind: #f30d0d;
+$Font_positive: #34ff25;
+
+//linear
+$gradient01: linear-gradient(to top, #feb300 0%, #ffcc41 100%);
+$gradient02: linear-gradient(to right, #feb300 0%, #ff8207 100%);
+$gradient03: linear-gradient(to bottom, #7684ae 0%, #4f576e 85%, #222836 100%);
+$gradient04: linear-gradient(to bottom, #415471 0%, #2f3f58 100%);
+
+//border
+$Border_01: #feb300;
+$Border_02: #e0e7ff;
+$Border_03: #838ba0;
+$Border_04: #d8d8d8;
+$Border_05: #aecbdf;
+$Border_06: #5c6d79;
+$Border_07: #ffffff;
+
+//shadow
+$shadow_01: #00000033;
+$shadow_02: #0000001c;
+$shadow_03: #50647f;
+
+//filter
+$filter_BG: #000000ad;
+
+//homePage
+$gameFilter_BG: linear-gradient(to right, #e47100 0%, #fe8f00 13%, #feb300 30%, #ffcf3c 50%, #feb300 70%, #fe8f00 87%, #e47100 100%);
+$gameBlock_BG: repeating-linear-gradient(-45deg,#28354b,#28354b 25%,#28354b 0,#3a4b67 50%);
+$gameBlock_BG-2: linear-gradient(-45deg,#28354b,#28354b 25%,#28354b 0,#3a4b67 50%);
+$gameBlock_triangle_left: linear-gradient(45deg, #394b67 0%, #506687 100%);
+
+//公用
+@mixin textHidden {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//按鈕樣式
+@mixin btnStyle01 {  //主色
+    background: $BG_Color06;
+    border-radius: pxToVw(20);
+    color: #19202a;
+}
+@mixin btnStyle02 {
+    background: #3b73c2;
+    border-radius: pxToVw(20);
+    color: #ffffff;
+    box-shadow: 0 2px 5px $shadow_01;
+}
+@mixin btnStyle03 {  //漸層
+    background: $gradient01;
+    border-radius: 1vw;
+    color: $Font_Color01;
+}
+@mixin btnStyle04 {  //主色線色
+    background: transparent;
+    border: pxToVw(1) solid $Border_01 ;
+    border-radius: pxToVw(20);
+    color: $Font_Color07;
+}
+
+@mixin switchBtnStyle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $BG_Color00;
+    border-radius: 30vw;
+    padding: 0.2vw;
+    position: relative;
+
+    &.on {
+
+        .bar {
+            left: unset;
+            right: 0.2vw;
+            transform: translate(-2%,-50%);
+        }
+
+        p {
+            &:nth-of-type(1) {
+                color: $Font_Color03;
+            }
+            &:nth-of-type(2) {
+                color: $Font_Color01;
+            }
+        }
+    }
+
+    p {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $Font_Color01;
+        font-size: 3.4vw;
+        text-align: center;
+        position: relative;
+        z-index: 8;
+
+        &:nth-of-type(2) {
+            color: $Font_Color03;
+        }
+    }
+
+    .bar {
+        width: 48%;
+        height: 79%;
+        background: $BG_Color01;
+        border-radius: 30vw;
+        position: absolute;
+        top: 50%;
+        left: 0.2vw;
+        transform: translate(2%,-50%);
+        transition: all 0.4s;
+        z-index: 7;
+    }
+}
+
+//input select 樣式
+@mixin input01 {
+    background: #1b2739;
+    color-scheme: dark;
+    border: pxToVw(1) solid #5c6d79;
+    border-radius: pxToVw(20);
+    color: $Font_Color03;
+    font-size: 3.8vw;
+
+    &::placeholder {
+        color: $Font_Color09;
+    }
+}
+
+//選擇彈窗
+@mixin jumpBlock {
+    width: 95%;
+    height: auto;
+    background: $BG_Color09;
+    border-radius: 2vw;
+    border: 1px solid $Border_05;
+    position: absolute;
+    top: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &.display {
+        display: block;
+    }
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 2.2vw 4vw 2.2vw;
+        border-color: transparent transparent #283d5c transparent;
+        filter: drop-shadow(0vw -1vw 0.5px $Border_06);
+        position: absolute;
+        top: -3.2vw;
+        left: 6vw;
+    }
+
+    .titleBlock {
+        width: 100%;
+        height: 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #283d5c;
+        border-radius: 2vw 2vw 0 0;
+        border-bottom: 1px solid $Border_06;
+        position: relative;
+
+        p {
+            color: $Font_Color07;
+            font-size: 4vw;
+            font-weight: bold;
+        }
+
+        i {
+            width: 5vw;
+            height: 5vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $Font_Color07;
+            font-size: 4vw;
+            position: absolute;
+            top: 50%;
+            right: 3vw;
+            transform: translateY(-50%);
+        }
+    }
+
+    .content {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1vw;
+        border-radius: 0 0 2vw 2vw;
+        padding: 2vw;
+
+        button {
+            width: 100%;
+            height: 8vw;
+            background: #3d5261;
+            color: $Font_Color07;
+            border: 1px solid $Border_01;
+            border-radius: 1vw;
+            font-size: 3.5vw;
+            font-weight: bold;
+            white-space: nowrap;
+
+            &:active,&.active {
+                background: $BG_Color06;
+                color: $Font_Color01;
+            }
+        }
+    }
+}

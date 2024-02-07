@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="ZH-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css_2/style.css">
+    <link rel="shortcut icon" href="../img/newBall_64x64.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <script src="https://kit.fontawesome.com/8858aac5ee.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="innerPage">
+        <div>
+            <p class="pageTitle">盤口教程</p>
+        </div>
+        <i class="leftArrow_Icon backTo_LastPage" onclick="window.location.href='./index.html'"></i>
+    </header>
+    <main class="fullScreen">
+        <div class="wrapContainer tutorialPage">
+            <!-- 球種選擇 -->
+           <ol class="topContainer display">
+            <ul class="gameType">
+                <li class="active">
+                    <i class="soccer_ic"></i>
+                    <p>足球</p>
+                </li>
+                <li>
+                    <i class="basketball_ic"></i>
+                    <p>籃球</p>
+                </li>
+                <li>
+                    <i class="baseball_ic"></i>
+                    <p>棒球</p>
+                </li>
+            </ul>
+            <ul class="ruleType">
+                <li class="active">
+                    <p>讓球</p>
+                </li>
+                <li>
+                    <p>大小球</p>
+                </li>
+            </ul>
+           </ol>
+           <!-- 個別規則 -->
+           <div class="ruleContainer display">
+                <div class="ruleType_content display">
+                    <div class="ruleBlock">
+                        <div class="title">
+                            <p>和局</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        阿仙奴
+                                        <span></span>
+                                    </p>
+                                    <p class="point">-</p>
+                                    <p class="rate">0.970</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注本金1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退回本金</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>賽果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退回本金</span>
+                            </div>
+                        </div>
+                   </div>
+                    <div class="ruleBlock">
+                        <div class="title">
+                            <p>全贏/全輸</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        皇家馬德里
+                                        <span>[主]</span>
+                                    </p>
+                                    <p class="point">1球半/2球</p>
+                                    <p class="rate">0.920</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        巴賽隆納
+                                        <span></span>
+                                    </p>
+                                    <p class="point">-</p>
+                                    <p class="rate">0.960</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注本金1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>贏920元</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>賽果</p>
+                                <span>3-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>輸本金1000</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>贏1000 X (0.920) = 920</p>
+                                <p>(不包括本金)</p>
+                            </div>
+                            <div class="half">
+                            </div>
+                        </div>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>贏920元</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>賽果</p>
+                                <span>0-1</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>輸本金1000</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                            </div>
+                            <div class="half">
+                                <p>贏1000 X (0.920) = 920</p>
+                                <p>(不包括本金)</p>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="ruleType_content">
+                    <div class="ruleBlock">
+                        <div class="title">
+                            <p>輸贏</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退款</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>結果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退款</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                            <div class="half">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                        </div>
+                   </div>
+                    <div class="ruleBlock">
+                        <div class="title">
+                            <p>輸贏</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退款</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>結果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退款</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                            <div class="half">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="ruleBlock">
+                        <div class="title">
+                            <p>輸贏</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退款</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>結果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退款</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>贏 1000X (0.920) = 920</p>
+                                <p>(不含本金)</p>
+                                <p></p>
+                            </div>
+                            <div class="half gray">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+           <div class="ruleContainer">
+                <div class="ruleType_content display">
+                    <div class="ruleBlock">
+                        <div class="title">
+                            <p>輸贏</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退款</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>結果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退款</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                            <div class="half">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="ruleBlock">
+                        <div class="title">
+                            <p>輸贏</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退款</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>結果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退款</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>贏 1000X (0.920) = 920</p>
+                                <p>(不包括本金)</p>
+                                <p></p>
+                            </div>
+                            <div class="half gray">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                        </div>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退款</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>結果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退款</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half gray">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                            <div class="half">
+                                <p>贏 1000X (0.920) = 920</p>
+                                <p>(不包括本金)</p>
+                                <p></p>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="ruleType_content">
+                    <div class="ruleBlock">
+                        <div class="title">
+                            <p>輸贏</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退款</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>結果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退款</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                            <div class="half">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="ruleBlock">
+                        <div class="title">
+                            <p>輸贏</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退款</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>結果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退款</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>贏 1000X (0.920) = 920</p>
+                                <p>(不包括本金)</p>
+                                <p></p>
+                            </div>
+                            <div class="half gray">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+            <div class="ruleContainer">
+                <div class="ruleType_content display">
+                    <div class="ruleBlock">
+                        <div class="title">
+                            <p>和局</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        紅襪
+                                        <span>[主]</span>
+                                    </p>
+                                    <p class="point">1平</p>
+                                    <p class="rate">0.940</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        天使
+                                        <span></span>
+                                    </p>
+                                    <p class="point">-</p>
+                                    <p class="rate">0.940</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注本金1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退回本金</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>賽果</p>
+                                <span>4-3</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退回本金</span>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="ruleBlock">
+                        <div class="title">
+                            <p>全贏/全輸</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        紅襪
+                                        <span>[主]</span>
+                                    </p>
+                                    <p class="point">平手</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        天使
+                                        <span></span>
+                                    </p>
+                                    <p class="point">-</p>
+                                    <p class="rate">0.940</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注本金1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>贏940</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>賽果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>輸本金1000</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>贏 1000 X (0.940) = 940</p>
+                                <p>(不含本金)</p>
+                                <p></p>
+                            </div>
+                            <div class="half gray">
+                                <p>輸1000 X -1 = -1000</p>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="ruleBlock">
+                        <div class="title">
+                            <p>贏一半/輸一半</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        藍鳥
+                                        <span>[主]</span>
+                                    </p>
+                                    <p class="point">2+50</p>
+                                    <p class="rate">0.940</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        水手
+                                        <span></span>
+                                    </p>
+                                    <p class="point">-</p>
+                                    <p class="rate">0.940</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注本金1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>贏470</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>賽果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>輸500元</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>贏分洞</p>
+                                <p>1000 X 0.940 X 50% = 470</p>
+                                <p>(不含本金)</p>
+                            </div>
+                            <div class="half gray">
+                                <p>輸分洞</p>
+                                <p>1000 X -1 X 50% = -500</p>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+                <div class="ruleType_content">
+                    <div class="ruleBlock">
+                        <div class="title">
+                            <p>輸贏</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退款</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>結果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退款</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                            <div class="half">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="ruleBlock">
+                        <div class="title">
+                            <p>輸贏</p>
+                        </div>
+                        <div class="teamWrap">
+                            <div class="team">
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                                <i class="logo"></i>
+                            </div>
+                            <p class="vs">VS</p>
+                            <div class="team">
+                                <i class="logo"></i>
+                                <div class="text">
+                                    <p class="teamName">
+                                        曼聯
+                                        <span>[主場]</span>
+                                    </p>
+                                    <p class="point">1球</p>
+                                    <p class="rate">0.910</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="betMoney">投注1,000元</p>
+                        <div class="pointWrap">
+                            <div class="text">
+                                <p>投注主隊</p>
+                                <span>退款</span>
+                            </div>
+                            <div class="centerResult">
+                                <p>結果</p>
+                                <span>1-0</span>
+                            </div>
+                            <div class="text">
+                                <p>投注客隊</p>
+                                <span>退款</span>
+                            </div>
+                        </div>
+                        <div class="explain">
+                            <div class="half">
+                                <p>贏 1000X (0.920) = 920</p>
+                                <p>(不包括本金)</p>
+                                <p></p>
+                            </div>
+                            <div class="half gray">
+                                <p>讓分盤"1球"</p>
+                                <p>這將是一場平局</p>
+                                <p>退款</p>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </main>
+   <footer>
+    <ul class="mainNav">
+        <li onclick="window.location.href='./index.html'">
+            <i class="home_ic"></i>
+            <span>首頁</span>
+        </li>
+        <li onclick="window.location.href='../html/gameResult.html'">
+            <i class="event_ic"></i>
+            <span>賽事結果</span>
+        </li>
+        <li onclick="window.location.href='../html/csService.html'">
+            <i class="cs_ic"></i>
+            <span>客服</span>
+        </li>
+        <li onclick="window.location.href='../html/betRecord.html'">
+            <i class="sponsor_ic"></i>
+            <span>投注紀錄</span>
+        </li>
+        <li onclick="window.location.href='../html/member.html'">
+            <i class="member_ic"></i>
+            <span>我的</span>
+        </li>
+    </ul>
+    </footer>
+    <!-- 彈窗 -->
+    <div class="filter">
+        <!-- 下注彈窗 -->
+        <div class="jumpWindow betGame">
+            <i class="close_icon closeWindow"></i>
+            <div class="titleArea">
+                <p class="gameName">法國甲組聯賽</p>
+            </div>
+            <div class="content">
+                <div class="gameBlock">
+                    <div class="teamBlock">
+                        <p class="teamName">利華古遜</p>
+                        <p class="vs">VS</p>
+                        <p class="teamName">司徒加特</p>
+                    </div>
+                    <div class="betDetail">
+                        <div class="infoWrap">
+                            <p class="betSide">平</p>
+                            <span>@</span>
+                            <p class="betRate">5.10</p>
+                        </div>
+                        <p class="betChoose">獨贏</p>
+                        <span class="num">8</span>
+                    </div>
+                    <div class="moneyState">
+                        <div class="group">
+                            <p>餘額:</p>
+                            <span>0.00元</span>
+                        </div>
+                        <div class="group">
+                            <p>下注限額:</p>
+                            <span>10100.00元</span>
+                        </div>
+                    </div>
+                    <form>
+                        <label>
+                            <input type="text" placeholder="請輸入金額">
+                            <p>元</p>
+                        </label>
+                        <div class="btnWrap">
+                            <button type="button" class="quickMoneyBtn">100</button>
+                            <button type="button" class="quickMoneyBtn">500</button>
+                            <button type="button" class="quickMoneyBtn">1000</button>
+                            <button type="button" class="quickMoneyBtn">2000</button>
+                            <button type="button" class="quickMoneyBtn">5000</button>
+                            <button type="button" class="quickMoneyBtn">最大</button>
+                        </div>
+                        <div class="winWrap">
+                            <p>可贏金額:</p>
+                            <span>NT$0</span>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="btnBlock betBtn">
+                <p>向右滑動投注</p>
+                <div class="grabBar">
+                    <i class="rightArrow_Icon"></i>
+                    <i class="rightArrow_Icon"></i>
+                </div>
+            </div>
+        </div>
+        <!-- 未結注單 -->
+        <div class="jumpWindow unFinish_bet">
+            <i class="close_icon closeWindow"></i>
+            <div class="titleArea">
+                <p>
+                    投注清單
+                    <span class="num">2</span>
+                </p>
+            </div>
+            <div class="content">
+                <div class="tableOuter active">
+                    <table>
+                        <tbody>
+                            <tr class="gameName">
+                                <th colspan="2">
+                                    <div class="outer">
+                                        <p>足球-全場-獨贏</p>
+                                        <p class="state">未開獎</p>
+                                    </div>
+                                </th>
+                                <th colspan="2" class="oddNum">
+                                    <div class="outer">
+                                        <p>M11513352</p>
+                                        <i class="downArrow_Icon"></i>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="summary">
+                                <td colspan="2">
+                                    <p>智利甲組聯賽全場FT1820340</p>
+                                </td>
+                                <td colspan="2">
+                                    <div class="outer">
+                                        <p>投注</p>
+                                        <p class="important">100</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="gameInfo">
+                                    <div class="outer">
+                                        <p>智利甲組聯賽全場FT1820340</p>
+                                        <div class="team">
+                                            <p>梅里比拉[主]</p>
+                                            <span>VS</span>
+                                            <p>艾斯潘諾拉</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>有效下注</p>
+                                </td>
+                                <td>
+                                    <p>0</p>
+                                </td>
+                                <td>
+                                    <p>賠率</p>
+                                </td>
+                                <td>
+                                    <p class="highLight">1.13</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>投注選項</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="highLight">梅里比拉</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>結果</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="state">未開獎</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>投注</p>
+                                </td>
+                                <td>
+                                    <p class="important">100</p>
+                                </td>
+                                <td>
+                                    <p>可贏(參考)</p>
+                                </td>
+                                <td>
+                                    <p class="important">113</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tableOuter">
+                    <table>
+                        <tbody>
+                            <tr class="gameName">
+                                <th colspan="2">
+                                    <div class="outer">
+                                        <p>足球-全場-獨贏</p>
+                                        <p class="state">未開獎</p>
+                                    </div>
+                                </th>
+                                <th colspan="2" class="oddNum">
+                                    <div class="outer">
+                                        <p>M11513352</p>
+                                        <i class="downArrow_Icon"></i>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="summary">
+                                <td colspan="2">
+                                    <p>智利甲組聯賽全場FT1820340</p>
+                                </td>
+                                <td colspan="2">
+                                    <div class="outer">
+                                        <p>投注</p>
+                                        <p class="important">100</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="gameInfo">
+                                    <div class="outer">
+                                        <p>智利甲組聯賽全場FT1820340</p>
+                                        <div class="team">
+                                            <p>梅里比拉[主]</p>
+                                            <span>VS</span>
+                                            <p>艾斯潘諾拉</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>有效下注</p>
+                                </td>
+                                <td>
+                                    <p>0</p>
+                                </td>
+                                <td>
+                                    <p>賠率</p>
+                                </td>
+                                <td>
+                                    <p class="highLight">1.13</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>投注選項</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="highLight">梅里比拉</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>結果</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="state">未開獎</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>投注</p>
+                                </td>
+                                <td>
+                                    <p class="important">100</p>
+                                </td>
+                                <td>
+                                    <p>可贏(參考)</p>
+                                </td>
+                                <td>
+                                    <p class="important">113</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tableOuter">
+                    <table>
+                        <tbody>
+                            <tr class="gameName">
+                                <th colspan="2">
+                                    <div class="outer">
+                                        <p>足球-全場-獨贏</p>
+                                        <p class="state">未開獎</p>
+                                    </div>
+                                </th>
+                                <th colspan="2" class="oddNum">
+                                    <div class="outer">
+                                        <p>M11513352</p>
+                                        <i class="downArrow_Icon"></i>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr class="summary">
+                                <td colspan="2">
+                                    <p>智利甲組聯賽全場FT1820340</p>
+                                </td>
+                                <td colspan="2">
+                                    <div class="outer">
+                                        <p>投注</p>
+                                        <p class="important">100</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="gameInfo">
+                                    <div class="outer">
+                                        <p>智利甲組聯賽全場FT1820340</p>
+                                        <div class="team">
+                                            <p>梅里比拉[主]</p>
+                                            <span>VS</span>
+                                            <p>艾斯潘諾拉</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>有效下注</p>
+                                </td>
+                                <td>
+                                    <p>0</p>
+                                </td>
+                                <td>
+                                    <p>賠率</p>
+                                </td>
+                                <td>
+                                    <p class="highLight">1.13</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>投注選項</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="highLight">梅里比拉</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="1">
+                                    <p>結果</p>
+                                </td>
+                                <td colspan="3">
+                                    <p class="state">未開獎</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>投注</p>
+                                </td>
+                                <td>
+                                    <p class="important">100</p>
+                                </td>
+                                <td>
+                                    <p>可贏(參考)</p>
+                                </td>
+                                <td>
+                                    <p class="important">113</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="countBlock">
+                <div class="half">
+                    <p>投注</p>
+                    <span class="bet">100</span>
+                </div>
+                <div class="half">
+                    <p>結果</p>
+                    <span class="result">88</span>
+                </div>
+            </div>
+        </div>
+        <!-- 菜單設置 -->
+        <div class="jumpMenu">
+            <div class="setUnions">
+                <p>
+                    聯賽篩選
+                    <span class="state">全部</span>
+                </p>
+                <div class="group">
+                    <div class="unions"></div>
+                    <div class="more">
+                        <p>更多</p>
+                        <i class="rightArrow_Icon"></i>
+                    </div>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <p>投注模式</p>
+                    <div class="switchBtn">
+                        <p>新手版</p>
+                        <p>專業版</p>
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <p>排序規則</p>
+                    <div class="switchBtn">
+                        <p>熱門</p>
+                        <p>時間</p>
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <p>盤口設置</p>
+                    <div class="switchBtn">
+                        <p>歐洲盤</p>
+                        <p>香港盤</p>
+                        <div class="bar"></div>
+                    </div>
+                </li>
+                <li>
+                    <p>主題風格</p>
+                    <div class="switchBtn">
+                        <p>日間</p>
+                        <p>夜間</p>
+                        <div class="bar"></div>
+                    </div>
+                </li>
+            </ul>
+            <button type="button" class="closeMenu">關閉</button>
+        </div>
+    </div>
+</body>
+</html>
